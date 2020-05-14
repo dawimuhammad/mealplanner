@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44FDD505246D51B0006666E8 /* babi.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD4FF246D51B0006666E8 /* babi.json */; };
+		44FDD506246D51B0006666E8 /* sapi.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD500246D51B0006666E8 /* sapi.json */; };
+		44FDD507246D51B0006666E8 /* ayam.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD501246D51B0006666E8 /* ayam.json */; };
+		44FDD508246D51B0006666E8 /* other.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD502246D51B0006666E8 /* other.json */; };
+		44FDD509246D51B0006666E8 /* sayur.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD503246D51B0006666E8 /* sayur.json */; };
+		44FDD50A246D51B0006666E8 /* ikan.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD504246D51B0006666E8 /* ikan.json */; };
 		B7D5DC2424643E4A00A2F763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */; };
 		B7D5DC2624643E4A00A2F763 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2524643E4A00A2F763 /* SceneDelegate.swift */; };
 		B7D5DC2824643E4A00A2F763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2724643E4A00A2F763 /* ViewController.swift */; };
@@ -17,6 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		44FDD4FF246D51B0006666E8 /* babi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = babi.json; sourceTree = "<group>"; };
+		44FDD500246D51B0006666E8 /* sapi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sapi.json; sourceTree = "<group>"; };
+		44FDD501246D51B0006666E8 /* ayam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ayam.json; sourceTree = "<group>"; };
+		44FDD502246D51B0006666E8 /* other.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = other.json; sourceTree = "<group>"; };
+		44FDD503246D51B0006666E8 /* sayur.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sayur.json; sourceTree = "<group>"; };
+		44FDD504246D51B0006666E8 /* ikan.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ikan.json; sourceTree = "<group>"; };
 		B7D5DC2024643E4A00A2F763 /* Meal Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D5DC2524643E4A00A2F763 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +51,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44FDD4C6246BE75A006666E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		44FDD4C7246BE76C006666E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		44FDD4CC246BEB59006666E8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				44FDD501246D51B0006666E8 /* ayam.json */,
+				44FDD4FF246D51B0006666E8 /* babi.json */,
+				44FDD504246D51B0006666E8 /* ikan.json */,
+				44FDD502246D51B0006666E8 /* other.json */,
+				44FDD500246D51B0006666E8 /* sapi.json */,
+				44FDD503246D51B0006666E8 /* sayur.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		B7D5DC1724643E4A00A2F763 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +97,9 @@
 		B7D5DC2224643E4A00A2F763 /* Meal Planner */ = {
 			isa = PBXGroup;
 			children = (
+				44FDD4CC246BEB59006666E8 /* Data */,
+				44FDD4C7246BE76C006666E8 /* Controller */,
+				44FDD4C6246BE75A006666E8 /* Model */,
 				B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */,
 				B7D5DC2524643E4A00A2F763 /* SceneDelegate.swift */,
 				B7D5DC2724643E4A00A2F763 /* ViewController.swift */,
@@ -129,8 +171,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7D5DC3324643E4A00A2F763 /* LaunchScreen.storyboard in Resources */,
+				44FDD507246D51B0006666E8 /* ayam.json in Resources */,
+				44FDD506246D51B0006666E8 /* sapi.json in Resources */,
+				44FDD508246D51B0006666E8 /* other.json in Resources */,
 				B7D5DC3024643E4A00A2F763 /* Assets.xcassets in Resources */,
 				B7D5DC2B24643E4A00A2F763 /* Main.storyboard in Resources */,
+				44FDD509246D51B0006666E8 /* sayur.json in Resources */,
+				44FDD505246D51B0006666E8 /* babi.json in Resources */,
+				44FDD50A246D51B0006666E8 /* ikan.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

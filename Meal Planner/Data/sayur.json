@@ -1,0 +1,350 @@
+[
+  {
+    "id": "sayur-1",
+    "name": "Tumis Kacang Panjang",
+    "category": "sayur",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F70065952-281e-4b77-aa20-0a78abf9b48e%2FResep-Tumis-kacang-panjang.jpg?table=block&id=656995e0-715c-49c8-a115-97e97d09fae9&width=600&cache=v2",
+    "duration": 30,
+    "portion": 2,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "kacang-panjang"
+            ],
+            "name": "Kacang panjang, potong lalu cuci bersih - 1 ikat",
+            "unit": "ikat",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "tempe"
+            ],
+            "name": "Tempe, potong kotak lalu goreng setengah matang - 1 papan",
+            "unit": "papan",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "udang"
+            ],
+            "name": "Udang, buang kepalanya - 100 gram",
+            "unit": "gram",
+            "qty": 100
+          },
+          {
+            "tag": [
+              "cabe-merah"
+            ],
+            "name": "Cabe merah besar, iris serong - 2 buah",
+            "unit": "buah",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "cabe-rawit"
+            ],
+            "name": "Cabe rawit, iris - 5 buah",
+            "unit": "buah",
+            "qty": 5
+          },
+          {
+            "tag": [
+              "bawang-merah"
+            ],
+            "name": "Bawang merah, iris - 4 siung",
+            "unit": "siung",
+            "qty": 4
+          },
+          {
+            "tag": [
+              "bawang-putih"
+            ],
+            "name": "Bawang putih, iris - 3 siung",
+            "unit": "siung",
+            "qty": 3
+          },
+          {
+            "tag": [
+              "daun-salam"
+            ],
+            "name": "Daun salam - 1 lembar",
+            "unit": "lembar",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "lengkuas"
+            ],
+            "name": "Lengkuas, memarkan - 1 ruas",
+            "unit": "ruas",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "kecap-manis"
+            ],
+            "name": "Kecap manis - 3 sdm",
+            "unit": "sdm",
+            "qty": 3
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "gula"
+            ],
+            "name": "Gula - 1/4 sdt",
+            "unit": "sdt",
+            "qty": 0.25
+          },
+          {
+            "tag": [
+              "merica"
+            ],
+            "name": "Merica - 1/4 sdt",
+            "unit": "sdt",
+            "qty": 0.25
+          },
+          {
+            "tag": [
+              "air"
+            ],
+            "name": "Air - 150 ml",
+            "unit": "ml",
+            "qty": 150
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT",
+        "steps": [
+          "1. Cuci bersih udang, beri garam dan perasan jeruk nipis lalu diamkan 15 menit. Setelahnya bilas kembali.",
+          "2. Tumis bawang merah, bawang putih, cabe, lengkuas, dan daun salam hingga harum.",
+          "3. Masukkan udang, tumis sampai berubah warna.",
+          "4. Masukkan tempe yang telah digoreng, aduk rata.",
+          "5. Tuang air dan tambahkan kecap manis, garam, gula, merica, dan cabe rawit. Masak sampai air mendidih.",
+          "6. Masukkan kacang panjang, aduk rata. Masak sampai bumbunya meresap dan kacang panjang matang. Angkat.",
+          "7. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [],
+    "source": "https://resepkoki.id/resep/resep-tumis-kacang-panjang/"
+  },
+  {
+    "id": "sayur-2",
+    "name": "Tumis Buncis Udang",
+    "category": "sayur",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F808cd803-4e5d-43d0-ab01-9d044eb6844e%2FResep-Tumis-Buncis-Udang.jpg?table=block&id=25df5173-206a-479c-8097-c85b97fad0d2&width=600&cache=v2",
+    "duration": 30,
+    "portion": 2,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "udang"
+            ],
+            "name": "Udang - 300 gram",
+            "unit": "gram",
+            "qty": 300
+          },
+          {
+            "tag": [
+              "buncis"
+            ],
+            "name": "Buncis, bersihkan lalu potong korek api - 200 gram",
+            "unit": "gram",
+            "qty": 200
+          },
+          {
+            "tag": [
+              "minyak"
+            ],
+            "name": "Minyak - 5 sdm",
+            "unit": "sdm",
+            "qty": 5
+          },
+          {
+            "tag": [
+              "cabai-merah"
+            ],
+            "name": "Cabai merah besar, buang bijinya dan iris serong - 2 buah",
+            "unit": "buah",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "bawang-merah"
+            ],
+            "name": "Bawang merah, iris tipis - 4 butir",
+            "unit": "butir",
+            "qty": 4
+          },
+          {
+            "tag": [
+              "bawang-putih"
+            ],
+            "name": "Bawang putih, iris tipis - 3 siung",
+            "unit": "siung",
+            "qty": 3
+          },
+          {
+            "tag": [
+              "gula-pasir"
+            ],
+            "name": "Gula pasir - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "kecap-manis"
+            ],
+            "name": "Kecap manis - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "terasi"
+            ],
+            "name": "Terasi - 1 cm",
+            "unit": "cm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "air"
+            ],
+            "name": "Air - 100 ml",
+            "unit": "ml",
+            "qty": 100
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT",
+        "steps": [
+          "1. Tumis bawang putih dan bawang merah dengan minyak hingga harum.",
+          "2. Masukkan terasi, aduk hingga tercampur rata.",
+          "3. Masukkan cabai, tumis hingga layu.",
+          "4. Tambahkan udang, masak hingga berubah warna.",
+          "5. Masukkan buncis, garam, gula, kecap manis, dan air. Masak hingga buncis matang. Koreksi rasanya. Angkat.",
+          "6. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [
+      "Kupas kulit udang dan buang kepalanya atau sesuai selera. Beri sedikit air perasan jeruk nipis agar udang tak terlalu amis."
+    ],
+    "source": "https://resepkoki.id/resep/resep-tumis-buncis-udang/"
+  },
+  {
+    "id": "sayur-3",
+    "name": "Tumis Pakcoy",
+    "category": "sayur",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc020aa50-a9b9-4fb7-849a-41823c7e04c2%2FResep-Tumis-Pakcoy.jpg?table=block&id=f6857728-e56b-4220-a6ab-4d7581d06b4c&width=600&cache=v2",
+    "duration": 15,
+    "portion": 3,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "pakcoy"
+            ],
+            "name": "Pakcoy - 5 bonggol",
+            "unit": "bonggol",
+            "qty": 5
+          },
+          {
+            "tag": [
+              "bawang-putih"
+            ],
+            "name": "Bawang putih, cincang - 5 siung",
+            "unit": "siung",
+            "qty": 5
+          },
+          {
+            "tag": [
+              "saus-tiram"
+            ],
+            "name": "Saus tiram - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "gula-pasir"
+            ],
+            "name": "Gula pasir - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "maizena"
+            ],
+            "name": "Maizena - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "air"
+            ],
+            "name": "Air - 150 ml",
+            "unit": "ml",
+            "qty": 150
+          },
+          {
+            "tag": [
+              "minyak"
+            ],
+            "name": "Minyak, untuk menumis - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT",
+        "steps": [
+          "1. Rebus pakcoy dalam air mendidih selama 30 detik saja. Angkat dan tiriskan.",
+          "2. Tumis bawang putih hingga harum.",
+          "3. Masukkan saus tiram, gula, air, dan maizena. Aduk dan masak hingga mengental. Angkat.",
+          "4. Tata pakcoy di piring saji. Siram dengan hasil tumisan.",
+          "5. Siap disajikan"
+        ]
+      }
+    ],
+    "tips": [],
+    "source": "https://resepkoki.id/resep/resep-tumis-pakcoy/"
+  }
+]

@@ -1,0 +1,355 @@
+[
+  {
+    "id": "lainnya-1",
+    "name": "Roti Maryam",
+    "category": "sayur",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F031f7216-a3b2-4b60-9a15-a24132946bc7%2FResep-Roti-maryam.jpg?table=block&id=1f6a788c-ae87-40d1-8375-cbffa62bc773&width=600&cache=v2",
+    "duration": 180,
+    "portion": 5,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "tepung-terigu"
+            ],
+            "name": "Tepung terigu serbaguna - 500 gram",
+            "unit": "gram",
+            "qty": 500
+          },
+          {
+            "tag": [
+              "telur"
+            ],
+            "name": "Telur - 1 butir",
+            "unit": "butir",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "kuning-telur"
+            ],
+            "name": "Kuning telur - 1 butir",
+            "unit": "butir",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "susu-bubuk"
+            ],
+            "name": "Susu bubuk - 25 gram",
+            "unit": "gram",
+            "qty": 25
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "minyak-goreng"
+            ],
+            "name": "Minyak goreng - 100 ml",
+            "unit": "ml",
+            "qty": 100
+          },
+          {
+            "tag": [
+              "air"
+            ],
+            "name": "Air hangat - 200 ml",
+            "unit": "ml",
+            "qty": 200
+          },
+          {
+            "tag": [
+              "margarin"
+            ],
+            "name": "Margarin, untuk olesan - 200 gram",
+            "unit": "gram",
+            "qty": 200
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT",
+        "steps": [
+          "1. Dalam wadah, campur telur, minyak goreng, dan air hangat. Aduk asal rata saja.",
+          "2. Masukkan tepung terigu, susu bubuk dan garam. Uleni hingga benar-benar kalis.",
+          "3. Siapkan loyang yang sudah dioles minyak goreng.",
+          "4. Bagi adonan jadi 10 bagian sama besar dan bulatkan.",
+          "5. Tata adonan dalam loyang lalu olesi dengan minyak goreng agar permukaannya tidak kering. Tutup loyang dengan plastic wrap atau kain lap basah dan diamkan selama 1 jam.",
+          "6. Ambil 1 adonan lalu tipiskan dengan cara ditekan-tekan. Olesi seluruh permukaannya dengan margarin. Gulung adonan jadi bentuk memanjang. Tarik tiap ujungnya dan buat bentuk melingkar, saling berlawanan seperti huruf S. Lalu tumpuk kedua bagian yang melingkar tadi. Pipihkan dengan cara ditekan dengan telapak tangan.",
+          "7. Panaskan wajan datar anti lengket atau teflon. Panggang roti maryam hingga kecoklatan di kedua sisinya. Angkat.",
+          "8. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Jika roti maryam akan disimpan dalam freezer maka panggang roti maryam hingga asal matang saja, tidak perlu sampai kecoklatan.",
+      "2. Simpan roti maryam di atas kertas roti, masukkan dalam wadah kedap udara, dan taruh dalam freezer. Dengan cara ini, roti maryam bisa tahan selama 1-2 minggu"
+    ],
+    "source": "https://resepkoki.id/resep/resep-roti-maryam/"
+  },
+  {
+    "id": "lainnya-2",
+    "name": "Rengginang",
+    "category": "lainnya",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fba04da65-0fbd-48d8-8164-732e1bba7ebb%2FResep-Rengginang.jpg?table=block&id=38a24e36-e7ed-48f9-a8c6-4b9783c80fdb&width=600&cache=v2",
+    "duration": 60,
+    "portion": 10,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "beras-ketan"
+            ],
+            "name": "Beras ketan, cuci bersih - 500 gram",
+            "unit": "gram",
+            "qty": 500
+          },
+          {
+            "tag": [
+              "air"
+            ],
+            "name": "Air - 90 ml",
+            "unit": "ml",
+            "qty": 90
+          },
+          {
+            "tag": [
+              "minyak-goreng"
+            ],
+            "name": "Minyak goreng - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      },
+      {
+        "section": "BUMBU HALUS",
+        "ingredients": [
+          {
+            "id": "bawang-putih",
+            "name": "Bawang putih - 6 siung",
+            "unit": "siung",
+            "qty": 6
+          },
+          {
+            "id": "terasi",
+            "name": "Terasi, opsional - 5 cm",
+            "unit": "cm",
+            "qty": 5
+          },
+          {
+            "id": "ketumbar",
+            "name": "Ketumbar - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "id": "garam",
+            "name": "Garam - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "LANGKAH",
+        "steps": [
+          "1. Tiriskan beras ketan yang telah direndam semalaman. Kukus beras ketan dalam panci kukusan/dandang yang telah dipanaskan sebelumnya, selama ±15 menit.",
+          "2. Dalam wadah besar, campur bumbu halus dengan air. Aduk rata.",
+          "3. Angkat ketan lalu masukkan dalam wadah bumbu tadi. Aduk rata dan diamkan sesaat hingga larutan bumbu terserap ke dalam beras ketan.",
+          "4. Kukus kembali beras ketan selama 30 menit hingga matang. Angkat dan cetak ketan selagi panas.",
+          "5. Tata ketan yang telah dicetak di atas wadah lebar, nampan atau tampah yang telah dilapisi plastik. Jemur ketan di bawah sinar matahari hingga kering. Jangan lupa untuk membolak baliknya agar kedua sisi rengginang bisa kering sempurna.",
+          "6. Panaskan banyak minyak. Goreng rengginang sambil digoyang-goyangkan atau disiram minyak panas agar mengembang. Angkat dan tiriskan.",
+          "7. Siap disajikan atau simpan dalam toples kedap udara."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Tujuan beras ketan direndam adalah supaya rengginang bisa mengembang sempurna ketika digoreng dan renyah.",
+      "2. Saat pencetakan ketan/rengginang, cukup bentuk jadi bulat dan rapikan tanpa perlu ditekan-tekan.",
+      "3. Sebaiknya pemasakan/pengukusan dilakukan di pagi hari agar rengginang bisa langsung dijemur siang harinya.",
+      "4. Bila cuaca panas, penjemuran hanya memakan waktu 1-2 hari saja dan bisa langsung digoreng.",
+      "5. Saat mengukus rengginang, pilih panci kukus yang berdiamater agak besar agar tidak saling menempel."
+    ],
+    "source": "https://resepkoki.id/resep/resep-rengginang/"
+  },
+  {
+    "id": "lainnya-3",
+    "name": "Pudding Oreo",
+    "category": "lainnya",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F035bf2b9-add3-4c47-ac9f-510c11dae13b%2FResep-Puding-Oreo.jpg?table=block&id=943dd736-0b39-466c-b0d0-127da51eb840&width=600&cache=v2",
+    "duration": 30,
+    "portion": 4,
+    "ingredient_section": [
+      {
+        "section": "LAPISAN 1",
+        "ingredients": [
+          {
+            "tag": [
+              "oreo"
+            ],
+            "name": "Oreo hancurkan (tanpa cream putih) - 6 keping",
+            "unit": "keping",
+            "qty": 6
+          },
+          {
+            "tag": [
+              "bubuk-agar-agar-plain"
+            ],
+            "name": "Bubuk agar-agar plain - 1 bungkus",
+            "unit": "bungkus",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "susu-full-cream"
+            ],
+            "name": "Susu full cream - 650 ml",
+            "unit": "ml",
+            "qty": 650
+          },
+          {
+            "tag": [
+              "gula-pasir"
+            ],
+            "name": "Gula pasir - 7 sdm",
+            "unit": "sdm",
+            "qty": 7
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - sejumput",
+            "unit": "sejumput",
+            "qty": 0
+          },
+          {
+            "tag": [
+              "tepung-maizena"
+            ],
+            "name": "Tepung maizena 5 sdm larutan dengan 20 ml susu cair full ",
+            "unit": "sdm",
+            "qty": 5
+          },
+          {
+            "tag": [
+              "cream"
+            ],
+            "name": "cream - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "essen-vanila"
+            ],
+            "name": "Essen vanila - 1/4 sdt",
+            "unit": "sdt",
+            "qty": 0.25
+          }
+        ]
+      },
+      {
+        "section": "LAPISAN 2",
+        "ingredients": [
+          {
+            "id": "bubuk-agar-agar-plain",
+            "name": "Bubuk agar-agar plain - 1 bungkus",
+            "unit": "bungkus",
+            "qty": 1
+          },
+          {
+            "id": "susu-coklat",
+            "name": "Susu coklat - 600 ml",
+            "unit": "ml",
+            "qty": 600
+          },
+          {
+            "id": "skm",
+            "name": "SKM coklat - 50 ml",
+            "unit": "ml",
+            "qty": 50
+          },
+          {
+            "id": "bubuk-coklat",
+            "name": "Bubuk coklat - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "id": "gula",
+            "name": "Gula - 5 gram",
+            "unit": "gram",
+            "qty": 5
+          },
+          {
+            "id": "garam",
+            "name": "Garam - 1/8 sdt",
+            "unit": "sdt",
+            "qty": 0.125
+          },
+          {
+            "id": "tepung-maizena",
+            "name": "Tepung maizena 5 sdm larutan dengan 20 ml susu cair",
+            "unit": "sdm",
+            "qty": 5
+          },
+          {
+            "id": "bubuk-coklat",
+            "name": "Bubuk coklat - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "id": "essen-vanila",
+            "name": "Essen vanila - 1/4 sdt",
+            "unit": "sdt",
+            "qty": 0.25
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "LAPISAN 1",
+        "steps": [
+          "1. Dalam wadah masukan semua bahan lapisan 1, aduk rata semua bahan.",
+          "2. Nyalakan kompor dan masak hingga pinggiran berbuih.",
+          "3. Lalu masukan setengah oreo aduk rata sisakan untuk lapisan kedua.",
+          "4. Masukan adonan puding kedalam cetakan biarkan hingga agak mengeras."
+        ]
+      },
+      {
+        "section": "LAPISAN 2",
+        "steps": [
+          "1. Dalam wadah masukan semua bahan lapisan 2 aduk rata semua bahan.",
+          "2. Nyalakan kompor dan masak hingga pinggiran berbuih.",
+          "3. Lalu masukan sisa oreo aduk rata kembali.",
+          "4. Masukan adonan kedalam cetakan.",
+          "5. Biarkan hingga set. Sajikan selagi dingin lebih enak."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Gunakan Balloon whisk (pengocok telur) untuk mengaduk puding saat memasak.",
+      "2. Jangan menunggu puding mengeras sempurna untuk lapisan ke 2 cukup bagian atas mengeras dan puding masih agak hangat agar puding menyatu."
+    ],
+    "source": "https://resepkoki.id/resep/resep-puding-oreo/"
+  }
+]

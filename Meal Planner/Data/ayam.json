@@ -1,0 +1,420 @@
+[
+  {
+    "id": "ayam-1",
+    "name": "Ayam Goreng Cabe",
+    "category": "ayam",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F95c74560-c800-4333-9f90-134d5ade3b52%2FResep-Ayam-Goreng-Cabe.jpg?table=block&id=88096c4f-08a8-4633-a556-da4ae784f1dd&width=600&cache=v2",
+    "duration": 30,
+    "portion": 4,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "daging-ayam"
+            ],
+            "name": "Ayam potong menjadi 10 bagian, sesuai selera - 1 ekor",
+            "unit": "ekor",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "cuka",
+              "jeruk-nipis"
+            ],
+            "name": "Air jeruk nipis / cuka - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "laos"
+            ],
+            "name": "Laos, geprek - 3 cm",
+            "unit": "cm",
+            "qty": 3
+          },
+          {
+            "tag": [
+              "daun-salam"
+            ],
+            "name": "Daun salam - 2 lembar",
+            "unit": "lembar",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "daun-jeruk"
+            ],
+            "name": "Daun jeruk - 2 lembar",
+            "unit": "lembar",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "sereh"
+            ],
+            "name": "Sereh bagian putihnya, geprek - 1 batang",
+            "unit": "batang",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - 2 sdt",
+            "unit": "sdt",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "gule"
+            ],
+            "name": "Gula - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "kaldu-jamur"
+            ],
+            "name": "Kaldu jamur - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "minyak-goreng"
+            ],
+            "name": "Minyak goreng - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      },
+      {
+        "section": "BUMBU HALUS",
+        "ingredients": [
+          {
+            "id": "cabe-merah-besar",
+            "name": "Cabe merah besar - 7 buah",
+            "unit": "buah",
+            "qty": 7
+          },
+          {
+            "id": "cabe-rawit-merah",
+            "name": "Cabe rawit merah - 5 buah",
+            "unit": "buah",
+            "qty": 5
+          },
+          {
+            "id": "cabe-keriting-merah",
+            "name": "Cabe merah keriting - 5 buah",
+            "unit": "buah",
+            "qty": 5
+          },
+          {
+            "id": "tomat",
+            "name": "Tomat - 1 buah",
+            "unit": "buah",
+            "qty": 1
+          },
+          {
+            "id": "bawang-merah",
+            "name": "Bawang merah - 8 butir",
+            "unit": "butir",
+            "qty": 8
+          },
+          {
+            "id": "bawang-putih",
+            "name": "Bawang putih - 4 siung",
+            "unit": "siung",
+            "qty": 4
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "LANGKAH",
+        "steps": [
+          "1. Cuci bersih ayam lalu beri air jeruk nipis / cuka dan garam, marinasi selama 45 menit.",
+          "2. Goreng ayam hingga matang, sisihkan.",
+          "3. Panaskan minyak goreng lalu tumis bumbu halus. Tambahkan laos, daun salam, daun jeruk sereh.",
+          "4. Masak hingga harum, kemudian beri garam, gula dan kaldu jamur. Aduk merata, biarkan bumbu matang dan harum.",
+          "5. Satukan ayam goreng dengan bumbu, lalu masak hingga bumbu meresap dengan ayam. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Saat menggoreng ayam gunakan api sedang agar ayam matang rata, dan sambal tidak gosong.",
+      "2. Untuk menumis bumbu halus penggunaan minyak jangan terlalu banyak secukupnya saja."
+    ],
+    "source": "https://resepkoki.id/resep/resep-ayam-goreng-cabe/"
+  },
+  {
+    "id": "ayam-2",
+    "name": "Ayam Kecap Goreng Mentega",
+    "category": "ayam",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F47a88a30-a903-4fbc-ba21-f33060ab3c29%2FResep-Ayam-goreng-mentega.jpg?table=block&id=3c271fe5-037f-4f81-acbd-ea18b7a65576&width=600&cache=v2",
+    "duration": 55,
+    "portion": 2,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "daging-ayam"
+            ],
+            "name": "Ayam, potong-potong kecil - 1/2 ekor",
+            "unit": "ekor",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "Bawang Putih"
+            ],
+            "name": "Bawang putih, haluskan - 2 siung",
+            "unit": "siung",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "Garam"
+            ],
+            "name": "Garam - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          }
+        ]
+      },
+      {
+        "section": "SAUS",
+        "ingredients": [
+          {
+            "id": "bawang-putih",
+            "name": "Bawang putih, memarkan lalu cincang halus - 4 siung",
+            "unit": "siung",
+            "qty": 4
+          },
+          {
+            "id": "bawang-bombay",
+            "name": "Bawang bombay, iris memanjang - 1/2 buah",
+            "unit": "buah",
+            "qty": 0.5
+          },
+          {
+            "id": "kecap-manis",
+            "name": "Kecap manis - 3 sdm",
+            "unit": "sdm",
+            "qty": 3
+          },
+          {
+            "id": "kecap-inggris",
+            "name": "Kecap inggris - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "id": "air",
+            "name": "Air - 50 ml",
+            "unit": "ml",
+            "qty": 50
+          },
+          {
+            "id": "garam",
+            "name": "Garam - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "id": "gula-pasir",
+            "name": "Gula pasir - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "id": "merica-bubuk",
+            "name": "Merica bubuk - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "id": "air",
+            "name": "Air - 50 ml",
+            "unit": "ml",
+            "qty": 50
+          },
+          {
+            "id": "mentega",
+            "name": "Mentega - 3 sdm",
+            "unit": "sdm",
+            "qty": 3
+          },
+          {
+            "id": "minyak",
+            "name": "Minyak, goreng untuk menumis - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "LANGKAH",
+        "steps": [
+          "1. Cuci bersih ayam lalu baluri seluruh permukaannya dengan bawang putih halus dan garam. Marinasi (diamkan) selama 1 jam di dalam kulkas.",
+          "2. Goreng ayam hingga matang. Angkat dan tiriskan. Sisihkan.",
+          "3. Panaskan minyak, tumis bawang putih cincang hingga harum.",
+          "4. Masukkan kecap manis dan kecap inggris. Aduk rata.",
+          "5. Tuang air lalu aduk rata agar tidak gosong.",
+          "6. Beri garam, gula pasir, dan merica. Aduk hingga rata.",
+          "7. Masukkan ayam dan bawang bombay iris. Aduk hingga rata.",
+          "8. Terakhir masukkan mentega. Masak hingga meletup letup dan bumbu meresap. Angkat.",
+          "9. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Gunakan alat masak yang tidak lengket dan mudah dibersihkan",
+      "2. Bila khawatir tidak matang merata sampai ke dalam, ayam bisa dimasak/diungkep dulu baru digoreng.",
+      "3. Masukkan mentega diakhir proses masak agar wangi khasnya masih terasa."
+    ],
+    "source": "https://resepkoki.id/resep/resep-ayam-kecap-goreng-mentega/"
+  },
+  {
+    "id": "ayam-3",
+    "name": "Ayam Pok-Pok",
+    "category": "ayam",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F448f0cf9-b428-43bc-b56a-59954a001240%2FResep-Ayam-Pok-Pok.jpg?table=block&id=8419d7fa-485d-4f85-b52e-7a5dc8dc2479&width=600&cache=v2",
+    "duration": 45,
+    "portion": 3,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "daging-ayam"
+            ],
+            "name": "Daging ayam bagian paha, potong-potong - 300 gram",
+            "unit": "gram",
+            "qty": 300
+          },
+          {
+            "tag": [
+              "saus-tiram"
+            ],
+            "name": "Saus tiram - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "bawang-putih-bubuk"
+            ],
+            "name": "Bawang putih bubuk - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "lada-bubuk"
+            ],
+            "name": "Lada bubuk - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "minyak"
+            ],
+            "name": "Minyak, untuk menggoreng - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      },
+      {
+        "section": "PENCELUP",
+        "ingredients": [
+          {
+            "id": "putih-telur",
+            "name": "Putih telur - 2 butir",
+            "unit": "butir",
+            "qty": 2
+          }
+        ]
+      },
+      {
+        "section": "PELAPIS KERING",
+        "ingredients": [
+          {
+            "id": "tepung-terigu",
+            "name": "Tepung terigu - 250 gram",
+            "unit": "gram",
+            "qty": 250
+          },
+          {
+            "id": "tepung-maizena",
+            "name": "Tepung maizena - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "id": "bawang-putih-bubuk",
+            "name": "Bawang putih bubuk - 2 sdt",
+            "unit": "sdt",
+            "qty": 2
+          },
+          {
+            "id": "garam",
+            "name": "Garam - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "id": "lada-bubuk",
+            "name": "Lada bubuk - 1/4 sdt",
+            "unit": "sdt",
+            "qty": 0.25
+          },
+          {
+            "id": "kaldu-bubuk",
+            "name": "Kaldu bubuk - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "id": "gula-pasir",
+            "name": "Gula pasir - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "LANGKAH",
+        "steps": [
+          "1. Dalam wadah, campur daging ayam dengan saus tiram, bawang putih bubuk, dan lada bubuk. Aduk rata dan diamkan minimal selama 30 menit. Sisihkan.",
+          "2. Dalam wadah, campur semua bahan pelapis kering lalu aduk rata dan sisihkan. Siapkan juga bahan pencelup dalam wadah tersendiri dan sisihkan.",
+          "3. Panaskan banyak minyak.",
+          "4. Gulingkan daging ayam ke dalam bahan pelapis kering, lalu celupkan dalam bahan pencelup. Gulingkan kembali dalam bahan pelapis kering.",
+          "5. Goreng ayam dalam minyak panas dengan api sedang-kecil hingga berubah kecoklatan. Angkat dan tiriskan.",
+          "6. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Pastikan daging ayam sudah bersuhu ruang/normal ketika akan diolah. Supaya saat digoreng, ayam bisa matang merata hingga ke bagian dalam. Tips ini juga berlaku untuk bahan lainnya yang digoreng balut tepung.",
+      "2. Sajikan ayam pok pok dengan cocolan saus atau bumbu tabur favorit.",
+      "3. Untuk memotong atau memfillet ayam gunakan pisau tajam agar tidak merusak testur daging"
+    ],
+    "source": "https://resepkoki.id/resep/resep-ayam-pok-pok/"
+  }
+]
