@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // sample usage of categories usage
+        let ayams: [Recipe] = categories.getRecipeByCategory(category: .ayam)!
+        for ayam: Recipe in ayams {
+            print(ayam.name!)
+        }
+        // Do any additional setup after loading the view.        
     }
 
 
