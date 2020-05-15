@@ -19,6 +19,7 @@
 		44FDD513246D7D02006666E8 /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDD512246D7D02006666E8 /* Ingredient.swift */; };
 		44FDD515246D7D8B006666E8 /* StepSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDD514246D7D8B006666E8 /* StepSection.swift */; };
 		44FDD519246D7F60006666E8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDD518246D7F60006666E8 /* Category.swift */; };
+		44FDD51B246DA960006666E8 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FDD51A246DA960006666E8 /* PlanViewController.swift */; };
 		753963562465554500E7EEA4 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753963552465554500E7EEA4 /* CategoryViewController.swift */; };
 		B7D5DC2424643E4A00A2F763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */; };
 		B7D5DC2624643E4A00A2F763 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2524643E4A00A2F763 /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 		44FDD512246D7D02006666E8 /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		44FDD514246D7D8B006666E8 /* StepSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepSection.swift; sourceTree = "<group>"; };
 		44FDD518246D7F60006666E8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		44FDD51A246DA960006666E8 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		753963552465554500E7EEA4 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		B7D5DC2024643E4A00A2F763 /* Meal Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		44FDD4C7246BE76C006666E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				44FDD51A246DA960006666E8 /* PlanViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				44FDD519246D7F60006666E8 /* Category.swift in Sources */,
 				B7D5DC2424643E4A00A2F763 /* AppDelegate.swift in Sources */,
 				44FDD50F246D7C61006666E8 /* CategoryEnum.swift in Sources */,
+				44FDD51B246DA960006666E8 /* PlanViewController.swift in Sources */,
 				B7D5DC2624643E4A00A2F763 /* SceneDelegate.swift in Sources */,
 				44FDD513246D7D02006666E8 /* Ingredient.swift in Sources */,
 				B7D5DC2E24643E4A00A2F763 /* Meal_Planner.xcdatamodeld in Sources */,

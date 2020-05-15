@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iC8-CB-p23">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,5 +37,109 @@
             </objects>
             <point key="canvasLocation" x="852" y="-61"/>
         </scene>
+        <!--Plan View Controller-->
+        <scene sceneID="kDT-FR-uxx">
+            <objects>
+                <viewController id="iC8-CB-p23" customClass="PlanViewController" customModule="Meal_Planner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YrH-cr-6jG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyf-31-n8M">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlanEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="Cny-aq-0vs">
+                                        <rect key="frame" x="-9" y="233" width="392" height="353"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tE-6L-MTx">
+                                        <rect key="frame" x="38" y="651.5" width="298" height="46"/>
+                                        <color key="backgroundColor" red="0.94509803921568625" green="0.58039215686274503" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="1Rx-9U-3Hw"/>
+                                            <constraint firstAttribute="width" constant="298" id="Jeb-w3-viZ"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="298" id="sjE-dG-QIQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Mulai Rencanakan">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu belum memiliki rencana masak Tekan tombol ’Mulia Rencanakan’" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcs-fh-2N6">
+                                        <rect key="frame" x="38" y="125" width="298" height="65"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="298" id="F89-vO-OsW"/>
+                                            <constraint firstAttribute="height" constant="65" id="uer-Uz-WMJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Cny-aq-0vs" firstAttribute="top" secondItem="Gcs-fh-2N6" secondAttribute="bottom" constant="42.5" id="7s3-Rg-8F3"/>
+                                    <constraint firstItem="Cny-aq-0vs" firstAttribute="height" secondItem="Uyf-31-n8M" secondAttribute="height" multiplier="0.43154" id="IYf-Yl-DvE"/>
+                                    <constraint firstItem="Cny-aq-0vs" firstAttribute="top" secondItem="Gcs-fh-2N6" secondAttribute="bottom" constant="42.5" id="PBg-yb-IBH"/>
+                                    <constraint firstAttribute="trailing" secondItem="Cny-aq-0vs" secondAttribute="trailing" constant="-9" id="cQb-0Y-ILL"/>
+                                    <constraint firstItem="8tE-6L-MTx" firstAttribute="top" secondItem="Cny-aq-0vs" secondAttribute="bottom" constant="66" id="dzQ-vr-XXt"/>
+                                    <constraint firstItem="8tE-6L-MTx" firstAttribute="centerX" secondItem="Uyf-31-n8M" secondAttribute="centerX" id="el9-WW-vfb"/>
+                                    <constraint firstItem="Cny-aq-0vs" firstAttribute="leading" secondItem="Uyf-31-n8M" secondAttribute="leading" constant="-9" id="lKy-TK-3x4"/>
+                                    <constraint firstItem="Cny-aq-0vs" firstAttribute="centerY" secondItem="Uyf-31-n8M" secondAttribute="centerY" id="obh-Lr-Kgq"/>
+                                    <constraint firstItem="Gcs-fh-2N6" firstAttribute="centerX" secondItem="Uyf-31-n8M" secondAttribute="centerX" id="shu-y0-JZH"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoR-ke-gIu">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-bJ-mRw">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="818"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="HUQ-CA-IIx">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HUQ-CA-IIx" id="w1E-gN-mO8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="0LP-bJ-mRw" firstAttribute="top" secondItem="eoR-ke-gIu" secondAttribute="top" id="0XI-YS-Nqh"/>
+                                    <constraint firstItem="0LP-bJ-mRw" firstAttribute="width" secondItem="eoR-ke-gIu" secondAttribute="width" id="QyO-iG-BdA"/>
+                                    <constraint firstAttribute="trailing" secondItem="0LP-bJ-mRw" secondAttribute="trailing" id="aEg-G3-L0M"/>
+                                    <constraint firstItem="0LP-bJ-mRw" firstAttribute="height" secondItem="eoR-ke-gIu" secondAttribute="height" id="tQd-sA-tQY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="FZX-bq-LCF" firstAttribute="trailing" secondItem="eoR-ke-gIu" secondAttribute="trailing" constant="20" id="7lX-zk-Ka9"/>
+                            <constraint firstItem="eoR-ke-gIu" firstAttribute="top" secondItem="FZX-bq-LCF" secondAttribute="top" id="Bcv-nu-ar7"/>
+                            <constraint firstItem="Uyf-31-n8M" firstAttribute="leading" secondItem="FZX-bq-LCF" secondAttribute="leading" constant="20" id="EYs-Fc-vkP"/>
+                            <constraint firstItem="FZX-bq-LCF" firstAttribute="trailing" secondItem="Uyf-31-n8M" secondAttribute="trailing" constant="20" id="NXs-jO-K1z"/>
+                            <constraint firstItem="Uyf-31-n8M" firstAttribute="top" secondItem="FZX-bq-LCF" secondAttribute="top" id="X6N-Za-Fay"/>
+                            <constraint firstItem="eoR-ke-gIu" firstAttribute="width" secondItem="YrH-cr-6jG" secondAttribute="width" id="Ze7-zC-hUk"/>
+                            <constraint firstItem="eoR-ke-gIu" firstAttribute="bottom" secondItem="FZX-bq-LCF" secondAttribute="bottom" id="c1E-AG-YU6"/>
+                            <constraint firstItem="eoR-ke-gIu" firstAttribute="height" secondItem="YrH-cr-6jG" secondAttribute="height" id="ndg-PG-heB"/>
+                            <constraint firstItem="Uyf-31-n8M" firstAttribute="bottom" secondItem="FZX-bq-LCF" secondAttribute="bottom" id="sQL-vN-TcH"/>
+                            <constraint firstItem="eoR-ke-gIu" firstAttribute="leading" secondItem="FZX-bq-LCF" secondAttribute="leading" constant="20" id="sr1-ji-dmd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FZX-bq-LCF"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnMulai" destination="8tE-6L-MTx" id="4pf-9z-iAb"/>
+                        <outlet property="emptyViewContainer" destination="Uyf-31-n8M" id="nNo-Ha-grB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DM5-Oa-xDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="850.72463768115949" y="646.875"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="PlanEmpty" width="392.5" height="353"/>
+    </resources>
 </document>
