@@ -97,37 +97,49 @@
         "section": "BUMBU HALUS",
         "ingredients": [
           {
-            "id": "cabe-merah-besar",
+            "tag": [
+              "cabe-merah-besar"
+            ],
             "name": "Cabe merah besar - 7 buah",
             "unit": "buah",
             "qty": 7
           },
           {
-            "id": "cabe-rawit-merah",
+            "tag": [
+              "cabe-rawit-merah"
+            ],
             "name": "Cabe rawit merah - 5 buah",
             "unit": "buah",
             "qty": 5
           },
           {
-            "id": "cabe-keriting-merah",
+            "tag": [
+              "cabe-keriting-merah"
+            ],
             "name": "Cabe merah keriting - 5 buah",
             "unit": "buah",
             "qty": 5
           },
           {
-            "id": "tomat",
+            "tag": [
+              "tomat"
+            ],
             "name": "Tomat - 1 buah",
             "unit": "buah",
             "qty": 1
           },
           {
-            "id": "bawang-merah",
+            "tag": [
+              "bawang-merah"
+            ],
             "name": "Bawang merah - 8 butir",
             "unit": "butir",
             "qty": 8
           },
           {
-            "id": "bawang-putih",
+            "tag": [
+              "bawang-putih"
+            ],
             "name": "Bawang putih - 4 siung",
             "unit": "siung",
             "qty": 4
@@ -194,67 +206,89 @@
         "section": "SAUS",
         "ingredients": [
           {
-            "id": "bawang-putih",
+            "tag": [
+              "bawang-putih"
+            ],
             "name": "Bawang putih, memarkan lalu cincang halus - 4 siung",
             "unit": "siung",
             "qty": 4
           },
           {
-            "id": "bawang-bombay",
+            "tag": [
+              "bawang-bombay"
+            ],
             "name": "Bawang bombay, iris memanjang - 1/2 buah",
             "unit": "buah",
             "qty": 0.5
           },
           {
-            "id": "kecap-manis",
+            "tag": [
+              "kecap-manis"
+            ],
             "name": "Kecap manis - 3 sdm",
             "unit": "sdm",
             "qty": 3
           },
           {
-            "id": "kecap-inggris",
+            "tag": [
+              "kecap-inggris"
+            ],
             "name": "Kecap inggris - 2 sdm",
             "unit": "sdm",
             "qty": 2
           },
           {
-            "id": "air",
+            "tag": [
+              "air"
+            ],
             "name": "Air - 50 ml",
             "unit": "ml",
             "qty": 50
           },
           {
-            "id": "garam",
+            "tag": [
+              "garam"
+            ],
             "name": "Garam - 1 sdt",
             "unit": "sdt",
             "qty": 1
           },
           {
-            "id": "gula-pasir",
+            "tag": [
+              "gula-pasir"
+            ],
             "name": "Gula pasir - 1/2 sdt",
             "unit": "sdt",
             "qty": 0.5
           },
           {
-            "id": "merica-bubuk",
+            "itagd": [
+              "merica-bubuk"
+            ],
             "name": "Merica bubuk - 1 sdt",
             "unit": "sdt",
             "qty": 1
           },
           {
-            "id": "air",
+            "tag": [
+              "air"
+            ],
             "name": "Air - 50 ml",
             "unit": "ml",
             "qty": 50
           },
           {
-            "id": "mentega",
+            "tag": [
+              "mentega"
+            ],
             "name": "Mentega - 3 sdm",
             "unit": "sdm",
             "qty": 3
           },
           {
-            "id": "minyak",
+            "tag": [
+              "minyak-goreng"
+            ],
             "name": "Minyak, goreng untuk menumis - 2 sdm",
             "unit": "sdm",
             "qty": 2
@@ -330,7 +364,7 @@
           },
           {
             "tag": [
-              "minyak"
+              "minyak-goreng"
             ],
             "name": "Minyak, untuk menggoreng - secukupnya",
             "unit": "secukupnya",
@@ -342,7 +376,9 @@
         "section": "PENCELUP",
         "ingredients": [
           {
-            "id": "putih-telur",
+            "tag": [
+              "putih-telur"
+            ],
             "name": "Putih telur - 2 butir",
             "unit": "butir",
             "qty": 2
@@ -353,43 +389,43 @@
         "section": "PELAPIS KERING",
         "ingredients": [
           {
-            "id": "tepung-terigu",
+            "tag": ["tepung-terigu"],
             "name": "Tepung terigu - 250 gram",
             "unit": "gram",
             "qty": 250
           },
           {
-            "id": "tepung-maizena",
+            "tag": ["tepung-maizena"],
             "name": "Tepung maizena - 2 sdm",
             "unit": "sdm",
             "qty": 2
           },
           {
-            "id": "bawang-putih-bubuk",
+            "tag": ["bawang-putih-bubuk"],
             "name": "Bawang putih bubuk - 2 sdt",
             "unit": "sdt",
             "qty": 2
           },
           {
-            "id": "garam",
+            "tag": ["garam"],
             "name": "Garam - 1 sdt",
             "unit": "sdt",
             "qty": 1
           },
           {
-            "id": "lada-bubuk",
+            "tag": ["lada-bubuk"],
             "name": "Lada bubuk - 1/4 sdt",
             "unit": "sdt",
             "qty": 0.25
           },
           {
-            "id": "kaldu-bubuk",
+            "tag": ["kaldu-bubuk"],
             "name": "Kaldu bubuk - 1 sdt",
             "unit": "sdt",
             "qty": 1
           },
           {
-            "id": "gula-pasir",
+            "tag": ["gula-pasir"],
             "name": "Gula pasir - 1/2 sdt",
             "unit": "sdt",
             "qty": 0.5
