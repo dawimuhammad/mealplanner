@@ -12,5 +12,5 @@ struct Ingredient {
     var tag: [String]?
     var name: String?
     var unit: String?
-    var qty: Int?
+    var qty: Float?
 }
