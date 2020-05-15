@@ -10,10 +10,25 @@ import Foundation
 import CoreData
 
 extension ShoppingList {
-    static func fetchQuery(viewContext: NSManagedObjectContext, attrName: String) -> [ShoppingList] {
+    static func fetchQuery(viewContext: NSManagedObjectContext, tag: String) -> [ShoppingList] {
         let request: NSFetchRequest<ShoppingList> = ShoppingList.fetchRequest()
+        request.predicate = NSPredicate(format: "shopping_tag == %@", tag)
         let result = try? viewContext.fetch(request)
         return result ?? []
+    }
+    
+    static func fetchDataWithKey(viewContext: NSManagedObjectContext, tag: String) -> ShoppingList? {
+        let request: NSFetchRequest<ShoppingList> = ShoppingList.fetchRequest()
+        request.predicate = NSPredicate(format: "shopping_tag == %@", tag)
+        let result = try? viewContext.fetch(request)
+        if let res = result {
+            if (res.count > 0) {
+                return res[0]
+            } else {
+                return nil
+            }
+        }
+        return nil
     }
     
     static func fetchAll(viewContext: NSManagedObjectContext) -> [ShoppingList] {
