@@ -13,6 +13,7 @@ class FindMealViewController: UIViewController {
     var selectedCategory = CategoryEnum.ayam
     
     var resep: [Recipe] = []
+    var selectRecipe = categories.getRecipeByCategory(category: .ayam)![0]
     
     
     @IBOutlet weak var labelTitle: UILabel!
@@ -27,7 +28,17 @@ class FindMealViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let identifier = segue.identifier {
+            if identifier == "toDetailMeal" {
+                if let destinationVC = segue.destination as? DetailMealViewController{
+                    destinationVC.recipe = selectRecipe
+                }
+            }
+        }
+    }
+    
+    
 }
 
 extension FindMealViewController: UICollectionViewDataSource {
@@ -48,10 +59,9 @@ extension FindMealViewController: UICollectionViewDataSource {
 
 extension FindMealViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print("SDASD")
-//            print(mealCategories[indexPath.row].rawValue)
-//            selectCategory = mealCategories[indexPath.row]
-            performSegue(withIdentifier: "toDetailMeal", sender: self)
+        print("SDASD")
+        selectRecipe = resep[indexPath.row]
+        performSegue(withIdentifier: "toDetailMeal", sender: self)
     }
-
+    
 }
