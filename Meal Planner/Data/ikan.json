@@ -199,31 +199,31 @@
         "section": "BUMBU HALUS:",
         "ingredients": [
           {
-            "id": "bawang-putih",
+            "tag": ["bawang-putih"],
             "name": "Bawang putih - 3 siung",
             "unit": "siung",
             "qty": 3
           },
           {
-            "id": "ketumbar",
+            "tag": ["ketumbar"],
             "name": "Ketumbar - 1 sdm",
             "unit": "sdm",
             "qty": 1
           },
           {
-            "id": "kunyit",
+            "tag": ["kunyit"],
             "name": "Kunyit - 2 cm",
             "unit": "cm",
             "qty": 2
           },
           {
-            "id": "jahe",
+            "tag": ["jahe"],
             "name": "Jahe - 2 cm",
             "unit": "cm",
             "qty": 2
           },
           {
-            "id": "garam",
+            "tag": ["garam"],
             "name": "Garam - 1 sdm",
             "unit": "sdm",
             "qty": 1
@@ -234,13 +234,13 @@
         "section": "BUMBU OLESAN (CAMPUR JADI SATU) :",
         "ingredients": [
           {
-            "id": "kecap-manis",
+            "tag": ["kecap-manis"],
             "name": "Kecap manis - 100 ml",
             "unit": "ml",
             "qty": 10
           },
           {
-            "id": "madu",
+            "tag": ["madu"],
             "name": "Madu - 50 ml",
             "unit": "ml",
             "qty": 50
