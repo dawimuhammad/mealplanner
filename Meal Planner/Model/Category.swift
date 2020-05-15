@@ -47,7 +47,7 @@ class Categories {
                                 tag: recipeIngredient["tag"] as? [String],
                                 name: recipeIngredient["name"] as? String,
                                 unit: recipeIngredient["unit"] as? String,
-                                qty: recipeIngredient["qty"] as? Int)
+                                qty: recipeIngredient["qty"] as? Float)
                             ingredients.append(ingredient)
                         }
                         
