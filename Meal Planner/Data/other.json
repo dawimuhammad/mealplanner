@@ -139,25 +139,33 @@
         "section": "BUMBU HALUS",
         "ingredients": [
           {
-            "id": "bawang-putih",
+            "tag": [
+              "bawang-putih"
+            ],
             "name": "Bawang putih - 6 siung",
             "unit": "siung",
             "qty": 6
           },
           {
-            "id": "terasi",
+            "tag": [
+              "terasi"
+            ],
             "name": "Terasi, opsional - 5 cm",
             "unit": "cm",
             "qty": 5
           },
           {
-            "id": "ketumbar",
+            "tag": [
+              "ketumbar"
+            ],
             "name": "Ketumbar - 1 sdt",
             "unit": "sdt",
             "qty": 1
           },
           {
-            "id": "garam",
+            "tag": [
+              "garam"
+            ],
             "name": "Garam - 1 sdm",
             "unit": "sdm",
             "qty": 1
@@ -269,55 +277,67 @@
         "section": "LAPISAN 2",
         "ingredients": [
           {
-            "id": "bubuk-agar-agar-plain",
+            "tag": [
+              "bubuk-agar-agar-plain"
+            ],
             "name": "Bubuk agar-agar plain - 1 bungkus",
             "unit": "bungkus",
             "qty": 1
           },
           {
-            "id": "susu-coklat",
+            "tag": [
+              "susu-coklat"
+            ],
             "name": "Susu coklat - 600 ml",
             "unit": "ml",
             "qty": 600
           },
           {
-            "id": "skm",
+            "tag": [
+              "coklat-skm"
+            ],
             "name": "SKM coklat - 50 ml",
             "unit": "ml",
             "qty": 50
           },
           {
-            "id": "bubuk-coklat",
+            "tag": [
+              "bubuk-coklat"
+            ],
             "name": "Bubuk coklat - 1 sdt",
             "unit": "sdt",
             "qty": 1
           },
           {
-            "id": "gula",
+            "tag": [
+              "gula"
+            ],
             "name": "Gula - 5 gram",
             "unit": "gram",
             "qty": 5
           },
           {
-            "id": "garam",
+            "tag": [
+              "garam"
+            ],
             "name": "Garam - 1/8 sdt",
             "unit": "sdt",
             "qty": 0.125
           },
           {
-            "id": "tepung-maizena",
+            "tag": ["tepung-maizena"],
             "name": "Tepung maizena 5 sdm larutan dengan 20 ml susu cair",
             "unit": "sdm",
             "qty": 5
           },
           {
-            "id": "bubuk-coklat",
+            "tag": ["bubuk-coklat"],
             "name": "Bubuk coklat - 1/2 sdt",
             "unit": "sdt",
             "qty": 0.5
           },
           {
-            "id": "essen-vanila",
+            "tag": ["essen-vanila"],
             "name": "Essen vanila - 1/4 sdt",
             "unit": "sdt",
             "qty": 0.25

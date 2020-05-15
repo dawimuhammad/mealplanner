@@ -24,25 +24,29 @@
         "section": "Bumbu A (aduk rata) :",
         "ingredients": [
           {
-            "id": "bubuk-ngohiong",
+            "tag": [
+              "bubuk-ngohiong"
+            ],
             "name": "1 sdt bubuk ngohiong",
             "unit": "sdt",
             "qty": 1
           },
           {
-            "id": "garam",
+            "tag": [
+              "garam"
+            ],
             "name": "1 1/2 sdt garam",
             "unit": "sdt",
             "qty": 1.5
           },
           {
-            "id": "gula-pasir",
+            "tag": ["gula-pasir"],
             "name": "1 sdm munjung gula pasir",
             "unit": "sdm",
             "qty": 1
           },
           {
-            "id": "merica",
+            "tag":[ "merica"],
             "name": "1/4 sdt merica bubuk",
             "unit": "sdt",
             "qty": 0.25
@@ -53,13 +57,13 @@
         "section": "Bumbu B (aduk sampai rata dan larut):",
         "ingredients": [
           {
-            "id": "garam",
+            "tag": ["garam"],
             "name": "1 sdm garam",
             "unit": "sdm",
             "qty": 1
           },
           {
-            "id": "cuka",
+            "tag": ["cuka"],
             "name": "3 sdm cuka putih",
             "unit": "sdm",
             "qty": 3
