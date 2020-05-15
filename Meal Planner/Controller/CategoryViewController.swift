@@ -45,7 +45,7 @@ extension CategoryViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CategoryCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCollectionViewCell
         cell.labelCategory.text = mealCategories[indexPath.row].rawValue
         cell.backgroundColor = .green
         return cell
@@ -55,10 +55,10 @@ extension CategoryViewController: UICollectionViewDataSource {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print("SDASD")
-//            print(mealCategories[indexPath.row].rawValue)
-//            selectCategory = mealCategories[indexPath.row]
-//            performSegue(withIdentifier: "toFindMeal", sender: self)
+            print("SDASD123123")
+            print(mealCategories[indexPath.row].rawValue)
+            selectCategory = mealCategories[indexPath.row]
+            performSegue(withIdentifier: "toFindMeal", sender: self)
     }
 
 }

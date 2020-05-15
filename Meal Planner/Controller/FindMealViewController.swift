@@ -12,8 +12,8 @@ class FindMealViewController: UIViewController {
     
     var selectedCategory = CategoryEnum.ayam
     
-    let resep: [Recipe] = categories.getRecipeByCategory(category: .ayam)!
-
+    var resep: [Recipe] = []
+    
     
     @IBOutlet weak var labelTitle: UILabel!
     @IBOutlet weak var findMealViewController: UICollectionView!
@@ -23,6 +23,7 @@ class FindMealViewController: UIViewController {
         labelTitle.text = selectedCategory.rawValue
         findMealViewController.delegate = self
         findMealViewController.dataSource = self
+        resep = categories.getRecipeByCategory(category: selectedCategory)!
         // Do any additional setup after loading the view.
     }
     
@@ -38,7 +39,6 @@ extension FindMealViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FindMealCell", for: indexPath) as! FindMealCollectionViewCell
         print(resep.count)
-//        print(resep[0].name)
         cell.backgroundColor = .green
         cell.labelRecipeTitle.text = resep[indexPath.row].name
         return cell
@@ -51,7 +51,7 @@ extension FindMealViewController: UICollectionViewDelegate {
             print("SDASD")
 //            print(mealCategories[indexPath.row].rawValue)
 //            selectCategory = mealCategories[indexPath.row]
-//            performSegue(withIdentifier: "toFindMeal", sender: self)
+            performSegue(withIdentifier: "toDetailMeal", sender: self)
     }
 
 }
