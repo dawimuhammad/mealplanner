@@ -1,14 +1,14 @@
 //
-//  CategoryViewController.swift
+//  DetailMealViewController.swift
 //  Meal Planner
 //
-//  Created by Fandrian Rhamadiansyah on 08/05/20.
+//  Created by Fandrian Rhamadiansyah on 15/05/20.
 //  Copyright © 2020 Team13. All rights reserved.
 //
 
 import UIKit
 
-class CategoryViewController: UIViewController {
+class DetailMealViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

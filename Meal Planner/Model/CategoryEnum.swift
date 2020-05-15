@@ -8,11 +8,13 @@
 
 import Foundation
 
-enum CategoryEnum {
+enum CategoryEnum : String, CaseIterable{
     case ayam
     case sapi
     case babi
     case ikan
     case sayur
     case lainnya
+    
+
 }
