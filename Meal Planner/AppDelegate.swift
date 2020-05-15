@@ -9,6 +9,8 @@
 import UIKit
 import CoreData
 
+let categories: Categories = Categories()
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -1,0 +1,530 @@
+[
+  {
+    "id": "sapi-1",
+    "name": "Sate Sapi",
+    "category": "sapi",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F90d88df6-9cdd-4d14-9f92-6ed524ad15d7%2FResep-Sate-Sapi.jpg?table=block&id=94d2af60-67be-495b-8b52-5fb34a546d0a&width=600&cache=v2",
+    "duration": 60,
+    "portion": 4,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "daging-sapi"
+            ],
+            "name": "Daging sapi - 300 gram",
+            "unit": "gram",
+            "qty": 300
+          },
+          {
+            "tag": [
+              "saus-tiram"
+            ],
+            "name": "Saus tiram - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "lemak-sapi"
+            ],
+            "name": "Lemak sapi - 50 gram",
+            "unit": "gram",
+            "qty": 50
+          },
+          {
+            "tag": [
+              "kecap-manis"
+            ],
+            "name": "Kecap manis - 3 sdm",
+            "unit": "sdm",
+            "qty": 3
+          },
+          {
+            "tag": [
+              "gula-merah"
+            ],
+            "name": "Gula merah - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "air-asem-jawa"
+            ],
+            "name": "Air asam jawa - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "tusuk-sate"
+            ],
+            "name": "Tusuk sate - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      },
+      {
+        "section": "BUMBU HALUS",
+        "ingredients": [
+          {
+            "tag": ["bawang-merah"],
+            "name": "Bawang merah - 4 butir",
+            "unit": "butir",
+            "qty": 4
+          },
+          {
+            "tag": ["bawang-merah"],
+            "name": "Bawang putih - 3 siung",
+            "unit": "siung",
+            "qty": 3
+          },
+          {
+            "tag": ["ketumbar"],
+            "name": "Ketumbar - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": ["lengkuas"],
+            "name": "Lengkuas - 1 cm",
+            "unit": "cm",
+            "qty": 1
+          },
+          {
+            "tag": ["kencur"],
+            "name": "Kencur - 1 cm",
+            "unit": "cm",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "section": "SAMBAL KECAP",
+        "ingredients": [
+          {
+            "tag": ["kecap-manis"],
+            "name": "Kecap manis - 10 sdm",
+            "unit": "sdm",
+            "qty": 10
+          },
+          {
+            "tag": ["bawang-merah"],
+            "name": "Bawang merah, iris - 4 butir",
+            "unit": "butir",
+            "qty": 4
+          },
+          {
+            "tag": ["tomat"],
+            "name": "Tomat, potong dadu kecil - 1 buah",
+            "unit": "buah",
+            "qty": 1
+          },
+          {
+            "tag": ["cabe-rawit"],
+            "name": "Cabe rawit, iris - 50 gram",
+            "unit": "gram",
+            "qty": 50
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "LANGKAH",
+        "steps": [
+         "1. Dalam wadah, campur semua bahan sambel kecap hingga rata. Sisihkan.",
+         "2. Potong daging dan lemak sapi dengan ukuran kecil.",
+         "3. Campur daging dengan bumbu halus, kecap manis, gula merah, air asam jawa, dan garam. Aduk rata kemudian diamkan selama 30 menit agar bumbu meresap.",
+         "4. Ambil tusuk sate. Tusukkan daging dan lemak secara berseling. Susun 4-5 potongan per tusuknya.",
+         "5. Bakar sate hingga matang sambil sesekali dioles dengan sisa bumbu rendaman. Angkat.",
+         "6. Siap disajikan bersama sambal kecapnya.",
+         "7. Potongan lemak yang diselipkan ditiap tusuknya bertujuan agar sate tidak mudah gosong saat dibakar.",
+         "8. Sambel kecap dapat diganti atau ditambah dengan bumbu kacang, sesuai selera.",
+         "9. Bila tak punya panggangan arang, sate dapat dibakar dengan teflon, happy call, atau skillet."
+        ]
+      }
+     ],
+     "tips": [],
+     "source": "https://resepkoki.id/resep/resep-sate-sapi/"
+  },
+  {
+    "id": "sapi-2",
+    "name": "Rolade Sapi",
+    "category": "sapi",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc7326121-bc06-4d6e-ac72-8ac5d95cb05e%2FResep-Rolade.jpg?table=block&id=046c1cf4-d2d0-41e7-a65b-dda4e1336f91&width=600&cache=v2",
+    "duration": 60,
+    "portion": 4,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "daging-sapi"
+            ],
+            "name": "Daging sapi giling - 250 gram",
+            "unit": "gram",
+            "qty": 250
+          },
+          {
+            "tag": [
+              "tepung-roti"
+            ],
+            "name": "Tepung roti - 50 gram",
+            "unit": "gram",
+            "qty": 50
+          },
+          {
+            "tag": [
+              "bawang-putih"
+            ],
+            "name": "Bawang putih, cincang halus - 1 siung",
+            "unit": "siung",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "bawang-bombay"
+            ],
+            "name": "Bawang bombay, cincang halus - 25 gram",
+            "unit": "gram",
+            "qty": 25
+          },
+          {
+            "tag": [
+              "kecap-inggris"
+            ],
+            "name": "Kecap inggris - 1/2 sdm",
+            "unit": "sdm",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "gula-pasir"
+            ],
+            "name": "Gula pasir - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "merica-bubuk"
+            ],
+            "name": "Merica bubuk - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "pala-bubuk"
+            ],
+            "name": "Pala bubuk - 1/4 sdt",
+            "unit": "sdt",
+            "qty": 0.25
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "susu-bubuk"
+            ],
+            "name": "Susu bubuk - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "telur"
+            ],
+            "name": "Telur - 1 butir",
+            "unit": "butir",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "section": "BUMBU KULIT DASAR",
+        "ingredients": [
+          {
+            "tag": ["telur"],
+            "name": "Telur - 1 butir",
+            "unit": "butir",
+            "qty": 1
+          },
+          {
+            "tag": ["garam"],
+            "name": "Garam - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      },
+      {
+        "section": "BAHAN SAUS",
+        "ingredients": [
+          {
+            "tag": ["margarin"],
+            "name": "Margarin untuk menumis - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "tag": ["bawang-bombay"],
+            "name": "Bawang bombay, iris memanjang - 1/2 buah",
+            "unit": "buah",
+            "qty": 0.5
+          },
+          {
+            "tag": ["tepung-terigu"],
+            "name": "Tepung terigu - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "tag": ["air-kaldu"],
+            "name": "Air kaldu - 500 ml",
+            "unit": "ml",
+            "qty": 500
+          },
+          {
+            "tag": ["kecap-inggris"],
+            "name": "Kecap inggris - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "tag": ["kecap-manis"],
+            "name": "Kecap manis - 1/2 sdm",
+            "unit": "sdm",
+            "qty": 0.5
+          },
+          {
+            "tag": ["garam"],
+            "name": "Garam - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": ["merica"],
+            "name": "Merica - 1/4 sdt",
+            "unit": "sdt",
+            "qty": 0.25
+          },
+          {
+            "tag": ["gula"],
+            "name": "Gula - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT BAHAN SAUS",
+        "steps": [
+          "1. Panaskan margarin, tumis bawang bombay hingga harum.",
+          "2. Masukkan tepung terigu. Aduk rata.",
+          "3. Tuangkan kaldu sedikit demi sedikit sambil diaduk hingga licin.",
+          "4. Tambahkan kecap inggris, kecap manis, garam, gula dan merica. Aduk sampai saus meletup-letup.",
+          "5. Angkat dan sisihkan."
+        ]
+      }, {
+        "section": "CARA MEMBUAT ROLADE",
+        "steps": [
+          "1. Kocok telur, tambahkan sedikit garam. Buat dadar tipis, sisihkan.",
+          "2. Campur semua bahan dan bumbu-bumbu rolade, aduk hingga merata.",
+          "3. Ambil selembar kulit dadar, ratakan adonan rolade merata di permukaan kulit dadar. Gulung dan rapatkan rolade. Kemudian bungkus dengan plastik ato daun pisang.",
+          "4. Kukus kurang lebih 30 menit. Angkat dan dinginkan.",
+          "5. Ambil gulungan rolade, potong-potong dengan ketebalan sesuai selera.",
+          "6. Panaskan sedikit minyak goreng di atas wajan datar.",
+          "7. Goreng dan balik hingga kedua sisinya berwarna kecoklatan.",
+          "8. Angkat dan sajikan bersama saus."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Jika membungkus dengan plastik sebelum dikukus permukaan plastik ditusuk-tusuk dulu dengan jarum supaya ketika dikukus plastik tidak menggelembung."
+    ],
+    "source": "https://resepkoki.id/resep/resep-rolade-daging-sapi/"
+  },
+  {
+    "id": "sapi-3",
+    "name": "Sapi Lada Hitam",
+    "category": "sapi",
+    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa2e19567-4271-412a-97be-c5c7ba96b3a4%2FResep-Sapi-Lada-Hitam.jpg?table=block&id=8df08c5a-268e-4fc9-9a31-21f4c42675f2&width=600&cache=v2",
+    "duration": 40,
+    "portion": 4,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "daging-sapi"
+            ],
+            "name": "Daging sapi has dalam, iris tipis - 350 gram",
+            "unit": "gram",
+            "qty": 350
+          },
+          {
+            "tag": [
+              "paprika-merah"
+            ],
+            "name": "Paprika merah, potong kotak - 1/2 buah",
+            "unit": "buah",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "paprika-hijau"
+            ],
+            "name": "Paprika hijau, potong kotak - 1/2 buah",
+            "unit": "buah",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "bawang-bombay"
+            ],
+            "name": "Bawang bombay, iris kasar - 1 butir",
+            "unit": "butir",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "jahe"
+            ],
+            "name": "Jahe, iris korek api - 1 ruas",
+            "unit": "ruas",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "saus-tiram"
+            ],
+            "name": "Saus tiram - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "kecap-manis"
+            ],
+            "name": "Kecap manis - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "gula-pasir"
+            ],
+            "name": "Gula pasir - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "air"
+            ],
+            "name": "Air (Tambah jika kurang) - 500 ml",
+            "unit": "ml",
+            "qty": 500
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          },
+          {
+            "tag": [
+              "merica-bubuk"
+            ],
+            "name": "Merica bubuk - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "minyak"
+            ],
+            "name": "Minyak untuk menumis - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          }
+        ]
+      },
+      {
+        "section": "BUMBU PERENDAM DAGING:",
+        "ingredients": [
+          {
+            "tag": ["saus-tiram"],
+            "name": "Saus tiram - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "tag": ["kecap-manis"],
+            "name": "Kecap manis - 3 sdm",
+            "unit": "sdm",
+            "qty": 3
+          },
+          {
+            "tag": ["kecap-asin"],
+            "name": "Kecap asin - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "tag": ["merica-hitam"],
+            "name": "Merica hitam tumbuk kasar - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT BAHAN SAUS",
+        "steps": [
+          "1. Campur daging dengan bumbu perendam, aduk rata. Simpan di kulkas minimal 1 jam agar bumbunya meresap.",
+          "2. Panaskan minyak, tumis bawang putih dan bawang bombay hingga harum.",
+          "3. Masukkan jahe iris, aduk rata.",
+          "4. Masukkan daging serta sisa bumbu perendamnya, aduk-aduk hingga daging berubah warna.",
+          "5. Masukkan saus tiram, kecap manis, gula, garam, merica, aduk rata.",
+          "6. Tuang air, masak hingga daging empuk. Air bisa ditambahkan jika daging belum empuk.",
+          "7. Masukkan paprika merah dan hijau, aduk hingga sedikit layu. Sesuaikan rasanya.",
+          "8. Masak hingga kuah mengental.",
+          "9. Angkat. Sajikan hangat."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Untuk memudahkan mengiris daging agar didapat irisan yang tipis, simpan daging di freezer hingga setengah beku, baru kemudian iris tipis menggunakan pisau tajam."
+    ],
+    "source": "https://resepkoki.id/resep/resep-daging-sapi-lada-hitam/"
+  }
+]
