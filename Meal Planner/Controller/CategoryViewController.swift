@@ -11,10 +11,10 @@ import UIKit
 class CategoryViewController: UIViewController {
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
-
+    
     let mealCategories = CategoryEnum.allCases
     var selectCategory = CategoryEnum.ayam
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +47,20 @@ extension CategoryViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCollectionViewCell
         cell.labelCategory.text = mealCategories[indexPath.row].rawValue
+        switch mealCategories[indexPath.row] {
+        case .ayam:
+            cell.imageCategory.image = #imageLiteral(resourceName: "CategoryAyam")
+        case .sapi:
+            cell.imageCategory.image = #imageLiteral(resourceName: "CategorySapi")
+        case .ikan:
+            cell.imageCategory.image = #imageLiteral(resourceName: "CategoryIkan")
+        case .sayur:
+            cell.imageCategory.image = #imageLiteral(resourceName: "CategorySayuran")
+        case .babi:
+            cell.imageCategory.image = #imageLiteral(resourceName: "CategoryBabi")
+        default:
+            cell.imageCategory.image = #imageLiteral(resourceName: "CategoryLainnya")
+        }
         cell.backgroundColor = .green
         return cell
     }
@@ -55,11 +69,13 @@ extension CategoryViewController: UICollectionViewDataSource {
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-            print("SDASD123123")
-            print(mealCategories[indexPath.row].rawValue)
-            selectCategory = mealCategories[indexPath.row]
-            performSegue(withIdentifier: "toFindMeal", sender: self)
+        print("SDASD123123")
+        print(mealCategories[indexPath.row].rawValue)
+        selectCategory = mealCategories[indexPath.row]
+        performSegue(withIdentifier: "toFindMeal", sender: self)
     }
-
+    
 }
+
+
 
