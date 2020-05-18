@@ -102,7 +102,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.recipeImageView.image = UIImage(named: plansWithSection[indexPath.section].plans[indexPath.row].recipe_photo!)
         cell.recipeNameLabel.text = plansWithSection[indexPath.section].plans[indexPath.row].recipe_name
-        cell.recipeDurationLabel.text = "30 menit"
+        cell.recipeDurationLabel.text = "\(plansWithSection[indexPath.section].plans[indexPath.row].recipe_duration) Menit"
         
         return cell
     }

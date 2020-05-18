@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         // sample usage of categories usage
         let ayams: [Recipe] = categories.getRecipeByCategory(category: .ayam)!
         for ayam: Recipe in ayams {
-            let plan = Plan.save(viewContext: getViewContext(), date: Date(), recipeId: ayam.id!, recipeName: ayam.name!, recipePhoto: ayam.photo!)
+            let plan = Plan.save(viewContext: getViewContext(), date: Date(), recipeId: ayam.id!, recipeName: ayam.name!, recipePhoto: ayam.photo!, duration: Int16(ayam.duration!), portion: Int16(ayam.portion!))
             for ingredientSection in ayam.ingredientSections! {
                 for ingredient in ingredientSection.ingredients! {
                     for tag in ingredient.tag! {
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         let theCalendar     = Calendar.current
         let nextDate: Date        = theCalendar.date(byAdding: dayComponent, to: Date())!
         for sapi: Recipe in sapis {
-            let plan = Plan.save(viewContext: getViewContext(), date: nextDate, recipeId: sapi.id!, recipeName: sapi.name!, recipePhoto: sapi.photo!)
+            let plan = Plan.save(viewContext: getViewContext(), date: nextDate, recipeId: sapi.id!, recipeName: sapi.name!, recipePhoto: sapi.photo!, duration: Int16(sapi.duration!), portion: Int16(sapi.portion!))
             for ingredientSection in sapi.ingredientSections! {
                 for ingredient in ingredientSection.ingredients! {
                     for tag in ingredient.tag! {
@@ -69,6 +69,8 @@ class ViewController: UIViewController {
             print("recipe id: \(plan.recipe_id!)")
             print("recipe name: \(plan.recipe_name!)")
             print("recipe photo: \(plan.recipe_photo!)")
+            print("recipe duration: \(plan.recipe_duration)")
+            print("recipe portion: \(plan.recipe_portion)")
             print("shopping list:")
             if let shoppingList: [ShoppingList] = plan.shopping_list?.allObjects as! [ShoppingList] {
                 for shopping in shoppingList {
