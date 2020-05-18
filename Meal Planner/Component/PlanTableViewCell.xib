@@ -15,20 +15,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uDP-7l-Yf5">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uDP-7l-Yf5">
                         <rect key="frame" x="16" y="4" width="64" height="62"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-HX-zBS">
-                        <rect key="frame" x="96" y="11" width="102" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-ZJ-yBd">
-                        <rect key="frame" x="96" y="32" width="122" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <rect key="frame" x="96" y="42" width="103" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" translatesAutoresizingMaskIntoConstraints="NO" id="feS-Jf-6nU">
@@ -38,15 +32,21 @@
                             <constraint firstAttribute="width" constant="15" id="iyf-zQ-RK9"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-HX-zBS">
+                        <rect key="frame" x="96" y="18" width="116" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="DfW-ZJ-yBd" firstAttribute="leading" secondItem="uDP-7l-Yf5" secondAttribute="trailing" constant="16" id="0jM-VM-MDX"/>
                     <constraint firstAttribute="bottom" secondItem="feS-Jf-6nU" secondAttribute="bottom" constant="4" id="0xM-7D-HNf"/>
-                    <constraint firstItem="DfW-ZJ-yBd" firstAttribute="leading" secondItem="uDP-7l-Yf5" secondAttribute="trailing" constant="16" id="BFV-8F-OO4"/>
-                    <constraint firstItem="Bhl-HX-zBS" firstAttribute="leading" secondItem="uDP-7l-Yf5" secondAttribute="trailing" constant="16" id="aSe-g2-AQA"/>
+                    <constraint firstItem="Bhl-HX-zBS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Juo-vD-JGu"/>
+                    <constraint firstItem="Bhl-HX-zBS" firstAttribute="leading" secondItem="uDP-7l-Yf5" secondAttribute="trailing" constant="16" id="QTh-M7-SmQ"/>
+                    <constraint firstItem="DfW-ZJ-yBd" firstAttribute="top" secondItem="Bhl-HX-zBS" secondAttribute="bottom" id="j90-6w-CDS"/>
                     <constraint firstItem="feS-Jf-6nU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="lPb-CO-iD9"/>
-                    <constraint firstItem="DfW-ZJ-yBd" firstAttribute="top" secondItem="Bhl-HX-zBS" secondAttribute="bottom" id="qKD-zQ-wk5"/>
                     <constraint firstAttribute="trailing" secondItem="feS-Jf-6nU" secondAttribute="trailing" constant="16" id="tNb-rx-8pB"/>
-                    <constraint firstItem="Bhl-HX-zBS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="tkk-bc-r9O"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
