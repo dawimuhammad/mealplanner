@@ -17,6 +17,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     let cellIdentifier = "CellPlan"
     
     var plans: [Plan] = []
+    var plansWithSection: [PlanSection] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,34 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func preparePlanContainer() {
+        
+        var prevPlanDate: Date? = nil
+        var planDatas: [Plan] = []
+        for plan in plans {
+            let curPlanDate = plan.plan_date
+            
+            if (prevPlanDate == nil) {
+                prevPlanDate = curPlanDate
+            } else {
+                let curDateFormat = DateFormatter()
+                let prevDateFormat = DateFormatter()
+                curDateFormat.dateFormat = "MMM dd,yyyy"
+                prevDateFormat.dateFormat = "MMM dd,yyyy"
+
+                if (curDateFormat.string(from: curPlanDate!) != prevDateFormat.string(from: prevPlanDate!) ) {
+                    let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
+                    plansWithSection.append(planSection)
+                    prevPlanDate = curPlanDate
+                    planDatas = []
+                }
+            }
+            
+            planDatas.append(plan)
+        }
+        
+        let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
+        plansWithSection.append(planSection)
+                
         tableViewContainer.isHidden = false
         emptyViewContainer.isHidden = true
         self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
@@ -53,17 +82,17 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        2
+        plansWithSection.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return plans.count
+        return plansWithSection[section].plans.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "MMM dd,yyyy"
-        return dateFormatterPrint.string(from: plans[section].plan_date!)
+        return dateFormatterPrint.string(from: plansWithSection[section].date!)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -71,8 +100,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         print(indexPath)
         
-        cell.recipeImageView.image = UIImage(named: plans[indexPath.row].recipe_photo!)
-        cell.recipeNameLabel.text = plans[indexPath.row].recipe_name
+        cell.recipeImageView.image = UIImage(named: plansWithSection[indexPath.section].plans[indexPath.row].recipe_photo!)
+        cell.recipeNameLabel.text = plansWithSection[indexPath.section].plans[indexPath.row].recipe_name
         cell.recipeDurationLabel.text = "30 menit"
         
         return cell

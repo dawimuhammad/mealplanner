@@ -38,6 +38,30 @@ class ViewController: UIViewController {
             }
         }
         
+        let sapis: [Recipe] = categories.getRecipeByCategory(category: .sapi)!
+        var dayComponent    = DateComponents()
+        dayComponent.day    = 1 // For removing one day (yesterday): -1
+        let theCalendar     = Calendar.current
+        let nextDate: Date        = theCalendar.date(byAdding: dayComponent, to: Date())!
+        for sapi: Recipe in sapis {
+            let plan = Plan.save(viewContext: getViewContext(), date: nextDate, recipeId: sapi.id!, recipeName: sapi.name!, recipePhoto: sapi.photo!)
+            for ingredientSection in sapi.ingredientSections! {
+                for ingredient in ingredientSection.ingredients! {
+                    for tag in ingredient.tag! {
+                        let shoppingItem = ShoppingItem.save(viewContext: getViewContext(), name: ingredient.name!, qty: ingredient.qty!, unit: ingredient.unit!)
+                        let existingTag = ShoppingList.fetchDataWithKey(viewContext: getViewContext(), tag: tag)
+                        if existingTag != nil {
+                            ShoppingList.addShoppingItem(viewContext: getViewContext(), instance: existingTag!, shoppingItem: shoppingItem!)
+                        } else {
+                            let shoppinglist = ShoppingList.save(viewContext: getViewContext(), tag: tag)
+                            ShoppingList.addPlan(viewContext: getViewContext(), instance: shoppinglist!, plan: plan!)
+                            ShoppingList.addShoppingItem(viewContext: getViewContext(), instance: shoppinglist!, shoppingItem: shoppingItem!)
+                        }
+                    }
+                }
+            }
+        }
+        
         let plans = Plan.fetchAll(viewContext: getViewContext())
         
         for plan in plans {
