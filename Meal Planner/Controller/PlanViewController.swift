@@ -14,14 +14,13 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     @IBOutlet var tableViewContainer: UIView!
     @IBOutlet var tableView: UITableView!
     
+    let cellIdentifier = "CellPlan"
+    
     var plans: [Plan] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
         
         plans = Plan.fetchAll(viewContext: getViewContext())
         if (plans.count > 0) {
@@ -40,19 +39,42 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     func preparePlanContainer() {
         tableViewContainer.isHidden = false
         emptyViewContainer.isHidden = true
+        self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(70)
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return view.frame.width
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return plans.count
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let dateFormatterPrint = DateFormatter()
+        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+        return dateFormatterPrint.string(from: plans[section].plan_date!)
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellTable", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PlanTableViewCell
         
-        cell.textLabel?.text = plans[indexPath.row].recipe_name
-        cell.detailTextLabel?.text = plans[indexPath.row].recipe_name
-        cell.imageView?.image = UIImage(named: plans[indexPath.row].recipe_photo!)
-
+        print(indexPath)
+        
+        cell.recipeImageView.image = UIImage(named: plans[indexPath.row].recipe_photo!)
+        cell.recipeNameLabel.text = plans[indexPath.row].recipe_name
+        cell.recipeDurationLabel.text = "30 menit"
+        
         return cell
     }
     

@@ -87,61 +87,25 @@
                                     <constraint firstItem="Gcs-fh-2N6" firstAttribute="centerX" secondItem="Uyf-31-n8M" secondAttribute="centerX" id="shu-y0-JZH"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoR-ke-gIu">
-                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eoR-ke-gIu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-bJ-mRw">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="818"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                        <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellTable" textLabel="W8V-Vh-pXW" detailTextLabel="ofo-MJ-sDJ" style="IBUITableViewCellStyleSubtitle" id="HUQ-CA-IIx">
-                                                <rect key="frame" x="0.0" y="28" width="374" height="55.5"/>
-                                                <autoresizingMask key="autoresizingMask"/>
-                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HUQ-CA-IIx" id="w1E-gN-mO8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="55.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <subviews>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W8V-Vh-pXW">
-                                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ofo-MJ-sDJ">
-                                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                </tableViewCellContentView>
-                                            </tableViewCell>
-                                        </prototypes>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="0LP-bJ-mRw">
+                                        <rect key="frame" x="0.0" y="52" width="414" height="802"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="0LP-bJ-mRw" firstAttribute="top" secondItem="eoR-ke-gIu" secondAttribute="top" id="0XI-YS-Nqh"/>
-                                    <constraint firstItem="0LP-bJ-mRw" firstAttribute="width" secondItem="eoR-ke-gIu" secondAttribute="width" id="QyO-iG-BdA"/>
-                                    <constraint firstAttribute="trailing" secondItem="0LP-bJ-mRw" secondAttribute="trailing" id="aEg-G3-L0M"/>
-                                    <constraint firstItem="0LP-bJ-mRw" firstAttribute="height" secondItem="eoR-ke-gIu" secondAttribute="height" id="tQd-sA-tQY"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="FZX-bq-LCF" firstAttribute="trailing" secondItem="eoR-ke-gIu" secondAttribute="trailing" constant="20" id="7lX-zk-Ka9"/>
-                            <constraint firstItem="eoR-ke-gIu" firstAttribute="top" secondItem="FZX-bq-LCF" secondAttribute="top" id="Bcv-nu-ar7"/>
                             <constraint firstItem="Uyf-31-n8M" firstAttribute="leading" secondItem="FZX-bq-LCF" secondAttribute="leading" constant="20" id="EYs-Fc-vkP"/>
                             <constraint firstItem="FZX-bq-LCF" firstAttribute="trailing" secondItem="Uyf-31-n8M" secondAttribute="trailing" constant="20" id="NXs-jO-K1z"/>
                             <constraint firstItem="Uyf-31-n8M" firstAttribute="top" secondItem="FZX-bq-LCF" secondAttribute="top" id="X6N-Za-Fay"/>
-                            <constraint firstItem="eoR-ke-gIu" firstAttribute="width" secondItem="YrH-cr-6jG" secondAttribute="width" id="Ze7-zC-hUk"/>
-                            <constraint firstItem="eoR-ke-gIu" firstAttribute="bottom" secondItem="FZX-bq-LCF" secondAttribute="bottom" id="c1E-AG-YU6"/>
-                            <constraint firstItem="eoR-ke-gIu" firstAttribute="height" secondItem="YrH-cr-6jG" secondAttribute="height" id="ndg-PG-heB"/>
                             <constraint firstItem="Uyf-31-n8M" firstAttribute="bottom" secondItem="FZX-bq-LCF" secondAttribute="bottom" id="sQL-vN-TcH"/>
-                            <constraint firstItem="eoR-ke-gIu" firstAttribute="leading" secondItem="FZX-bq-LCF" secondAttribute="leading" constant="20" id="sr1-ji-dmd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FZX-bq-LCF"/>
                     </view>
