@@ -1,4 +1,27 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="DataModel">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Plan" representedClassName="Plan" syncable="YES" codeGenerationType="class">
+        <attribute name="plan_date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="recipe_id" optional="YES" attributeType="String"/>
+        <attribute name="recipe_name" optional="YES" attributeType="String"/>
+        <attribute name="recipe_photo" optional="YES" attributeType="String"/>
+        <relationship name="shopping_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShoppingList" inverseName="plan" inverseEntity="ShoppingList"/>
+    </entity>
+    <entity name="ShoppingItem" representedClassName="ShoppingItem" syncable="YES" codeGenerationType="class">
+        <attribute name="item_name" optional="YES" attributeType="String"/>
+        <attribute name="item_qty" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="item_unit" optional="YES" attributeType="String"/>
+        <relationship name="shopping_list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingList" inverseName="shopping_item" inverseEntity="ShoppingList"/>
+    </entity>
+    <entity name="ShoppingList" representedClassName="ShoppingList" syncable="YES" codeGenerationType="class">
+        <attribute name="is_complete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="shopping_tag" optional="YES" attributeType="String"/>
+        <relationship name="plan" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Plan" inverseName="shopping_list" inverseEntity="Plan"/>
+        <relationship name="shopping_item" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShoppingItem" inverseName="shopping_list" inverseEntity="ShoppingItem"/>
+    </entity>
+    <elements>
+        <element name="Plan" positionX="-27" positionY="18" width="128" height="118"/>
+        <element name="ShoppingItem" positionX="0" positionY="81" width="128" height="103"/>
+        <element name="ShoppingList" positionX="18" positionY="90" width="128" height="103"/>
+    </elements>
 </model>
