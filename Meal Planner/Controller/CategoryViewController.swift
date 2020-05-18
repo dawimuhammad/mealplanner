@@ -19,9 +19,18 @@ class CategoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         categoryCollectionView.delegate = self
-        print("delegate success")
         categoryCollectionView.dataSource = self
-        print("datasource success")
+        
+        //try check save data
+        let savedData = Plan.fetchAll(viewContext: getViewContext())
+        for plan in savedData {
+            print("plan date: \(plan.plan_date!)")
+            print("recipe id: \(plan.recipe_id!)")
+            print("recipe name: \(plan.recipe_name!)")
+            print("recipe photo: \(plan.recipe_photo!)")
+            print("\n\n")
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

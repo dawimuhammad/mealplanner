@@ -8,30 +8,56 @@
 
 import UIKit
 
-class DetailMealViewController: UIViewController, UIScrollViewDelegate {
+class DetailMealViewController: UIViewController {
     
+    @IBOutlet weak var recipeTitleLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var portionLabel: UILabel!
     
-    @IBOutlet weak var recipeScrollView: UIScrollView!
+//    @IBOutlet weak var recipeScrollView: UIScrollView!
+    
+    @IBOutlet var popoverDatePicker: UIView!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     
     var recipe = categories.getRecipeByCategory(category: .ayam)![0]
     
+    var date = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        recipeScrollView.delegate = self
+//        recipeScrollView.delegate = self
         let temp = breakdownRecipe(recipe: recipe)
         
+        recipeTitleLabel.text = recipe.name!
+        
+        durationLabel.text = ": \(recipe.duration!) menit"
+        portionLabel.text = ": \(recipe.portion!) orang"
+        
         ingredientsLabel.text = temp
-        //        ingredientsLabel.text = "safn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanfsafn ojenwakdjnsjanerfanf"
+        datePicker.minimumDate = Date()
+        datePicker.maximumDate = Date(timeIntervalSinceNow: 60*60*24*30) //maximum pick one month from today
+        
         
         // Do any additional setup after loading the view.
     }
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(self.recipeScrollView.contentOffset.y)
+    @IBAction func displayPopover(_ sender: UIButton) {
+        print("muncul?")
+//        self.view.alpha = 0.2
+//        self.view.alpha = 0.2
+        self.view.addSubview(popoverDatePicker)
+//        self.popoverDatePicker.alpha = 0.5
+        popoverDatePicker.center = self.view.center
+        popoverDatePicker.alpha = 0.5
+        print("muncul??")
+        
     }
     
+    
+
     
     func breakdownRecipe(recipe : Recipe) -> String {
         var temp = ""
@@ -57,6 +83,31 @@ class DetailMealViewController: UIViewController, UIScrollViewDelegate {
         return temp
     }
     
+    
+    @IBAction func datePickerPicked(_ sender: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+
+        dateFormatter.dateStyle = DateFormatter.Style.short
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        date = datePicker.date
+        print(datePicker.timeZone)
+        print(date)
+//        let strDate = dateFormatter.string(from: date)
+        
+        
+    }
+    
+    
+    @IBAction func doneButton(_ sender: UIButton) {
+        // save plan
+        print(date)
+        Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
+        self.view.alpha = 1.0
+        self.popoverDatePicker.removeFromSuperview()
+        
+    }
+
     /*
      // MARK: - Navigation
      
@@ -68,3 +119,4 @@ class DetailMealViewController: UIViewController, UIScrollViewDelegate {
      */
     
 }
+

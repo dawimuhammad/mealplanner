@@ -38,8 +38,9 @@ class FindMealViewController: UIViewController {
         }
     }
     
-    
 }
+
+//MARK: - Find Meal View Controller
 
 extension FindMealViewController: UICollectionViewDataSource {
     
@@ -50,8 +51,8 @@ extension FindMealViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FindMealCell", for: indexPath) as! FindMealCollectionViewCell
         print(resep.count)
-        cell.backgroundColor = .green
         cell.labelRecipeTitle.text = resep[indexPath.row].name
+        cell.labelRecipeDetail.text = "\(resep[indexPath.row].duration!) menit - \(resep[indexPath.row].portion!) orang"
         return cell
     }
     
@@ -59,7 +60,6 @@ extension FindMealViewController: UICollectionViewDataSource {
 
 extension FindMealViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("SDASD")
         selectRecipe = resep[indexPath.row]
         performSegue(withIdentifier: "toDetailMeal", sender: self)
     }

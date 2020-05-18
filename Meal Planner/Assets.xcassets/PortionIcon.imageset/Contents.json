@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "CategorySapi.png",
+      "filename" : "PortionIcon.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "CategorySapi-1.png",
+      "filename" : "PortionIcon-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "CategorySapi-2.png",
+      "filename" : "PortionIcon-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

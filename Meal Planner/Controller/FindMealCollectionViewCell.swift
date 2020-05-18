@@ -11,5 +11,7 @@ import UIKit
 class FindMealCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var labelRecipeTitle: UILabel!
+    @IBOutlet weak var imageMeal: UIImageView!
+    @IBOutlet weak var labelRecipeDetail: UILabel!
     
 }

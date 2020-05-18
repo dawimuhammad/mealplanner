@@ -41,4 +41,23 @@ extension Plan {
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
         let _ = try? viewContext.execute(deleteRequest)
     }
+    
+    static func savePlan (viewContext: NSManagedObjectContext, date: Date, recipe: Recipe) {
+        let plan = Plan.save(viewContext: viewContext, date: Date(), recipeId: recipe.id!, recipeName: recipe.name!, recipePhoto: recipe.photo!)
+        for ingredientSection in recipe.ingredientSections! {
+            for ingredient in ingredientSection.ingredients! {
+                for tag in ingredient.tag! {
+                    let shoppingItem = ShoppingItem.save(viewContext: viewContext, name: ingredient.name!, qty: ingredient.qty!, unit: ingredient.unit!)
+                    let existingTag = ShoppingList.fetchDataWithKey(viewContext: viewContext, tag: tag)
+                    if existingTag != nil {
+                        ShoppingList.addShoppingItem(viewContext: viewContext, instance: existingTag!, shoppingItem: shoppingItem!)
+                    } else {
+                        let shoppinglist = ShoppingList.save(viewContext: viewContext, tag: tag)
+                        ShoppingList.addPlan(viewContext: viewContext, instance: shoppinglist!, plan: plan!)
+                        ShoppingList.addShoppingItem(viewContext: viewContext, instance: shoppinglist!, shoppingItem: shoppingItem!)
+                    }
+                }
+            }
+        }
+    }
 }
