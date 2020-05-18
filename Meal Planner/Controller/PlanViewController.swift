@@ -51,6 +51,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.textLabel?.text = plans[indexPath.row].recipe_name
         cell.detailTextLabel?.text = plans[indexPath.row].recipe_name
+        cell.imageView?.image = UIImage(named: plans[indexPath.row].recipe_photo!)
 
         return cell
     }
