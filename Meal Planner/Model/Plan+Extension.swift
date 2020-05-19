@@ -19,6 +19,8 @@ extension Plan {
     static func fetchQueryAfterDate(viewContext: NSManagedObjectContext, date: Date) -> [Plan] {
         let request: NSFetchRequest<Plan> = Plan.fetchRequest()
         request.predicate = NSPredicate(format: "plan_date >= %@", Calendar.current.startOfDay(for: date) as NSDate)
+        let sort = NSSortDescriptor(key: #keyPath(Plan.plan_date), ascending: true)
+        request.sortDescriptors = [sort]
         let result = try? viewContext.fetch(request)
         return result ?? []
     }
@@ -26,6 +28,8 @@ extension Plan {
     static func fetchQueryBeforeDate(viewContext: NSManagedObjectContext, date: Date) -> [Plan] {
         let request: NSFetchRequest<Plan> = Plan.fetchRequest()
         request.predicate = NSPredicate(format: "plan_date < %@", Calendar.current.startOfDay(for: date) as NSDate)
+        let sort = NSSortDescriptor(key: #keyPath(Plan.plan_date), ascending: true)
+        request.sortDescriptors = [sort]
         let result = try? viewContext.fetch(request)
         return result ?? []
     }

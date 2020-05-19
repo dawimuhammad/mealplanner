@@ -93,6 +93,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
             let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
             plansWithSection.append(planSection)
         }
+        
+        print(plansWithSection)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
