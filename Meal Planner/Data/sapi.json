@@ -3,7 +3,7 @@
     "id": "sapi-1",
     "name": "Sate Sapi",
     "category": "sapi",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F90d88df6-9cdd-4d14-9f92-6ed524ad15d7%2FResep-Sate-Sapi.jpg?table=block&id=94d2af60-67be-495b-8b52-5fb34a546d0a&width=600&cache=v2",
+    "photo": "sapi-1",
     "duration": 60,
     "portion": 4,
     "ingredient_section": [
@@ -164,7 +164,7 @@
     "id": "sapi-2",
     "name": "Rolade Sapi",
     "category": "sapi",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc7326121-bc06-4d6e-ac72-8ac5d95cb05e%2FResep-Rolade.jpg?table=block&id=046c1cf4-d2d0-41e7-a65b-dda4e1336f91&width=600&cache=v2",
+    "photo": "sapi-2",
     "duration": 60,
     "portion": 4,
     "ingredient_section": [
@@ -371,7 +371,7 @@
     "id": "sapi-3",
     "name": "Sapi Lada Hitam",
     "category": "sapi",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa2e19567-4271-412a-97be-c5c7ba96b3a4%2FResep-Sapi-Lada-Hitam.jpg?table=block&id=8df08c5a-268e-4fc9-9a31-21f4c42675f2&width=600&cache=v2",
+    "photo": "sapi-3",
     "duration": 40,
     "portion": 4,
     "ingredient_section": [

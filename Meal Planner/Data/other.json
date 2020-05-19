@@ -3,7 +3,7 @@
     "id": "lainnya-1",
     "name": "Roti Maryam",
     "category": "sayur",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F031f7216-a3b2-4b60-9a15-a24132946bc7%2FResep-Roti-maryam.jpg?table=block&id=1f6a788c-ae87-40d1-8375-cbffa62bc773&width=600&cache=v2",
+    "photo": "lainnya-1",
     "duration": 180,
     "portion": 5,
     "ingredient_section": [
@@ -102,7 +102,7 @@
     "id": "lainnya-2",
     "name": "Rengginang",
     "category": "lainnya",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fba04da65-0fbd-48d8-8164-732e1bba7ebb%2FResep-Rengginang.jpg?table=block&id=38a24e36-e7ed-48f9-a8c6-4b9783c80fdb&width=600&cache=v2",
+    "photo": "lainnya-2",
     "duration": 60,
     "portion": 10,
     "ingredient_section": [
@@ -200,7 +200,7 @@
     "id": "lainnya-3",
     "name": "Pudding Oreo",
     "category": "lainnya",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F035bf2b9-add3-4c47-ac9f-510c11dae13b%2FResep-Puding-Oreo.jpg?table=block&id=943dd736-0b39-466c-b0d0-127da51eb840&width=600&cache=v2",
+    "photo": "lainnya-3",
     "duration": 30,
     "portion": 4,
     "ingredient_section": [

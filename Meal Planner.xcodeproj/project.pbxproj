@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		44DC2DC5246E262600D989D0 /* Plan+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DC2DC4246E262600D989D0 /* Plan+Extension.swift */; };
+		44FB4816247340CF003127C0 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB4814247340CF003127C0 /* PlanTableViewCell.swift */; };
+		44FB4817247340CF003127C0 /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FB4815247340CF003127C0 /* PlanTableViewCell.xib */; };
+		44FB481924734DC8003127C0 /* PlanSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB481824734DC8003127C0 /* PlanSection.swift */; };
 		44FDD505246D51B0006666E8 /* babi.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD4FF246D51B0006666E8 /* babi.json */; };
 		44FDD506246D51B0006666E8 /* sapi.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD500246D51B0006666E8 /* sapi.json */; };
 		44FDD507246D51B0006666E8 /* ayam.json in Resources */ = {isa = PBXBuildFile; fileRef = 44FDD501246D51B0006666E8 /* ayam.json */; };
@@ -40,6 +43,9 @@
 
 /* Begin PBXFileReference section */
 		44DC2DC4246E262600D989D0 /* Plan+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plan+Extension.swift"; sourceTree = "<group>"; };
+		44FB4814247340CF003127C0 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
+		44FB4815247340CF003127C0 /* PlanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
+		44FB481824734DC8003127C0 /* PlanSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanSection.swift; sourceTree = "<group>"; };
 		44FDD4FF246D51B0006666E8 /* babi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = babi.json; sourceTree = "<group>"; };
 		44FDD500246D51B0006666E8 /* sapi.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = sapi.json; sourceTree = "<group>"; };
 		44FDD501246D51B0006666E8 /* ayam.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ayam.json; sourceTree = "<group>"; };
@@ -83,6 +89,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44FB48132473407B003127C0 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				44FB4814247340CF003127C0 /* PlanTableViewCell.swift */,
+				44FB4815247340CF003127C0 /* PlanTableViewCell.xib */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		44FDD4C6246BE75A006666E8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +110,7 @@
 				44FDD51E246E13E8006666E8 /* ShoppingItem+Extension.swift */,
 				44FDD520246E150D006666E8 /* ShoppingList+Extension.swift */,
 				44DC2DC4246E262600D989D0 /* Plan+Extension.swift */,
+				44FB481824734DC8003127C0 /* PlanSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +162,7 @@
 		B7D5DC2224643E4A00A2F763 /* Meal Planner */ = {
 			isa = PBXGroup;
 			children = (
+				44FB48132473407B003127C0 /* Component */,
 				44FDD4CC246BEB59006666E8 /* Data */,
 				44FDD4C7246BE76C006666E8 /* Controller */,
 				44FDD4C6246BE75A006666E8 /* Model */,
@@ -218,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44FB4817247340CF003127C0 /* PlanTableViewCell.xib in Resources */,
 				B7D5DC3324643E4A00A2F763 /* LaunchScreen.storyboard in Resources */,
 				44FDD507246D51B0006666E8 /* ayam.json in Resources */,
 				44FDD506246D51B0006666E8 /* sapi.json in Resources */,
@@ -253,7 +271,9 @@
 				B7D5DC2E24643E4A00A2F763 /* Meal_Planner.xcdatamodeld in Sources */,
 				44FDD515246D7D8B006666E8 /* StepSection.swift in Sources */,
 				44FDD521246E150D006666E8 /* ShoppingList+Extension.swift in Sources */,
+				44FB481924734DC8003127C0 /* PlanSection.swift in Sources */,
 				44FDD50D246D7C15006666E8 /* Recipe.swift in Sources */,
+				44FB4816247340CF003127C0 /* PlanTableViewCell.swift in Sources */,
 				44FDD511246D7CE0006666E8 /* IngredientSection.swift in Sources */,
 				754CA827246E0A240041F32E /* CategoryCollectionViewCell.swift in Sources */,
 				754CA825246E06510041F32E /* DetailMealViewController.swift in Sources */,

@@ -3,7 +3,7 @@
     "id": "babi-1",
     "name": "Samcan Crispy",
     "category": "babi",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fd923877c-1277-48de-b341-03a601f532db%2FResep-Samcan-Crispy-simpel-foto-resep-utama.jpg?table=block&id=eef21290-2fde-4257-8211-e7aa6a2f38a6&width=600&cache=v2",
+    "photo": "babi-1",
     "duration": 45,
     "portion": 8,
     "ingredient_section": [
@@ -92,7 +92,7 @@
     "id": "babi-2",
     "name": "Abon Babi",
     "category": "babi",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F50c209dc-bb0c-46b8-a5c5-886b30a00c13%2FResep-Abon-Babi.jpg?table=block&id=bc00b0e8-5a7a-43ab-9e0a-7c24eb34b294&width=600&cache=v2",
+    "photo": "babi-2",
     "duration": 45,
     "portion": 10,
     "ingredient_section": [
@@ -224,7 +224,7 @@
     "id": "babi-3",
     "name": "Siomay Babi",
     "category": "babi",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4c30b657-8e66-4f47-9209-04664d09cff4%2FResep-Siomay-Babi.jpg?table=block&id=86221685-363c-4ea6-b19b-a1e80bce3af1&width=600&cache=v2",
+    "photo": "babi-3",
     "duration": 60,
     "portion": 4,
     "ingredient_section": [
