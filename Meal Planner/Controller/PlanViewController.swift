@@ -65,7 +65,6 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func prepareSection() {
-        plansWithSection = []
         var prevPlanDate: Date? = nil
         var planDatas: [Plan] = []
         for plan in plans {
@@ -161,17 +160,31 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "plan2category", sender: self)
     }
     
-    func updatePlan() {
+    func updatePlan(plan: Plan) {
         if (plans.count == 0) {
             print("MASUK UPDATE ATAS")
-            plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
+            plans.append(plan)
             preparePlanContainer()
         } else {
             print("MASUK UPDATE BAWAH")
-            plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
-            prepareSection()
-            tableView.reloadData()
+            plans.append(plan)
+            updateNewPlan(newPlan: plan)
         }
+    }
+    
+    func updateNewPlan(newPlan: Plan) {
+        let curDateFormat = DateFormatter()
+        let prevDateFormat = DateFormatter()
+        curDateFormat.dateFormat = "MMM dd,yyyy"
+        prevDateFormat.dateFormat = "MMM dd,yyyy"
+        
+        if let row = plansWithSection.firstIndex(where: {prevDateFormat.string(from: $0.date!) == curDateFormat.string(from: newPlan.plan_date!)}) {
+               print(row)
+            plansWithSection[row].plans.append(newPlan)
+        } else {
+            plansWithSection.append(PlanSection(date: newPlan.plan_date, plans: [newPlan]))
+        }
+        tableView.reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MyDetailMealDelegate {
-    func updatePlan()
+    func updatePlan(plan: Plan)
 }
 
 class DetailMealViewController: UIViewController {
@@ -110,8 +110,8 @@ class DetailMealViewController: UIViewController {
     @IBAction func doneButton(_ sender: UIButton) {
         // save plan
         print(date)
-        Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
-        self.delegate?.updatePlan()
+        let newPlan: Plan = Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
+        self.delegate?.updatePlan(plan: newPlan)
         self.view.alpha = 1.0
         self.popoverDatePicker.removeFromSuperview()
         
