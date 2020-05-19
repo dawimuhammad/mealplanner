@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PlanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PlanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MyDetailMealDelegate {
+    
     @IBOutlet var emptyViewContainer: UIView!
     @IBOutlet var btnMulai: UIButton!
     @IBOutlet var tableViewContainer: UIView!
@@ -29,7 +30,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
             preparePlanContainer()
         } else {
             prepareEmptyContainer()
-        }
+        }        
     }
     
     func prepareNavigationButton() {
@@ -45,7 +46,17 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func preparePlanContainer() {
-        
+        prepareSection()
+        tableViewContainer.isHidden = false
+        emptyViewContainer.isHidden = true
+        self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.tableFooterView?.isHidden = true
+    }
+    
+    func prepareSection() {
+        plansWithSection = []
         var prevPlanDate: Date? = nil
         var planDatas: [Plan] = []
         for plan in plans {
@@ -74,13 +85,6 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
             let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
             plansWithSection.append(planSection)
         }
-                
-        tableViewContainer.isHidden = false
-        emptyViewContainer.isHidden = true
-        self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.tableFooterView?.isHidden = true
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -146,6 +150,26 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func navigateToCategory() {
         performSegue(withIdentifier: "plan2category", sender: self)
+    }
+    
+    func updatePlan() {
+        if (plans.count == 0) {
+            print("MASUK UPDATE ATAS")
+            plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
+            preparePlanContainer()
+        } else {
+            print("MASUK UPDATE BAWAH")
+            plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
+            prepareSection()
+            tableView.reloadData()
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "plan2category"){
+            let v = segue.destination as! CategoryViewController
+            v.delegate =  self
+        }
     }
     
     /*

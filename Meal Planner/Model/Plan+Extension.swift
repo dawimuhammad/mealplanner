@@ -46,6 +46,7 @@ extension Plan {
         plan.recipe_portion = portion
         do {
             try viewContext.save()
+            print("SAVE PLAN SUCCESS")
             return plan
         } catch {
             return nil

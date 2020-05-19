@@ -15,6 +15,7 @@ class CategoryViewController: UIViewController {
     let mealCategories = CategoryEnum.allCases
     var selectCategory = CategoryEnum.ayam
     
+    var delegate: MyDetailMealDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,7 @@ class CategoryViewController: UIViewController {
             print("recipe name: \(plan.recipe_name!)")
             print("recipe photo: \(plan.recipe_photo!)")
             print("\n\n")
-        }
-        
+        }        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,6 +38,7 @@ class CategoryViewController: UIViewController {
             if identifier == "toFindMeal" {
                 if let destinationVC = segue.destination as? FindMealViewController{
                     destinationVC.selectedCategory = selectCategory
+                    destinationVC.delegate = self.delegate
                 }
             }
         }
