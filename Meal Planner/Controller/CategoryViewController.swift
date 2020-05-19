@@ -22,6 +22,7 @@ class CategoryViewController: UIViewController {
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
         self.navigationItem.largeTitleDisplayMode = .never
+        self.tabBarController?.tabBar.isHidden = true
 
         //try check save data
         let savedData = Plan.fetchAll(viewContext: getViewContext())

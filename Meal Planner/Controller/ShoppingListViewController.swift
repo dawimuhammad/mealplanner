@@ -31,7 +31,12 @@ class ShoppingListViewController: UITableViewController {
         super.viewDidLoad()
         self.title = "Daftar Belanja"
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) { // As soon as vc appears
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ingredients.count
     }

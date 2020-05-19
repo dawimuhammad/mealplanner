@@ -39,6 +39,13 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.navigationItem.rightBarButtonItems = [addButton, archiveButton]
         self.navigationController?.navigationBar.tintColor = UIColor(hex: "#F19436")
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) { // As soon as vc appears
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func prepareEmptyContainer() {
