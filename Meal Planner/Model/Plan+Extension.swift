@@ -16,6 +16,20 @@ extension Plan {
         return result ?? []
     }
     
+    static func fetchQueryAfterDate(viewContext: NSManagedObjectContext, date: Date) -> [Plan] {
+        let request: NSFetchRequest<Plan> = Plan.fetchRequest()
+        request.predicate = NSPredicate(format: "plan_date >= %@", Calendar.current.startOfDay(for: date) as NSDate)
+        let result = try? viewContext.fetch(request)
+        return result ?? []
+    }
+    
+    static func fetchQueryBeforeDate(viewContext: NSManagedObjectContext, date: Date) -> [Plan] {
+        let request: NSFetchRequest<Plan> = Plan.fetchRequest()
+        request.predicate = NSPredicate(format: "plan_date < %@", Calendar.current.startOfDay(for: date) as NSDate)
+        let result = try? viewContext.fetch(request)
+        return result ?? []
+    }
+    
     static func fetchAll(viewContext: NSManagedObjectContext) -> [Plan] {
         let request: NSFetchRequest<Plan> = Plan.fetchRequest()
         let result = try? viewContext.fetch(request)

@@ -23,7 +23,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        plans = Plan.fetchAll(viewContext: getViewContext())
+        plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
         if (plans.count > 0) {
             preparePlanContainer()
         } else {
