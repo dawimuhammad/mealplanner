@@ -18,7 +18,8 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.largeTitleDisplayMode = .never
+
         plans = Plan.fetchQueryBeforeDate(viewContext: getViewContext(), date: Date())
         preparePlanSection()
         

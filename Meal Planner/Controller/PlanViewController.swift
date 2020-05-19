@@ -38,6 +38,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         let addButton = UIBarButtonItem(image: #imageLiteral(resourceName: "AddPlan"),  style: .plain, target: self, action: #selector(didTapAdd))
         self.navigationItem.rightBarButtonItems = [addButton, archiveButton]
         self.navigationController?.navigationBar.tintColor = UIColor(hex: "#F19436")
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
     
     func prepareEmptyContainer() {

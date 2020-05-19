@@ -21,7 +21,8 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
-        
+        self.navigationItem.largeTitleDisplayMode = .never
+
         //try check save data
         let savedData = Plan.fetchAll(viewContext: getViewContext())
         for plan in savedData {
