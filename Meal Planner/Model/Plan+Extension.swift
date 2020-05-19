@@ -59,7 +59,7 @@ extension Plan {
     }
     
     static func savePlan (viewContext: NSManagedObjectContext, date: Date, recipe: Recipe) {
-        let plan = Plan.save(viewContext: viewContext, date: Date(), recipeId: recipe.id!, recipeName: recipe.name!, recipePhoto: recipe.photo!, duration: Int16(recipe.duration!), portion: Int16(recipe.portion!))
+        let plan = Plan.save(viewContext: viewContext, date: date, recipeId: recipe.id!, recipeName: recipe.name!, recipePhoto: recipe.photo!, duration: Int16(recipe.duration!), portion: Int16(recipe.portion!))
         for ingredientSection in recipe.ingredientSections! {
             for ingredient in ingredientSection.ingredients! {
                 for tag in ingredient.tag! {

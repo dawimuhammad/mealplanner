@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iC8-CB-p23">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XHo-DX-0zh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -470,6 +470,7 @@
                         <outlet property="datePicker" destination="w97-XX-bac" id="bUZ-0y-p0b"/>
                         <outlet property="durationLabel" destination="jOX-2M-4xg" id="tTw-vU-BWd"/>
                         <outlet property="ingredientsLabel" destination="5Yv-tc-cBv" id="qKT-HS-gBd"/>
+                        <outlet property="mealImage" destination="Cfh-DU-Inh" id="N4m-e7-56w"/>
                         <outlet property="popoverDatePicker" destination="J2Z-jw-dH0" id="Zin-3N-bNa"/>
                         <outlet property="portionLabel" destination="kkF-34-3Eh" id="eeJ-sd-ehP"/>
                         <outlet property="recipeTitleLabel" destination="quV-kk-L0w" id="IVW-Yn-8Jn"/>
@@ -627,7 +628,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jzs-m1-4Gu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3029" y="122"/>
+            <point key="canvasLocation" x="3206" y="124"/>
         </scene>
         <!--Archive View Controller-->
         <scene sceneID="f0v-3x-RK8">
