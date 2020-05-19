@@ -3,7 +3,7 @@
     "id": "ayam-1",
     "name": "Ayam Goreng Cabe",
     "category": "ayam",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F95c74560-c800-4333-9f90-134d5ade3b52%2FResep-Ayam-Goreng-Cabe.jpg?table=block&id=88096c4f-08a8-4633-a556-da4ae784f1dd&width=600&cache=v2",
+    "photo": "ayam-1",
     "duration": 30,
     "portion": 4,
     "ingredient_section": [
@@ -169,7 +169,7 @@
     "id": "ayam-2",
     "name": "Ayam Kecap Goreng Mentega",
     "category": "ayam",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F47a88a30-a903-4fbc-ba21-f33060ab3c29%2FResep-Ayam-goreng-mentega.jpg?table=block&id=3c271fe5-037f-4f81-acbd-ea18b7a65576&width=600&cache=v2",
+    "photo": "ayam-2",
     "duration": 55,
     "portion": 2,
     "ingredient_section": [
@@ -323,7 +323,7 @@
     "id": "ayam-3",
     "name": "Ayam Pok-Pok",
     "category": "ayam",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F448f0cf9-b428-43bc-b56a-59954a001240%2FResep-Ayam-Pok-Pok.jpg?table=block&id=8419d7fa-485d-4f85-b52e-7a5dc8dc2479&width=600&cache=v2",
+    "photo": "ayam-3",
     "duration": 45,
     "portion": 3,
     "ingredient_section": [

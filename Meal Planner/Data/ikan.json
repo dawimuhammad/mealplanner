@@ -3,7 +3,7 @@
     "id": "ikan-1",
     "name": "Tim Ikan Kakap",
     "category": "ikan",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F27e641eb-411e-4217-af7e-d7be4c364619%2FResep-Tim-Ikan.jpg?table=block&id=3e5125b5-be4d-4762-9687-94a61cb5cad0&width=600&cache=v2",
+    "photo": "ikan-1",
     "duration": 45,
     "portion": 3,
     "ingredient_section": [
@@ -162,7 +162,7 @@
     "id": "ikan-2",
     "name": "Ikan Bawal Bakar",
     "category": "ikan",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F3161c4b4-0d9d-443d-93b6-9409f89a9259%2FResep-Ikan-bawal-bakar.jpg?table=block&id=88341536-ab50-4f57-8076-4bdace4a018f&width=600&cache=v2/",
+    "photo": "ikan-2",
     "duration": 60,
     "portion": 4,
     "ingredient_section": [
@@ -269,7 +269,7 @@
     "id": "ikan-3",
     "name": "Sup Ikan Kakap",
     "category": "ikan",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F17f0d8e0-e0ba-4461-8a83-423664457591%2FResep-Sup-Ikan-Kakap.jpg?table=block&id=f6ca363c-0a8d-4896-8c74-69a1a3a807de&width=600&cache=v2",
+    "photo": "ikan-3",
     "duration": 30,
     "portion": 5,
     "ingredient_section": [

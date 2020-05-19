@@ -22,12 +22,14 @@ extension Plan {
         return result ?? []
     }
     
-    static func save(viewContext: NSManagedObjectContext, date: Date, recipeId: String, recipeName: String, recipePhoto: String) -> Plan? {
+    static func save(viewContext: NSManagedObjectContext, date: Date, recipeId: String, recipeName: String, recipePhoto: String, duration: Int16, portion: Int16) -> Plan? {
         let plan = Plan(context: viewContext)
         plan.plan_date = date
         plan.recipe_id = recipeId
         plan.recipe_name = recipeName
         plan.recipe_photo = recipePhoto
+        plan.recipe_duration = duration
+        plan.recipe_portion = portion
         do {
             try viewContext.save()
             return plan
