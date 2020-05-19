@@ -97,14 +97,17 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PlanTableViewCell
-        
-        print(indexPath)
-        
+                
         cell.recipeImageView.image = UIImage(named: plansWithSection[indexPath.section].plans[indexPath.row].recipe_photo!)
         cell.recipeNameLabel.text = plansWithSection[indexPath.section].plans[indexPath.row].recipe_name
         cell.recipeDurationLabel.text = "\(plansWithSection[indexPath.section].plans[indexPath.row].recipe_duration) Menit"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedPlan: Plan = plansWithSection[indexPath.section].plans[indexPath.row]
+        print(selectedPlan)
     }
     
 
