@@ -1,44 +1,34 @@
 //
-//  PlanViewController.swift
+//  ArchiveViewController.swift
 //  Meal Planner
 //
-//  Created by Rahmat Zulfikri on 14/05/20.
+//  Created by Rahmat Zulfikri on 19/05/20.
 //  Copyright © 2020 Team13. All rights reserved.
 //
 
 import UIKit
 
-class PlanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    @IBOutlet var emptyViewContainer: UIView!
-    @IBOutlet var btnMulai: UIButton!
-    @IBOutlet var tableViewContainer: UIView!
+class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var tableView: UITableView!
     
     let cellIdentifier = "CellPlan"
     
     var plans: [Plan] = []
     var plansWithSection: [PlanSection] = []
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        plans = Plan.fetchQueryBeforeDate(viewContext: getViewContext(), date: Date())
+        preparePlanSection()
+        
+        self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         // Do any additional setup after loading the view.
-        
-        plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
-        if (plans.count > 0) {
-            preparePlanContainer()
-        } else {
-            prepareEmptyContainer()
-        }
     }
     
-    func prepareEmptyContainer() {
-        btnMulai.layer.cornerRadius = 8
-        tableViewContainer.isHidden = true
-        emptyViewContainer.isHidden = false
-    }
-    
-    func preparePlanContainer() {
-        
+    func preparePlanSection() {
         var prevPlanDate: Date? = nil
         var planDatas: [Plan] = []
         for plan in plans {
@@ -65,13 +55,6 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
         plansWithSection.append(planSection)
-                
-        tableViewContainer.isHidden = false
-        emptyViewContainer.isHidden = true
-        self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.tableFooterView?.isHidden = true
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -102,8 +85,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         guard let header = view as? UITableViewHeaderFooterView else { return }
-        header.contentView.backgroundColor = UIColor(hex: "#F19436")
-        header.textLabel?.textColor = UIColor.init(red: CGFloat(249)/CGFloat(249), green: CGFloat(249)/CGFloat(249), blue: CGFloat(249)/CGFloat(249), alpha: CGFloat(0.94))
+        header.contentView.backgroundColor = UIColor(hex: "#E0E0E0")
+        header.textLabel?.textColor = UIColor(hex: "#787878")
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 14)
     }
     
