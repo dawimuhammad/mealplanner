@@ -23,12 +23,19 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.title = "Rencana Masak"
+        prepareNavigationButton()
         plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
         if (plans.count > 0) {
             preparePlanContainer()
         } else {
             prepareEmptyContainer()
         }
+    }
+    
+    func prepareNavigationButton() {
+        let archiveButton   = UIBarButtonItem(image: #imageLiteral(resourceName: "ArchiveButton"),  style: .plain, target: self, action: #selector(didTapArchive))
+        let addButton = UIBarButtonItem(image: #imageLiteral(resourceName: "AddPlan"),  style: .plain, target: self, action: #selector(didTapAdd))
+        self.navigationItem.rightBarButtonItems = [addButton, archiveButton]
     }
     
     func prepareEmptyContainer() {
@@ -63,8 +70,10 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
             planDatas.append(plan)
         }
         
-        let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
-        plansWithSection.append(planSection)
+        if (prevPlanDate != nil) {
+            let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
+            plansWithSection.append(planSection)
+        }
                 
         tableViewContainer.isHidden = false
         emptyViewContainer.isHidden = true
@@ -123,7 +132,22 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(selectedPlan)
     }
     
+    @IBAction func onPressMulai(_ sender: Any) {
+        navigateToCategory()
+    }
+    
+    @objc func didTapAdd(sender: AnyObject){
+        navigateToCategory()
+    }
 
+    @objc func didTapArchive(sender: AnyObject){
+        performSegue(withIdentifier: "plan2archive", sender: self)
+    }
+    
+    func navigateToCategory() {
+        performSegue(withIdentifier: "plan2category", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 

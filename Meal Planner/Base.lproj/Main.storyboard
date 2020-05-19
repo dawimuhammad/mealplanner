@@ -524,7 +524,7 @@
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyf-31-n8M">
                                 <rect key="frame" x="20" y="88" width="374" height="725"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PlanEmpty" translatesAutoresizingMaskIntoConstraints="NO" id="Cny-aq-0vs">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plan-empty" translatesAutoresizingMaskIntoConstraints="NO" id="Cny-aq-0vs">
                                         <rect key="frame" x="-9" y="206" width="392" height="313"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8tE-6L-MTx">
@@ -538,8 +538,11 @@
                                         <state key="normal" title="Mulai Rencanakan">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="onPressMulai:" destination="iC8-CB-p23" eventType="touchUpInside" id="AbE-EV-fAL"/>
+                                        </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu belum memiliki rencana masak Tekan tombol ’Mulia Rencanakan’" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcs-fh-2N6">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kamu belum memiliki rencana masak Tekan tombol ’Mulai Rencanakan’" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gcs-fh-2N6">
                                         <rect key="frame" x="38" y="98.5" width="298" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="298" id="F89-vO-OsW"/>
@@ -593,9 +596,9 @@
                         <outlet property="emptyViewContainer" destination="Uyf-31-n8M" id="nNo-Ha-grB"/>
                         <outlet property="tableView" destination="0LP-bJ-mRw" id="tzY-uv-pgX"/>
                         <outlet property="tableViewContainer" destination="eoR-ke-gIu" id="f1O-yd-daL"/>
-                        <segue destination="D8a-dj-291" kind="show" id="Fv9-ff-uB9"/>
-                        <segue destination="QrH-Uz-uRH" kind="show" id="I3q-QI-oar"/>
-                        <segue destination="6Gs-TF-PXX" kind="show" id="TyA-Ra-dOo"/>
+                        <segue destination="D8a-dj-291" kind="show" identifier="plan2archive" id="Fv9-ff-uB9"/>
+                        <segue destination="QrH-Uz-uRH" kind="show" identifier="plan2category" id="I3q-QI-oar"/>
+                        <segue destination="6Gs-TF-PXX" kind="show" identifier="plan2detail" id="TyA-Ra-dOo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DM5-Oa-xDf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -737,6 +740,7 @@
         <image name="PortionIcon" width="12.5" height="9.5"/>
         <image name="TimeIcon" width="10" height="10"/>
         <image name="list-icon" width="32.5" height="29.5"/>
+        <image name="plan-empty" width="392.5" height="353"/>
         <image name="plan-icon" width="31.5" height="29"/>
         <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
