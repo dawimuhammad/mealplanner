@@ -53,8 +53,10 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
             planDatas.append(plan)
         }
         
-        let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
-        plansWithSection.append(planSection)
+        if (prevPlanDate != nil) {
+            let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
+            plansWithSection.append(planSection)
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -80,7 +82,7 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "cccc, dd MMM yyyy"
-        return dateFormatterPrint.string(from: plansWithSection[section].date!)
+        return plansWithSection.count > 0 ? dateFormatterPrint.string(from: plansWithSection[section].date!) : nil
     }
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
