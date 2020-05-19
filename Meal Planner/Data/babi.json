@@ -46,7 +46,7 @@
             "qty": 1
           },
           {
-            "tag":[ "merica"],
+            "tag": ["merica"],
             "name": "1/4 sdt merica bubuk",
             "unit": "sdt",
             "qty": 0.25
@@ -301,7 +301,7 @@
             ],
             "name": "Secukupnya Merica",
             "unit": "secukupnya",
-            "qty": "merica"
+            "qty": 0
           },
           {
             "tag": [
