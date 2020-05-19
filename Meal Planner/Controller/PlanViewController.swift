@@ -37,6 +37,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         let archiveButton   = UIBarButtonItem(image: #imageLiteral(resourceName: "ArchiveButton"),  style: .plain, target: self, action: #selector(didTapArchive))
         let addButton = UIBarButtonItem(image: #imageLiteral(resourceName: "AddPlan"),  style: .plain, target: self, action: #selector(didTapAdd))
         self.navigationItem.rightBarButtonItems = [addButton, archiveButton]
+        self.navigationController?.navigationBar.tintColor = UIColor(hex: "#F19436")
     }
     
     func prepareEmptyContainer() {
