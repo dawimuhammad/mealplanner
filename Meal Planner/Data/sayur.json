@@ -3,7 +3,7 @@
     "id": "sayur-1",
     "name": "Tumis Kacang Panjang",
     "category": "sayur",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F70065952-281e-4b77-aa20-0a78abf9b48e%2FResep-Tumis-kacang-panjang.jpg?table=block&id=656995e0-715c-49c8-a115-97e97d09fae9&width=600&cache=v2",
+    "photo": "sayur-1",
     "duration": 30,
     "portion": 2,
     "ingredient_section": [
@@ -146,7 +146,7 @@
     "id": "sayur-2",
     "name": "Tumis Buncis Udang",
     "category": "sayur",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F808cd803-4e5d-43d0-ab01-9d044eb6844e%2FResep-Tumis-Buncis-Udang.jpg?table=block&id=25df5173-206a-479c-8097-c85b97fad0d2&width=600&cache=v2",
+    "photo": "sayur-2",
     "duration": 30,
     "portion": 2,
     "ingredient_section": [
@@ -266,7 +266,7 @@
     "id": "sayur-3",
     "name": "Tumis Pakcoy",
     "category": "sayur",
-    "photo": "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fc020aa50-a9b9-4fb7-849a-41823c7e04c2%2FResep-Tumis-Pakcoy.jpg?table=block&id=f6857728-e56b-4220-a6ab-4d7581d06b4c&width=600&cache=v2",
+    "photo": "sayur-3",
     "duration": 15,
     "portion": 3,
     "ingredient_section": [
