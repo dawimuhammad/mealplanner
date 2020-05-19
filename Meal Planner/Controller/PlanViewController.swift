@@ -22,7 +22,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        self.title = "Rencana Masak"
         plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
         if (plans.count > 0) {
             preparePlanContainer()
