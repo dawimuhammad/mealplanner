@@ -53,6 +53,7 @@ extension FindMealViewController: UICollectionViewDataSource {
         print(resep.count)
         cell.labelRecipeTitle.text = resep[indexPath.row].name
         cell.labelRecipeDetail.text = "\(resep[indexPath.row].duration!) menit - \(resep[indexPath.row].portion!) orang"
+        cell.imageMeal.image = UIImage(named: resep[indexPath.row].photo!)
         return cell
     }
     

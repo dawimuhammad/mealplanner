@@ -112,7 +112,7 @@
                     <navigationItem key="navigationItem" id="Rzg-lo-CjG"/>
                     <connections>
                         <outlet property="categoryCollectionView" destination="PZ7-22-t5k" id="fAI-Jx-sHD"/>
-                        <segue destination="k7V-xS-L9A" kind="modal" identifier="toFindMeal" modalPresentationStyle="fullScreen" id="016-Sy-ltR"/>
+                        <segue destination="k7V-xS-L9A" kind="show" identifier="toFindMeal" id="016-Sy-ltR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEd-ML-lSv" sceneMemberID="firstResponder"/>
@@ -128,7 +128,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-FY-RbB">
-                                <rect key="frame" x="20" y="157" width="374" height="705"/>
+                                <rect key="frame" x="20" y="201" width="374" height="612"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UfW-nt-6FJ">
                                     <size key="itemSize" width="151" height="153"/>
@@ -241,7 +241,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktU-BS-onR">
-                                <rect key="frame" x="186" y="56" width="42" height="21"/>
+                                <rect key="frame" x="186" y="100" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -262,12 +262,12 @@
                     <connections>
                         <outlet property="findMealViewController" destination="NTp-FY-RbB" id="ggV-Wt-1xi"/>
                         <outlet property="labelTitle" destination="ktU-BS-onR" id="jFg-kW-sMK"/>
-                        <segue destination="6Gs-TF-PXX" kind="presentation" identifier="toDetailMeal" modalPresentationStyle="fullScreen" id="A3I-b5-127"/>
+                        <segue destination="6Gs-TF-PXX" kind="show" identifier="toDetailMeal" id="A3I-b5-127"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RhZ-yw-Stp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="991" y="440"/>
+            <point key="canvasLocation" x="893" y="440"/>
         </scene>
         <!--Detail Meal View Controller-->
         <scene sceneID="BSK-un-a6c">
@@ -471,6 +471,7 @@
                         <outlet property="datePicker" destination="w97-XX-bac" id="bUZ-0y-p0b"/>
                         <outlet property="durationLabel" destination="jOX-2M-4xg" id="tTw-vU-BWd"/>
                         <outlet property="ingredientsLabel" destination="5Yv-tc-cBv" id="qKT-HS-gBd"/>
+                        <outlet property="mealImage" destination="Cfh-DU-Inh" id="N4m-e7-56w"/>
                         <outlet property="popoverDatePicker" destination="J2Z-jw-dH0" id="Zin-3N-bNa"/>
                         <outlet property="portionLabel" destination="kkF-34-3Eh" id="eeJ-sd-ehP"/>
                         <outlet property="recipeTitleLabel" destination="quV-kk-L0w" id="IVW-Yn-8Jn"/>
@@ -510,7 +511,7 @@
                     <viewLayoutGuide key="safeArea" id="Ou5-0c-zkE"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="961" y="1180"/>
+            <point key="canvasLocation" x="571" y="1375"/>
         </scene>
         <!--Plan View Controller-->
         <scene sceneID="kDT-FR-uxx">
@@ -732,7 +733,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="TyA-Ra-dOo"/>
+        <segue reference="A3I-b5-127"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="PlanEmpty" width="392.5" height="353"/>

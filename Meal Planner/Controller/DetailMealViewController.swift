@@ -14,6 +14,7 @@ class DetailMealViewController: UIViewController {
     @IBOutlet weak var ingredientsLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var portionLabel: UILabel!
+    @IBOutlet weak var mealImage: UIImageView!
     
 //    @IBOutlet weak var recipeScrollView: UIScrollView!
     
@@ -35,6 +36,7 @@ class DetailMealViewController: UIViewController {
         
         durationLabel.text = ": \(recipe.duration!) menit"
         portionLabel.text = ": \(recipe.portion!) orang"
+        mealImage.image = UIImage(named: recipe.photo!)
         
         ingredientsLabel.text = temp
         datePicker.minimumDate = Date()
