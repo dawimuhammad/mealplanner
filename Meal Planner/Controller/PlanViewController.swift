@@ -123,7 +123,14 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         print(selectedPlan)
     }
     
-
+    @IBAction func onPressMulai(_ sender: Any) {
+        navigateToCategory()
+    }
+    
+    func navigateToCategory() {
+        performSegue(withIdentifier: "plan2category", sender: self)
+    }
+    
     /*
     // MARK: - Navigation
 
