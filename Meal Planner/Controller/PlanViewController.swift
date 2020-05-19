@@ -71,6 +71,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        self.tableView.tableFooterView?.isHidden = true
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -85,14 +86,24 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         plansWithSection.count
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(29)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return plansWithSection[section].plans.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let dateFormatterPrint = DateFormatter()
-        dateFormatterPrint.dateFormat = "MMM dd,yyyy"
+        dateFormatterPrint.dateFormat = "cccc, dd MMM yyyy"
         return dateFormatterPrint.string(from: plansWithSection[section].date!)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        header.textLabel?.textColor = UIColor.init(red: CGFloat(120/255), green: CGFloat(120/255), blue: CGFloat(120/255), alpha: CGFloat(1))
+        header.textLabel?.font = UIFont.boldSystemFont(ofSize: 14)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
