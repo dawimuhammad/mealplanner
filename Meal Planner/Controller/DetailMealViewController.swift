@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MyDetailMealDelegate {
+    func updatePlan(plan: Plan)
+}
+
 class DetailMealViewController: UIViewController {
     
     @IBOutlet weak var recipeTitleLabel: UILabel!
@@ -21,6 +25,8 @@ class DetailMealViewController: UIViewController {
     @IBOutlet var popoverDatePicker: UIView!
     
     @IBOutlet weak var datePicker: UIDatePicker!
+    
+    var delegate: MyDetailMealDelegate?
     
     
     var recipe = categories.getRecipeByCategory(category: .ayam)![0]
@@ -42,7 +48,7 @@ class DetailMealViewController: UIViewController {
         datePicker.minimumDate = Date()
         datePicker.maximumDate = Date(timeIntervalSinceNow: 60*60*24*30) //maximum pick one month from today
         
-        
+        print(self.delegate)
         // Do any additional setup after loading the view.
     }
     
@@ -104,7 +110,8 @@ class DetailMealViewController: UIViewController {
     @IBAction func doneButton(_ sender: UIButton) {
         // save plan
         print(date)
-        Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
+        let newPlan: Plan = Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
+        self.delegate?.updatePlan(plan: newPlan)
         self.view.alpha = 1.0
         self.popoverDatePicker.removeFromSuperview()
         

@@ -19,6 +19,8 @@ extension Plan {
     static func fetchQueryAfterDate(viewContext: NSManagedObjectContext, date: Date) -> [Plan] {
         let request: NSFetchRequest<Plan> = Plan.fetchRequest()
         request.predicate = NSPredicate(format: "plan_date >= %@", Calendar.current.startOfDay(for: date) as NSDate)
+        let sort = NSSortDescriptor(key: #keyPath(Plan.plan_date), ascending: true)
+        request.sortDescriptors = [sort]
         let result = try? viewContext.fetch(request)
         return result ?? []
     }
@@ -26,6 +28,8 @@ extension Plan {
     static func fetchQueryBeforeDate(viewContext: NSManagedObjectContext, date: Date) -> [Plan] {
         let request: NSFetchRequest<Plan> = Plan.fetchRequest()
         request.predicate = NSPredicate(format: "plan_date < %@", Calendar.current.startOfDay(for: date) as NSDate)
+        let sort = NSSortDescriptor(key: #keyPath(Plan.plan_date), ascending: true)
+        request.sortDescriptors = [sort]
         let result = try? viewContext.fetch(request)
         return result ?? []
     }
@@ -46,6 +50,7 @@ extension Plan {
         plan.recipe_portion = portion
         do {
             try viewContext.save()
+            print("SAVE PLAN SUCCESS")
             return plan
         } catch {
             return nil
@@ -58,7 +63,7 @@ extension Plan {
         let _ = try? viewContext.execute(deleteRequest)
     }
     
-    static func savePlan (viewContext: NSManagedObjectContext, date: Date, recipe: Recipe) {
+    static func savePlan (viewContext: NSManagedObjectContext, date: Date, recipe: Recipe) -> Plan {
         let plan = Plan.save(viewContext: viewContext, date: date, recipeId: recipe.id!, recipeName: recipe.name!, recipePhoto: recipe.photo!, duration: Int16(recipe.duration!), portion: Int16(recipe.portion!))
         for ingredientSection in recipe.ingredientSections! {
             for ingredient in ingredientSection.ingredients! {
@@ -75,5 +80,6 @@ extension Plan {
                 }
             }
         }
+        return plan!
     }
 }
