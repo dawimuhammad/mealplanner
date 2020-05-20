@@ -70,7 +70,6 @@ extension CategoryViewController: UICollectionViewDataSource {
         default:
             cell.imageCategory.image = #imageLiteral(resourceName: "CategoryLainnya")
         }
-        cell.backgroundColor = .green
         return cell
     }
     

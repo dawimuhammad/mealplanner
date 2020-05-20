@@ -53,7 +53,7 @@ class DetailMealViewController: UIViewController {
         self.view.addSubview(popoverDatePicker)
 //        self.popoverDatePicker.alpha = 0.5
         popoverDatePicker.center = self.view.center
-        popoverDatePicker.alpha = 0.5
+//        popoverDatePicker.alpha = 0.5
         print("muncul??")
         
     }
@@ -92,9 +92,11 @@ class DetailMealViewController: UIViewController {
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
         
-        date = datePicker.date
-        print(datePicker.timeZone)
-        print(date)
+        print(datePicker.date)
+//        print(datePicker.timeZone!)
+        datePicker.timeZone = TimeZone(abbreviation: "WIB")
+        print(datePicker)
+        print(datePicker.date)
 //        let strDate = dateFormatter.string(from: date)
         
         
