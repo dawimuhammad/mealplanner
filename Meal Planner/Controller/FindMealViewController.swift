@@ -15,15 +15,16 @@ class FindMealViewController: UIViewController {
     var resep: [Recipe] = []
     var selectRecipe = categories.getRecipeByCategory(category: .ayam)![0]
     
+
     var delegate: MyDetailMealDelegate?
     
-    
-    @IBOutlet weak var labelTitle: UILabel!
+
     @IBOutlet weak var findMealViewController: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        labelTitle.text = selectedCategory.rawValue
+        navigationItem.title = selectedCategory.rawValue
+//        labelTitle.text = selectedCategory.rawValue
         findMealViewController.delegate = self
         findMealViewController.dataSource = self
         resep = categories.getRecipeByCategory(category: selectedCategory)!
