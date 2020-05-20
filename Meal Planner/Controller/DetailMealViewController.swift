@@ -58,7 +58,7 @@ class DetailMealViewController: UIViewController {
     @IBAction func displayPopover(_ sender: UIButton) {
         self.view.addSubview(popoverDatePicker)
         popoverDatePicker.center = self.view.center
-        self.view.superview?.alpha = 0.1
+//        self.view.superview?.alpha = 0.1
         print("muncul??")
         
     }

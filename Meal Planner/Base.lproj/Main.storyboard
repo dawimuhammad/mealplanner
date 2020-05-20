@@ -157,7 +157,7 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FindMealCell" id="BwV-rR-tOh" customClass="FindMealCollectionViewCell" customModule="Meal_Planner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="68" width="151" height="153"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="DBx-mM-WOq">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qKa-ub-E6A">
                                             <rect key="frame" x="0.0" y="0.0" width="151" height="153"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -215,8 +215,8 @@
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="ZLI-eG-ry9" secondAttribute="bottom" id="CfV-Xg-lur"/>
                                                 <constraint firstAttribute="trailing" secondItem="ZLI-eG-ry9" secondAttribute="trailing" id="DPx-HG-zW8"/>
-                                                <constraint firstItem="ZLI-eG-ry9" firstAttribute="leading" secondItem="DBx-mM-WOq" secondAttribute="leading" id="FV9-Ah-MRV"/>
-                                                <constraint firstItem="ZLI-eG-ry9" firstAttribute="top" secondItem="DBx-mM-WOq" secondAttribute="top" id="rmb-Ty-j8T"/>
+                                                <constraint firstItem="ZLI-eG-ry9" firstAttribute="leading" secondItem="qKa-ub-E6A" secondAttribute="leading" id="FV9-Ah-MRV"/>
+                                                <constraint firstItem="ZLI-eG-ry9" firstAttribute="top" secondItem="qKa-ub-E6A" secondAttribute="top" id="rmb-Ty-j8T"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="151" height="153"/>
@@ -231,7 +231,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <searchBar contentMode="redraw" id="uPa-sy-JvB">
+                                        <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPa-sy-JvB">
                                             <rect key="frame" x="0.0" y="-329" width="374" height="725"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <textInputTraits key="textInputTraits"/>
@@ -292,7 +292,7 @@
                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="label.cornerRadius">
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
