@@ -485,7 +485,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" translatesAutoresizingMaskIntoConstraints="NO" id="w97-XX-bac">
+                        <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="w97-XX-bac">
                             <rect key="frame" x="28" y="44" width="358" height="193"/>
                             <connections>
                                 <action selector="datePickerPicked:" destination="6Gs-TF-PXX" eventType="valueChanged" id="8QK-Mm-OHL"/>
