@@ -142,7 +142,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedPlan: Plan = plansWithSection[indexPath.section].plans[indexPath.row]
-        print(selectedPlan)
+        let selectedRecipe: Recipe? = categories.getRecipeById(id: selectedPlan.recipe_id!)
+        performSegue(withIdentifier: "plan2detail", sender: selectedRecipe)
     }
     
     @IBAction func onPressMulai(_ sender: Any) {
@@ -192,6 +193,15 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         if(segue.identifier == "plan2category"){
             let v = segue.destination as! CategoryViewController
             v.delegate =  self
+        }
+        
+        if let identifier = segue.identifier {
+            if identifier == "plan2detail" {
+                if let destinationVC = segue.destination as? DetailMealViewController{
+                    destinationVC.recipe = sender as! Recipe
+                    destinationVC.fromPlan = true
+                }
+            }
         }
     }
     

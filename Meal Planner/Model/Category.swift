@@ -10,6 +10,7 @@ import Foundation
 
 class Categories {
     private var arrCategory: [CategoryEnum: [Recipe]] = [:]
+    private var allRecipes: [Recipe] = []
     
     init() {
         let ayamRecipes = getRecipesFromJSON(fileName: "ayam")
@@ -18,6 +19,12 @@ class Categories {
         let babiRecipes = getRecipesFromJSON(fileName: "babi")
         let sayurRecipes = getRecipesFromJSON(fileName: "sayur")
         let lainnyaRecipes = getRecipesFromJSON(fileName: "other")
+        allRecipes.append(contentsOf: ayamRecipes)
+        allRecipes.append(contentsOf: sapiRecipes)
+        allRecipes.append(contentsOf: ikanRecipes)
+        allRecipes.append(contentsOf: babiRecipes)
+        allRecipes.append(contentsOf: sayurRecipes)
+        allRecipes.append(contentsOf: lainnyaRecipes)
         arrCategory[.ayam] = ayamRecipes
         arrCategory[.sapi] = sapiRecipes
         arrCategory[.ikan] = ikanRecipes
@@ -119,5 +126,17 @@ class Categories {
     
     public func getRecipeByCategory(category: CategoryEnum) -> [Recipe]? {
         return arrCategory[category]
+    }
+    
+    public func getAllRecipes() -> [Recipe] {
+        return allRecipes
+    }
+    
+    public func getRecipeById(id: String) -> Recipe? {
+        var recipe: Recipe?
+        
+        recipe = allRecipes.filter({$0.id == id})[0]
+        
+        return recipe
     }
 }

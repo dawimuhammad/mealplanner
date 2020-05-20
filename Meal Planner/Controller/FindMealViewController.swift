@@ -28,9 +28,7 @@ class FindMealViewController: UIViewController {
         findMealViewController.delegate = self
         findMealViewController.dataSource = self
         resep = categories.getRecipeByCategory(category: selectedCategory)!
-        // Do any additional setup after loading the view.
-        
-        print(delegate)
+        // Do any additional setup after loading the view.        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
