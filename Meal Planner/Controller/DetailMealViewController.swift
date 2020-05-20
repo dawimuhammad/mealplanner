@@ -56,9 +56,12 @@ class DetailMealViewController: UIViewController {
         datePicker.maximumDate = Date(timeIntervalSinceNow: 60*60*24*30) //maximum pick one month from today
         
         // Do any additional setup after loading the view.
+        print(fromPlan)
         
         if (fromPlan) {
-            tambahRencanaButton.isHidden = true
+//            tambahRencanaButton.isHidden = true
+            tambahRencanaButton.backgroundColor = .black
+            tambahRencanaButton.titleLabel?.textColor = UIColor.init(hex: "#F19437")
         }
     }
     
@@ -104,13 +107,11 @@ class DetailMealViewController: UIViewController {
 
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
+        dateFormatter.timeZone =  TimeZone.current
         
         print(datePicker.date)
 //        print(datePicker.timeZone!)
-        datePicker.timeZone = TimeZone(abbreviation: "WIB")
-//        print(datePicker)
-        print(datePicker.date)
-//        let strDate = dateFormatter.string(from: date)
+//        datePicker.timeZone = TimeZone.current
         
         
     }
@@ -118,6 +119,8 @@ class DetailMealViewController: UIViewController {
     
     @IBAction func doneButton(_ sender: UIButton) {
         // save plan
+        
+        
         date = datePicker.date
         print(date)
         let newPlan: Plan = Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
