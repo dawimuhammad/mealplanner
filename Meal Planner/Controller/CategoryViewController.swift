@@ -58,7 +58,7 @@ extension CategoryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCollectionViewCell
-        cell.labelCategory.text = mealCategories[indexPath.row].rawValue
+        cell.labelCategory.text = mealCategories[indexPath.row].rawValue.capitalizingFirstLetter()
         switch mealCategories[indexPath.row] {
         case .ayam:
             cell.imageCategory.image = #imageLiteral(resourceName: "CategoryAyam")
