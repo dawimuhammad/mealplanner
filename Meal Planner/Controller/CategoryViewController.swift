@@ -16,6 +16,7 @@ class CategoryViewController: UIViewController {
     var selectCategory = CategoryEnum.ayam
     
     var delegate: MyDetailMealDelegate?
+    var recomendRecipe: [Recipe] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,8 @@ class CategoryViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         self.tabBarController?.tabBar.isHidden = true
 
+        prepareRecomendation()
+        
         //try check save data
         let savedData = Plan.fetchAll(viewContext: getViewContext())
         for plan in savedData {
@@ -33,6 +36,16 @@ class CategoryViewController: UIViewController {
             print("recipe photo: \(plan.recipe_photo!)")
             print("\n\n")
         }        
+    }
+    
+    func prepareRecomendation() {
+        var allRecipes: [Recipe] = categories.getAllRecipes()
+        for _ in 1...5 {
+            let index = Int.random(in: 0..<allRecipes.count)
+            let recipe: Recipe =  allRecipes[index]
+            recomendRecipe.append(recipe)
+            allRecipes.remove(at: index)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
