@@ -88,11 +88,12 @@ class DetailMealViewController: UIViewController {
             temp += "\(item.section ?? "") : \n\(item.steps!.joined(separator: "\n"))"
             temp += "\n\n"
         }
-        
-        if let tips = recipe.tips {
+
+        if recipe.tips?.count != 0 {
             temp += "Tips : \n"
-            temp += "\(tips.joined(separator: "\n"))\n"
+            temp += "\(recipe.tips?.joined(separator: "\n") ?? "")\n"
         }
+
         return temp
     }
     
