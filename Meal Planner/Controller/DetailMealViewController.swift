@@ -39,6 +39,9 @@ class DetailMealViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 //        recipeScrollView.delegate = self
+        self.navigationItem.largeTitleDisplayMode = .never
+        self.tabBarController?.tabBar.isHidden = true
+        
         let temp = breakdownRecipe(recipe: recipe)
         
         recipeTitleLabel.text = recipe.name!
@@ -53,7 +56,9 @@ class DetailMealViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
-        
+        if (fromPlan) {
+            tambahRencanaButton.isHidden = true
+        }
     }
     
     @IBAction func displayPopover(_ sender: UIButton) {

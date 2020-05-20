@@ -132,7 +132,11 @@ class Categories {
         return allRecipes
     }
     
-//    public func getRecipeById(id: String) -> Recipe {
-//        
-//    }
+    public func getRecipeById(id: String) -> Recipe? {
+        var recipe: Recipe?
+        
+        recipe = allRecipes.filter({$0.id == id})[0]
+        
+        return recipe
+    }
 }
