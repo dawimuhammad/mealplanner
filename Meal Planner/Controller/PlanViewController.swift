@@ -8,7 +8,8 @@
 
 import UIKit
 
-class PlanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PlanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MyDetailMealDelegate {
+    
     @IBOutlet var emptyViewContainer: UIView!
     @IBOutlet var btnMulai: UIButton!
     @IBOutlet var tableViewContainer: UIView!
@@ -29,13 +30,22 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
             preparePlanContainer()
         } else {
             prepareEmptyContainer()
-        }
+        }        
     }
     
     func prepareNavigationButton() {
         let archiveButton   = UIBarButtonItem(image: #imageLiteral(resourceName: "ArchiveButton"),  style: .plain, target: self, action: #selector(didTapArchive))
         let addButton = UIBarButtonItem(image: #imageLiteral(resourceName: "AddPlan"),  style: .plain, target: self, action: #selector(didTapAdd))
         self.navigationItem.rightBarButtonItems = [addButton, archiveButton]
+        self.navigationController?.navigationBar.tintColor = UIColor(hex: "#F19436")
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) { // As soon as vc appears
+        super.viewWillAppear(true)
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func prepareEmptyContainer() {
@@ -45,7 +55,16 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func preparePlanContainer() {
-        
+        prepareSection()
+        tableViewContainer.isHidden = false
+        emptyViewContainer.isHidden = true
+        self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        self.tableView.tableFooterView?.isHidden = true
+    }
+    
+    func prepareSection() {
         var prevPlanDate: Date? = nil
         var planDatas: [Plan] = []
         for plan in plans {
@@ -74,13 +93,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
             let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
             plansWithSection.append(planSection)
         }
-                
-        tableViewContainer.isHidden = false
-        emptyViewContainer.isHidden = true
-        self.tableView.register(UINib(nibName: "PlanTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
-        self.tableView.tableFooterView?.isHidden = true
+        
+        print(plansWithSection)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -146,6 +160,40 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func navigateToCategory() {
         performSegue(withIdentifier: "plan2category", sender: self)
+    }
+    
+    func updatePlan(plan: Plan) {
+        if (plans.count == 0) {
+            print("MASUK UPDATE ATAS")
+            plans.append(plan)
+            preparePlanContainer()
+        } else {
+            print("MASUK UPDATE BAWAH")
+            plans.append(plan)
+            updateNewPlan(newPlan: plan)
+        }
+    }
+    
+    func updateNewPlan(newPlan: Plan) {
+        let curDateFormat = DateFormatter()
+        let prevDateFormat = DateFormatter()
+        curDateFormat.dateFormat = "MMM dd,yyyy"
+        prevDateFormat.dateFormat = "MMM dd,yyyy"
+        
+        if let row = plansWithSection.firstIndex(where: {prevDateFormat.string(from: $0.date!) == curDateFormat.string(from: newPlan.plan_date!)}) {
+               print(row)
+            plansWithSection[row].plans.append(newPlan)
+        } else {
+            plansWithSection.append(PlanSection(date: newPlan.plan_date, plans: [newPlan]))
+        }
+        tableView.reloadData()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "plan2category"){
+            let v = segue.destination as! CategoryViewController
+            v.delegate =  self
+        }
     }
     
     /*

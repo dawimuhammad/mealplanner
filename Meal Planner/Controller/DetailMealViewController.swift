@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol MyDetailMealDelegate {
+    func updatePlan(plan: Plan)
+}
+
 class DetailMealViewController: UIViewController {
     
     @IBOutlet weak var recipeTitleLabel: UILabel!
@@ -15,17 +19,20 @@ class DetailMealViewController: UIViewController {
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var portionLabel: UILabel!
     @IBOutlet weak var mealImage: UIImageView!
-    
-//    @IBOutlet weak var recipeScrollView: UIScrollView!
+    @IBOutlet weak var tambahRencanaButton: UIButton!
+
     
     @IBOutlet var popoverDatePicker: UIView!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    var delegate: MyDetailMealDelegate?
+    
     
     var recipe = categories.getRecipeByCategory(category: .ayam)![0]
     
     var date = Date()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,18 +49,16 @@ class DetailMealViewController: UIViewController {
         datePicker.minimumDate = Date()
         datePicker.maximumDate = Date(timeIntervalSinceNow: 60*60*24*30) //maximum pick one month from today
         
-        
+        print(self.delegate)
         // Do any additional setup after loading the view.
+        
+        
     }
     
     @IBAction func displayPopover(_ sender: UIButton) {
-        print("muncul?")
-//        self.view.alpha = 0.2
-//        self.view.alpha = 0.2
         self.view.addSubview(popoverDatePicker)
-//        self.popoverDatePicker.alpha = 0.5
         popoverDatePicker.center = self.view.center
-//        popoverDatePicker.alpha = 0.5
+        self.view.superview?.alpha = 0.1
         print("muncul??")
         
     }
@@ -95,7 +100,7 @@ class DetailMealViewController: UIViewController {
         print(datePicker.date)
 //        print(datePicker.timeZone!)
         datePicker.timeZone = TimeZone(abbreviation: "WIB")
-        print(datePicker)
+//        print(datePicker)
         print(datePicker.date)
 //        let strDate = dateFormatter.string(from: date)
         
@@ -105,13 +110,19 @@ class DetailMealViewController: UIViewController {
     
     @IBAction func doneButton(_ sender: UIButton) {
         // save plan
+        date = datePicker.date
         print(date)
-        Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
-        self.view.alpha = 1.0
+        let newPlan: Plan = Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
+        self.delegate?.updatePlan(plan: newPlan)
+//        self.view.alpha = 1.0
         self.popoverDatePicker.removeFromSuperview()
         
     }
-
+    
+    @IBAction func closeButton(_ sender: UIButton) {
+        self.popoverDatePicker.removeFromSuperview()
+    }
+    
     /*
      // MARK: - Navigation
      

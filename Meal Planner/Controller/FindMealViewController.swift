@@ -16,6 +16,9 @@ class FindMealViewController: UIViewController {
     var selectRecipe = categories.getRecipeByCategory(category: .ayam)![0]
     
 
+    var delegate: MyDetailMealDelegate?
+    
+
     @IBOutlet weak var findMealViewController: UICollectionView!
     
     override func viewDidLoad() {
@@ -26,6 +29,8 @@ class FindMealViewController: UIViewController {
         findMealViewController.dataSource = self
         resep = categories.getRecipeByCategory(category: selectedCategory)!
         // Do any additional setup after loading the view.
+        
+        print(delegate)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -33,6 +38,7 @@ class FindMealViewController: UIViewController {
             if identifier == "toDetailMeal" {
                 if let destinationVC = segue.destination as? DetailMealViewController{
                     destinationVC.recipe = selectRecipe
+                    destinationVC.delegate = delegate
                 }
             }
         }
