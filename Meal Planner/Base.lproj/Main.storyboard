@@ -686,7 +686,7 @@
                     <navigationItem key="navigationItem" id="Io9-b4-v12"/>
                     <connections>
                         <outlet property="tableView" destination="NIv-YM-e0I" id="0Gw-b5-fMA"/>
-                        <segue destination="6Gs-TF-PXX" kind="show" id="eQI-N7-lY4"/>
+                        <segue destination="6Gs-TF-PXX" kind="show" identifier="archive2detail" id="eQI-N7-lY4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akO-wD-S6L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -762,7 +762,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="A3I-b5-127"/>
+        <segue reference="eQI-N7-lY4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="PlanEmpty" width="392.5" height="353"/>

@@ -33,6 +33,8 @@ class DetailMealViewController: UIViewController {
     
     var date = Date()
     
+    var fromPlan: Bool = false
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,7 +51,6 @@ class DetailMealViewController: UIViewController {
         datePicker.minimumDate = Date()
         datePicker.maximumDate = Date(timeIntervalSinceNow: 60*60*24*30) //maximum pick one month from today
         
-        print(self.delegate)
         // Do any additional setup after loading the view.
         
         
