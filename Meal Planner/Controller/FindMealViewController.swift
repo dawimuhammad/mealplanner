@@ -23,7 +23,7 @@ class FindMealViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = selectedCategory.rawValue
+        navigationItem.title = selectedCategory.rawValue.capitalizingFirstLetter()
 //        labelTitle.text = selectedCategory.rawValue
         findMealViewController.delegate = self
         findMealViewController.dataSource = self
@@ -72,3 +72,5 @@ extension FindMealViewController: UICollectionViewDelegate {
     }
     
 }
+
+
