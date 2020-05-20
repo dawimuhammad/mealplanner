@@ -94,7 +94,6 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
             plansWithSection.append(planSection)
         }
         
-        print(plansWithSection)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -164,11 +163,9 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func updatePlan(plan: Plan) {
         if (plans.count == 0) {
-            print("MASUK UPDATE ATAS")
             plans.append(plan)
             preparePlanContainer()
         } else {
-            print("MASUK UPDATE BAWAH")
             plans.append(plan)
             updateNewPlan(newPlan: plan)
         }
@@ -186,6 +183,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         } else {
             plansWithSection.append(PlanSection(date: newPlan.plan_date, plans: [newPlan]))
         }
+        
+        plansWithSection = plansWithSection.sorted(by: { curDateFormat.string(from: $0.date!) < curDateFormat.string(from: $1.date!) })
         tableView.reloadData()
     }
     
