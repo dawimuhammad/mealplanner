@@ -106,9 +106,20 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedPlan: Plan = plansWithSection[indexPath.section].plans[indexPath.row]
-        print(selectedPlan)
+        let selectedRecipe: Recipe? = categories.getRecipeById(id: selectedPlan.recipe_id!)
+        performSegue(withIdentifier: "archive2detail", sender: selectedRecipe)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           if let identifier = segue.identifier {
+               if identifier == "archive2detail" {
+                   if let destinationVC = segue.destination as? DetailMealViewController{
+                       destinationVC.recipe = sender as! Recipe
+                       destinationVC.fromPlan = true
+                   }
+               }
+           }
+       }
 
     /*
     // MARK: - Navigation
