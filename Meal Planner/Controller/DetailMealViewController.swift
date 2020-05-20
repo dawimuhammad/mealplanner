@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 
 protocol MyDetailMealDelegate {
     func updatePlan(plan: Plan)
@@ -123,6 +124,7 @@ class DetailMealViewController: UIViewController {
         self.delegate?.updatePlan(plan: newPlan)
 //        self.view.alpha = 1.0
         self.popoverDatePicker.removeFromSuperview()
+        performSegue(withIdentifier: "unwindToPlan", sender: self)
         
     }
     

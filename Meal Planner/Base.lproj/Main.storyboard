@@ -477,9 +477,11 @@
                         <outlet property="portionLabel" destination="kkF-34-3Eh" id="eeJ-sd-ehP"/>
                         <outlet property="recipeTitleLabel" destination="quV-kk-L0w" id="IVW-Yn-8Jn"/>
                         <outlet property="tambahRencanaButton" destination="ovp-yn-glQ" id="gwo-WO-3xJ"/>
+                        <segue destination="2Ez-0J-ALL" kind="unwind" identifier="unwindToPlan" unwindAction="unwind:" id="Ikk-mh-Bps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huo-KC-dwN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="2Ez-0J-ALL" userLabel="Exit" sceneMemberID="exit"/>
                 <view contentMode="scaleToFill" id="J2Z-jw-dH0">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="312"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
