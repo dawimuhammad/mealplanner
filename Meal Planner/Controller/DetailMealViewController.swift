@@ -21,7 +21,9 @@ class DetailMealViewController: UIViewController {
     @IBOutlet weak var portionLabel: UILabel!
     @IBOutlet weak var mealImage: UIImageView!
     @IBOutlet weak var tambahRencanaButton: UIButton!
-
+    @IBOutlet weak var tambahRencanaView: UIView!
+    
+    
     
     @IBOutlet var popoverDatePicker: UIView!
     
@@ -35,11 +37,11 @@ class DetailMealViewController: UIViewController {
     var date = Date()
     
     var fromPlan: Bool = false
+    var fromArchive: Bool = false
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        recipeScrollView.delegate = self
         self.navigationItem.largeTitleDisplayMode = .never
         self.tabBarController?.tabBar.isHidden = true
         
@@ -57,24 +59,33 @@ class DetailMealViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         print(fromPlan)
+        if fromArchive {
+            tambahRencanaView.isHidden = true
+            tambahRencanaButton.isHidden = true
+            print("hide") }
         
         if (fromPlan) {
-//            tambahRencanaButton.isHidden = true
-            tambahRencanaButton.backgroundColor = .black
-            tambahRencanaButton.titleLabel?.textColor = UIColor.init(hex: "#F19437")
+            tambahRencanaButton.setTitle("Hapus Rencana", for: .normal)
+            tambahRencanaButton.backgroundColor = .systemBackground
+            tambahRencanaButton.setTitleColor(UIColor.init(hex: "#F19437"), for: .normal)
+            tambahRencanaButton.layer.borderWidth = 2.0
+            tambahRencanaButton.layer.borderColor = UIColor.init(hex: "#F19437")?.cgColor
+            
         }
     }
     
-    @IBAction func displayPopover(_ sender: UIButton) {
-        self.view.addSubview(popoverDatePicker)
-        popoverDatePicker.center = self.view.center
-//        self.view.superview?.alpha = 0.1
-        print("muncul??")
+    @IBAction func tambahRencanaButtonPressed(_ sender: UIButton) {
+        print("fromplan = \(fromPlan), fromarchive = \(fromArchive) ")
+        if fromPlan {
+            print("delete")
+            createAlert(titles: recipe.name!, message: "Apakah kamu yakin mau menghapus \(recipe.name!) dalam rencana masakmu?", forDelete: true) { (UIAlertAction) in self.deleteRecipeFromPlan() }
+        } else {
+            self.view.addSubview(popoverDatePicker)
+            popoverDatePicker.center = self.view.center
+        }
         
     }
     
-    
-
     
     func breakdownRecipe(recipe : Recipe) -> String {
         var temp = ""
@@ -92,26 +103,24 @@ class DetailMealViewController: UIViewController {
             temp += "\(item.section ?? "") : \n\(item.steps!.joined(separator: "\n"))"
             temp += "\n\n"
         }
-
+        
         if recipe.tips?.count != 0 {
             temp += "Tips : \n"
             temp += "\(recipe.tips?.joined(separator: "\n") ?? "")\n"
         }
-
+        
         return temp
     }
     
     
     @IBAction func datePickerPicked(_ sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
-
+        
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
         dateFormatter.timeZone =  TimeZone.current
         
         print(datePicker.date)
-//        print(datePicker.timeZone!)
-//        datePicker.timeZone = TimeZone.current
         
         
     }
@@ -120,19 +129,49 @@ class DetailMealViewController: UIViewController {
     @IBAction func doneButton(_ sender: UIButton) {
         // save plan
         
-        
         date = datePicker.date
-        print(date)
+        
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "dd MMM yyyy"
+        dateFormatter.timeZone =  TimeZone.current
+        
         let newPlan: Plan = Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
         self.delegate?.updatePlan(plan: newPlan)
-//        self.view.alpha = 1.0
         self.popoverDatePicker.removeFromSuperview()
-        performSegue(withIdentifier: "unwindToPlan", sender: self)
+        createAlert(titles: recipe.name!, message: "Sudah dimasukkan ke rencana masak kamu pada \(dateFormatter.string(from: date))", forDelete: false) { (UIAlertAction) in
+            self.performSegue(withIdentifier: "unwindToPlan", sender: self)
+        }
+        
         
     }
     
     @IBAction func closeButton(_ sender: UIButton) {
         self.popoverDatePicker.removeFromSuperview()
+    }
+    
+    func createAlert(titles:String, message:String, forDelete : Bool, handlerRESET: ((UIAlertAction) -> Void)?) {
+        let alert = UIAlertController(title: titles, message: message, preferredStyle: .alert)
+        if (forDelete) {
+            alert.addAction(UIAlertAction(title: "Batal", style: .default, handler: nil))
+            alert.addAction(UIAlertAction(title: "Hapus", style: .destructive, handler:
+                //            {action in self.performSegue(withIdentifier: "unwindToPlan", sender: self)}
+                {action in self.deleteRecipeFromPlan()}
+            ))
+            
+        } else {
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: {action in self.performSegue(withIdentifier: "unwindToPlan", sender: self)}))
+        }
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func deleteRecipeFromPlan() {
+        // add delete from coredata function
+        print("DELETE YES")
+        // perform unwind segue
+        performSegue(withIdentifier: "unwindToPlan", sender: self)
+        
     }
     
     /*

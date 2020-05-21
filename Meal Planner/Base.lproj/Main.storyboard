@@ -290,7 +290,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="displayPopover:" destination="6Gs-TF-PXX" eventType="touchUpInside" id="gkw-34-AYR"/>
+                                            <action selector="tambahRencanaButtonPressed:" destination="6Gs-TF-PXX" eventType="touchUpInside" id="gkw-34-AYR"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -476,6 +476,7 @@
                         <outlet property="portionLabel" destination="kkF-34-3Eh" id="eeJ-sd-ehP"/>
                         <outlet property="recipeTitleLabel" destination="quV-kk-L0w" id="IVW-Yn-8Jn"/>
                         <outlet property="tambahRencanaButton" destination="ovp-yn-glQ" id="gwo-WO-3xJ"/>
+                        <outlet property="tambahRencanaView" destination="pEw-0C-v2Y" id="TcA-XX-t1M"/>
                         <segue destination="2Ez-0J-ALL" kind="unwind" identifier="unwindToPlan" unwindAction="unwind:" id="Ikk-mh-Bps"/>
                     </connections>
                 </viewController>

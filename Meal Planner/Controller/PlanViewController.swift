@@ -208,6 +208,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let destinationVC = segue.destination as? DetailMealViewController{
                     destinationVC.recipe = sender as! Recipe
                     destinationVC.fromPlan = true
+                    // add another value to determine detail views came from archive
+                    destinationVC.fromArchive = false
                 }
             }
         }
