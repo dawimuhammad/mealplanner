@@ -16,12 +16,13 @@ protocol MyDetailMealDelegate {
 class DetailMealViewController: UIViewController {
     
     @IBOutlet weak var recipeTitleLabel: UILabel!
-    @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var stepsLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var portionLabel: UILabel!
     @IBOutlet weak var mealImage: UIImageView!
     @IBOutlet weak var tambahRencanaButton: UIButton!
     @IBOutlet weak var tambahRencanaView: UIView!
+    @IBOutlet weak var ingredientsLabel: UILabel!
     
     
     
@@ -45,15 +46,15 @@ class DetailMealViewController: UIViewController {
         self.navigationItem.largeTitleDisplayMode = .never
         self.tabBarController?.tabBar.isHidden = true
         
-        let temp = breakdownRecipe(recipe: recipe)
-        
         recipeTitleLabel.text = recipe.name!
         
         durationLabel.text = ": \(recipe.duration!) menit"
         portionLabel.text = ": \(recipe.portion!) orang"
         mealImage.image = UIImage(named: recipe.photo!)
         
-        ingredientsLabel.text = temp
+        ingredientsLabel.text = breakdownIngredients(recipe: recipe)
+        stepsLabel.text = breakdownSteps(recipe: recipe)
+        
         datePicker.minimumDate = Date()
         datePicker.maximumDate = Date(timeIntervalSinceNow: 60*60*24*30) //maximum pick one month from today
         
@@ -87,31 +88,6 @@ class DetailMealViewController: UIViewController {
     }
     
     
-    func breakdownRecipe(recipe : Recipe) -> String {
-        var temp = ""
-        // Ingredients section
-        for item in recipe.ingredientSections! {
-            temp += item.section!
-            temp += ":"
-            for list in item.ingredients! {
-                temp += "\n\(list.name ?? "")"
-            }
-            temp += "\n\n"
-        }
-        
-        for item in recipe.stepSections! {
-            temp += "\(item.section ?? "") : \n\(item.steps!.joined(separator: "\n"))"
-            temp += "\n\n"
-        }
-        
-        if recipe.tips?.count != 0 {
-            temp += "Tips : \n"
-            temp += "\(recipe.tips?.joined(separator: "\n") ?? "")\n"
-        }
-        
-        return temp
-    }
-    
     
     @IBAction func datePickerPicked(_ sender: UIDatePicker) {
         let dateFormatter = DateFormatter()
@@ -121,7 +97,6 @@ class DetailMealViewController: UIViewController {
         dateFormatter.timeZone =  TimeZone.current
         
         print(datePicker.date)
-        
         
     }
     
@@ -172,6 +147,53 @@ class DetailMealViewController: UIViewController {
         // perform unwind segue
         performSegue(withIdentifier: "unwindToPlan", sender: self)
         
+    }
+    
+    
+    func breakdownIngredients(recipe : Recipe) -> String {
+        var temp = ""
+        // Ingredients section
+        if recipe.ingredientSections!.count == 1 {
+            for item in recipe.ingredientSections! {
+                for list in item.ingredients! {
+                    temp += "\(list.name ?? "")\n"
+                }
+                temp += "\n"
+            }
+        } else {
+            for item in recipe.ingredientSections! {
+                temp += item.section!
+                temp += ":"
+                for list in item.ingredients! {
+                    temp += "\n\(list.name ?? "")"
+                }
+                temp += "\n\n"
+            }
+        }
+        return temp
+    }
+    
+    func breakdownSteps(recipe : Recipe) -> String {
+        var temp = ""
+        
+        if recipe.stepSections?.count == 1 {
+            for item in recipe.stepSections! {
+                temp += "\(item.steps!.joined(separator: "\n"))"
+                temp += "\n\n"
+            }
+        } else {
+            for item in recipe.stepSections! {
+                temp += "\(item.section ?? "") : \n\(item.steps!.joined(separator: "\n"))"
+                temp += "\n\n"
+            }
+        }
+        
+        
+        if recipe.tips?.count != 0 {
+            temp += "Tips : \n"
+            temp += "\(recipe.tips?.joined(separator: "\n") ?? "")\n"
+        }
+        return temp
     }
     
     /*
