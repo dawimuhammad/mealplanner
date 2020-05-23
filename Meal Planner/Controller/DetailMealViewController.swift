@@ -132,6 +132,7 @@ class DetailMealViewController: UIViewController {
     
     @IBAction func closeButton(_ sender: UIButton) {
         self.popoverDatePicker.removeFromSuperview()
+        dimSuperview(false)
     }
     
     func createAlert(titles:String, message:String, forDelete : Bool, handlerRESET: ((UIAlertAction) -> Void)?) {
@@ -153,6 +154,7 @@ class DetailMealViewController: UIViewController {
     func deleteRecipeFromPlan() {
         // add delete from coredata function
         print("DELETE YES")
+        print(self.view.alpha)
         // perform unwind segue
         performSegue(withIdentifier: "unwindToPlan", sender: self)
         
