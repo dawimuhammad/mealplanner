@@ -512,6 +512,7 @@
                         <outlet property="popoverDatePicker" destination="J2Z-jw-dH0" id="Zin-3N-bNa"/>
                         <outlet property="portionLabel" destination="kkF-34-3Eh" id="eeJ-sd-ehP"/>
                         <outlet property="recipeTitleLabel" destination="quV-kk-L0w" id="IVW-Yn-8Jn"/>
+                        <outlet property="scrollContainerView" destination="j5M-4x-aTu" id="lJY-ZY-vSr"/>
                         <outlet property="stepsLabel" destination="5Yv-tc-cBv" id="qKT-HS-gBd"/>
                         <outlet property="tambahRencanaButton" destination="ovp-yn-glQ" id="gwo-WO-3xJ"/>
                         <outlet property="tambahRencanaView" destination="pEw-0C-v2Y" id="TcA-XX-t1M"/>
@@ -572,6 +573,11 @@
                         <constraint firstItem="Ou5-0c-zkE" firstAttribute="trailing" secondItem="sWf-Mj-JP9" secondAttribute="trailing" constant="68" id="zrK-8r-r1R"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="Ou5-0c-zkE"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </objects>
             <point key="canvasLocation" x="569.56521739130437" y="1374.7767857142856"/>

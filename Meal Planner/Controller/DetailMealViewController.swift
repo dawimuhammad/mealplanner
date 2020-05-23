@@ -24,6 +24,10 @@ class DetailMealViewController: UIViewController {
     @IBOutlet weak var tambahRencanaView: UIView!
     @IBOutlet weak var ingredientsLabel: UILabel!
     
+    //all view?
+    @IBOutlet weak var scrollContainerView: UIView!
+    
+    
     
     
     @IBOutlet var popoverDatePicker: UIView!
@@ -81,7 +85,9 @@ class DetailMealViewController: UIViewController {
             print("delete")
             createAlert(titles: recipe.name!, message: "Apakah kamu yakin mau menghapus \(recipe.name!) dalam rencana masakmu?", forDelete: true) { (UIAlertAction) in self.deleteRecipeFromPlan() }
         } else {
+            dimSuperview(true)
             self.view.addSubview(popoverDatePicker)
+//            self.popoverDatePicker.backgroundColor = UIColor.white
             popoverDatePicker.center = self.view.center
         }
         
@@ -113,6 +119,9 @@ class DetailMealViewController: UIViewController {
         
         let newPlan: Plan = Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
         self.delegate?.updatePlan(plan: newPlan)
+        // dim superview
+        dimSuperview(false)
+        //remove popover
         self.popoverDatePicker.removeFromSuperview()
         createAlert(titles: recipe.name!, message: "Sudah dimasukkan ke rencana masak kamu pada \(dateFormatter.string(from: date))", forDelete: false) { (UIAlertAction) in
             self.performSegue(withIdentifier: "unwindToPlan", sender: self)
@@ -194,6 +203,22 @@ class DetailMealViewController: UIViewController {
             temp += "\(recipe.tips?.joined(separator: "\n") ?? "")\n"
         }
         return temp
+    }
+    
+    func dimSuperview(_ value: Bool){
+        if (value) {
+            self.scrollContainerView.alpha = 0.1
+            self.mealImage.alpha = 0.1
+            self.view.backgroundColor = UIColor.lightGray
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
+            self.tambahRencanaView.alpha = 0.1
+        } else {
+            self.scrollContainerView.alpha = 1.0
+            self.mealImage.alpha = 1.0
+            self.view.backgroundColor = .systemBackground
+            self.navigationController?.setNavigationBarHidden(false, animated: false)
+            self.tambahRencanaView.alpha = 1.0
+        }
     }
     
     /*
