@@ -11,9 +11,12 @@ import UIKit
 class CategoryViewController: UIViewController {
     
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    @IBOutlet weak var recommendationCollectionView: UICollectionView!
     
     let mealCategories = CategoryEnum.allCases
     var selectCategory = CategoryEnum.ayam
+    
+    let recommendation = categories.getRecipeByCategory(category: .ayam)!
     
     var delegate: MyDetailMealDelegate?
     
@@ -21,6 +24,8 @@ class CategoryViewController: UIViewController {
         super.viewDidLoad()
         categoryCollectionView.delegate = self
         categoryCollectionView.dataSource = self
+        recommendationCollectionView.delegate = self
+        recommendationCollectionView.dataSource = self
         self.navigationItem.largeTitleDisplayMode = .never
         self.tabBarController?.tabBar.isHidden = true
 
@@ -53,37 +58,60 @@ class CategoryViewController: UIViewController {
 extension CategoryViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return mealCategories.count
+        if collectionView == self.categoryCollectionView {
+            return mealCategories.count
+        }
+        return recommendation.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCollectionViewCell
-        cell.labelCategory.text = mealCategories[indexPath.row].rawValue.capitalizingFirstLetter()
-        switch mealCategories[indexPath.row] {
-        case .ayam:
-            cell.imageCategory.image = #imageLiteral(resourceName: "CategoryAyam")
-        case .sapi:
-            cell.imageCategory.image = #imageLiteral(resourceName: "CategorySapi")
-        case .ikan:
-            cell.imageCategory.image = #imageLiteral(resourceName: "CategoryIkan")
-        case .sayur:
-            cell.imageCategory.image = #imageLiteral(resourceName: "CategorySayuran")
-        case .babi:
-            cell.imageCategory.image = #imageLiteral(resourceName: "CategoryBabi")
-        default:
-            cell.imageCategory.image = #imageLiteral(resourceName: "CategoryLainnya")
+        if collectionView == self.categoryCollectionView {
+            let cellA = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as! CategoryCollectionViewCell
+            cellA.labelCategory.text = mealCategories[indexPath.row].rawValue.capitalizingFirstLetter()
+            switch mealCategories[indexPath.row] {
+            case .ayam:
+                cellA.imageCategory.image = #imageLiteral(resourceName: "CategoryAyam")
+            case .sapi:
+                cellA.imageCategory.image = #imageLiteral(resourceName: "CategorySapi")
+            case .ikan:
+                cellA.imageCategory.image = #imageLiteral(resourceName: "CategoryIkan")
+            case .sayur:
+                cellA.imageCategory.image = #imageLiteral(resourceName: "CategorySayuran")
+            case .babi:
+                cellA.imageCategory.image = #imageLiteral(resourceName: "CategoryBabi")
+            default:
+                cellA.imageCategory.image = #imageLiteral(resourceName: "CategoryLainnya")
+            }
+            return cellA
+        } else {
+            let cellB = collectionView.dequeueReusableCell(withReuseIdentifier: "RecommendationCell", for: indexPath) as! RecommendationCollectionViewCell
+            print("cell ok")
+            cellB.recommendationTitleCell.text = recommendation[indexPath.row].name
+            cellB.recommendationDetailCell.text = "\(recommendation[indexPath.row].duration!) menit - \(recommendation[indexPath.row].portion!) orang"
+            cellB.recommendationImage.image = UIImage(named: recommendation[indexPath.row].photo!)
+            cellB.recommendationImage.layer.cornerRadius = 10
+            return cellB
         }
-        return cell
+        
+        
     }
     
 }
 
 extension CategoryViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("SDASD123123")
-        print(mealCategories[indexPath.row].rawValue)
-        selectCategory = mealCategories[indexPath.row]
-        performSegue(withIdentifier: "toFindMeal", sender: self)
+        if collectionView == self.categoryCollectionView {
+            print("SDASD123123")
+            print(mealCategories[indexPath.row].rawValue)
+            selectCategory = mealCategories[indexPath.row]
+            performSegue(withIdentifier: "toFindMeal", sender: self)
+        } else {
+            print("SDASD123123")
+//            print(mealCategories[indexPath.row].rawValue)
+//            selectCategory = mealCategories[indexPath.row]
+//            performSegue(withIdentifier: "toFindMeal", sender: self)
+        }
+        
     }
     
 }
