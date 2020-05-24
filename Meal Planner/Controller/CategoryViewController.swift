@@ -15,6 +15,7 @@ class CategoryViewController: UIViewController {
     
     let mealCategories = CategoryEnum.allCases
     var selectCategory = CategoryEnum.ayam
+    var selectRecommendation = categories.getRecipeByCategory(category: .ayam)![0]
     
     let recommendation = categories.getRecipeByCategory(category: .ayam)!
     
@@ -45,6 +46,11 @@ class CategoryViewController: UIViewController {
             if identifier == "toFindMeal" {
                 if let destinationVC = segue.destination as? FindMealViewController{
                     destinationVC.selectedCategory = selectCategory
+                    destinationVC.delegate = self.delegate
+                }
+            } else if identifier == "toDetailMeal" {
+                if let destinationVC = segue.destination as? DetailMealViewController{
+                    destinationVC.recipe = selectRecommendation
                     destinationVC.delegate = self.delegate
                 }
             }
@@ -107,9 +113,9 @@ extension CategoryViewController: UICollectionViewDelegate {
             performSegue(withIdentifier: "toFindMeal", sender: self)
         } else {
             print("SDASD123123")
-//            print(mealCategories[indexPath.row].rawValue)
-//            selectCategory = mealCategories[indexPath.row]
-//            performSegue(withIdentifier: "toFindMeal", sender: self)
+//            print(recommendation[indexPath.row].rawValue)
+            selectRecommendation = recommendation[indexPath.row]
+            performSegue(withIdentifier: "toDetailMeal", sender: self)
         }
         
     }
