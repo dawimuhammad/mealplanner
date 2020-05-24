@@ -35,7 +35,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3q-cV-mJi">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1335"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iEy-fj-2bm">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -79,10 +79,10 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sJX-mx-EdZ">
-                                                <rect key="frame" x="20" y="325" width="374" height="390"/>
+                                                <rect key="frame" x="20" y="325" width="374" height="1000"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="383" id="FU6-ty-rXy"/>
+                                                    <constraint firstAttribute="height" constant="1000" id="FU6-ty-rXy"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ngI-Ek-mJR">
                                                     <size key="itemSize" width="374" height="233"/>
@@ -160,7 +160,7 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="01n-O2-E2Y">
-                                                <rect key="frame" x="0.0" y="715" width="414" height="10"/>
+                                                <rect key="frame" x="0.0" y="1325" width="414" height="10"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="10" id="Lnj-zR-hDv"/>
@@ -267,7 +267,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="v2Y-fX-8nm" firstAttribute="leading" secondItem="CHW-zZ-dXe" secondAttribute="leading" id="2V1-yk-OYC"/>
-                            <constraint firstItem="c3q-cV-mJi" firstAttribute="height" secondItem="CHW-zZ-dXe" secondAttribute="height" id="Ekp-FX-bRO"/>
                             <constraint firstItem="v2Y-fX-8nm" firstAttribute="bottom" secondItem="CHW-zZ-dXe" secondAttribute="bottom" id="Jus-0w-1K3"/>
                             <constraint firstItem="PZ7-22-t5k" firstAttribute="height" secondItem="CHW-zZ-dXe" secondAttribute="height" multiplier="0.31" id="KCd-o0-2wh"/>
                             <constraint firstItem="01n-O2-E2Y" firstAttribute="width" secondItem="CHW-zZ-dXe" secondAttribute="width" id="KnB-yt-7MB"/>
