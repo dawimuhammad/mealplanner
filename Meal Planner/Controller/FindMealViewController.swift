@@ -14,19 +14,25 @@ class FindMealViewController: UIViewController {
     
     var resep: [Recipe] = []
     var selectRecipe = categories.getRecipeByCategory(category: .ayam)![0]
+    var searchedRecipe: [Recipe] = []
+    var searching : Bool = false
+    
     
 
+    
     var delegate: MyDetailMealDelegate?
     
 
-    @IBOutlet weak var findMealViewController: UICollectionView!
+    @IBOutlet weak var findMealCollectionView: UICollectionView!
+    @IBOutlet weak var findMealSearchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = selectedCategory.rawValue.capitalizingFirstLetter()
 //        labelTitle.text = selectedCategory.rawValue
-        findMealViewController.delegate = self
-        findMealViewController.dataSource = self
+        findMealCollectionView.delegate = self
+        findMealCollectionView.dataSource = self
+        findMealSearchBar.delegate = self
         resep = categories.getRecipeByCategory(category: selectedCategory)!
         // Do any additional setup after loading the view.        
     }
@@ -49,26 +55,79 @@ class FindMealViewController: UIViewController {
 extension FindMealViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return resep.count
+        if searching {
+            return searchedRecipe.count
+        } else {
+           return resep.count
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FindMealCell", for: indexPath) as! FindMealCollectionViewCell
         print(resep.count)
-        cell.labelRecipeTitle.text = resep[indexPath.row].name
-        cell.labelRecipeDetail.text = "\(resep[indexPath.row].duration!) menit - \(resep[indexPath.row].portion!) orang"
-        cell.imageMeal.image = UIImage(named: resep[indexPath.row].photo!)
-        return cell
+        if searching {
+            cell.labelRecipeTitle.text = searchedRecipe[indexPath.row].name
+            cell.labelRecipeDetail.text = "\(searchedRecipe[indexPath.row].duration!) menit - \(searchedRecipe[indexPath.row].portion!) orang"
+            cell.imageMeal.image = UIImage(named: searchedRecipe[indexPath.row].photo!)
+            return cell
+        } else {
+            cell.labelRecipeTitle.text = resep[indexPath.row].name
+            cell.labelRecipeDetail.text = "\(resep[indexPath.row].duration!) menit - \(resep[indexPath.row].portion!) orang"
+            cell.imageMeal.image = UIImage(named: resep[indexPath.row].photo!)
+            return cell
+        }
+        
     }
     
 }
 
 extension FindMealViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        selectRecipe = resep[indexPath.row]
-        performSegue(withIdentifier: "toDetailMeal", sender: self)
+        if searching {
+            selectRecipe = searchedRecipe[indexPath.row]
+            performSegue(withIdentifier: "toDetailMeal", sender: self)
+        } else {
+            selectRecipe = resep[indexPath.row]
+            performSegue(withIdentifier: "toDetailMeal", sender: self)
+        }
     }
-    
+
 }
 
+//MARK: - Search Bar Delegate
+
+extension FindMealViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        if(!(searchBar.text?.isEmpty)!){
+            print("search")
+            //reload your data source if necessary
+            searching = true
+        } else {
+            print ("do something?")
+            searching = false
+        }
+        self.findMealSearchBar.endEditing(true)
+        self.findMealCollectionView?.reloadData()
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print("edit")
+        if(searchText.isEmpty){
+            print("empty")
+            //reload your data source if necessary
+            self.findMealCollectionView?.reloadData()
+        } else {
+            searching = true
+            searchedRecipe = resep.filter { ($0.name?.lowercased().contains(searchText.lowercased()))! }
+            self.findMealCollectionView?.reloadData()
+        }
+    }
+    
+
+    
+
+    
+    
+}
 

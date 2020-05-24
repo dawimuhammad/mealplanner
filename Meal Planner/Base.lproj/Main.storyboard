@@ -146,17 +146,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NTp-FY-RbB">
-                                <rect key="frame" x="20" y="88" width="374" height="725"/>
+                                <rect key="frame" x="20" y="148" width="374" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UfW-nt-6FJ">
                                     <size key="itemSize" width="151" height="153"/>
-                                    <size key="headerReferenceSize" width="50" height="68"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FindMealCell" id="BwV-rR-tOh" customClass="FindMealCollectionViewCell" customModule="Meal_Planner" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="68" width="151" height="153"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="153"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qKa-ub-E6A">
                                             <rect key="frame" x="0.0" y="0.0" width="151" height="153"/>
@@ -227,37 +227,33 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FdE-M2-cPZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uPa-sy-JvB">
-                                            <rect key="frame" x="0.0" y="-329" width="374" height="725"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <textInputTraits key="textInputTraits"/>
-                                        </searchBar>
-                                    </subviews>
-                                    <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
-                                </collectionReusableView>
                                 <connections>
                                     <outlet property="dataSource" destination="k7V-xS-L9A" id="a2A-cO-Ktg"/>
                                     <outlet property="delegate" destination="k7V-xS-L9A" id="yUs-ZJ-Kuk"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2fI-ST-qhx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="NTp-FY-RbB" firstAttribute="leading" secondItem="AgU-9h-wJe" secondAttribute="leading" constant="20" id="5mi-yz-Sei"/>
+                            <constraint firstItem="NTp-FY-RbB" firstAttribute="top" secondItem="2fI-ST-qhx" secondAttribute="bottom" constant="16" id="7Oq-uq-sRz"/>
                             <constraint firstItem="AgU-9h-wJe" firstAttribute="trailing" secondItem="NTp-FY-RbB" secondAttribute="trailing" constant="20" id="H1L-Gj-T62"/>
                             <constraint firstItem="AgU-9h-wJe" firstAttribute="bottom" secondItem="NTp-FY-RbB" secondAttribute="bottom" id="MQk-cO-hMQ"/>
-                            <constraint firstItem="NTp-FY-RbB" firstAttribute="top" secondItem="AgU-9h-wJe" secondAttribute="top" id="aGI-4w-Wou"/>
+                            <constraint firstItem="NTp-FY-RbB" firstAttribute="top" secondItem="AgU-9h-wJe" secondAttribute="top" constant="60" id="aGI-4w-Wou"/>
+                            <constraint firstItem="2fI-ST-qhx" firstAttribute="leading" secondItem="AgU-9h-wJe" secondAttribute="leading" id="nze-Ea-vWT"/>
+                            <constraint firstItem="2fI-ST-qhx" firstAttribute="trailing" secondItem="AgU-9h-wJe" secondAttribute="trailing" id="ruT-3P-YJX"/>
+                            <constraint firstItem="2fI-ST-qhx" firstAttribute="top" secondItem="AgU-9h-wJe" secondAttribute="top" id="tTc-Cf-dxw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AgU-9h-wJe"/>
                     </view>
                     <navigationItem key="navigationItem" id="sj1-2J-KG4"/>
                     <connections>
-                        <outlet property="findMealViewController" destination="NTp-FY-RbB" id="ggV-Wt-1xi"/>
+                        <outlet property="findMealCollectionView" destination="NTp-FY-RbB" id="ggV-Wt-1xi"/>
+                        <outlet property="findMealSearchBar" destination="2fI-ST-qhx" id="4VJ-QR-TeG"/>
                         <segue destination="6Gs-TF-PXX" kind="show" identifier="toDetailMeal" id="A3I-b5-127"/>
                     </connections>
                 </viewController>
