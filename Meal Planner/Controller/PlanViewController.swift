@@ -78,6 +78,9 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
                 let prevDateFormat = DateFormatter()
                 curDateFormat.dateFormat = "MMM dd,yyyy"
                 prevDateFormat.dateFormat = "MMM dd,yyyy"
+                // added by Fandrian (to set print date to current timezone)
+                curDateFormat.timeZone = TimeZone.current
+                prevDateFormat.timeZone = TimeZone.current
 
                 if (curDateFormat.string(from: curPlanDate!) != prevDateFormat.string(from: prevPlanDate!) ) {
                     let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
@@ -120,6 +123,8 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "cccc, dd MMM yyyy"
+        // added by Fandrian (to set print date to current timezone)
+        dateFormatterPrint.timeZone = TimeZone.current
         return dateFormatterPrint.string(from: plansWithSection[section].date!)
     }
     
@@ -189,6 +194,9 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         let prevDateFormat = DateFormatter()
         curDateFormat.dateFormat = "MMM dd,yyyy"
         prevDateFormat.dateFormat = "MMM dd,yyyy"
+        // added by Fandrian (to set print date to current timezone)
+        curDateFormat.timeZone = TimeZone.current
+        prevDateFormat.timeZone = TimeZone.current
         
         if let row = plansWithSection.firstIndex(where: {prevDateFormat.string(from: $0.date!) == curDateFormat.string(from: newPlan.plan_date!)}) {
             plansWithSection[row].plans.append(newPlan)
@@ -220,6 +228,10 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {
+        
+    }
     /*
     // MARK: - Navigation
 
