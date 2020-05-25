@@ -116,6 +116,7 @@ extension FindMealViewController: UISearchBarDelegate {
         if(searchText.isEmpty){
             print("empty")
             //reload your data source if necessary
+            searching = false
             self.findMealCollectionView?.reloadData()
         } else {
             searching = true

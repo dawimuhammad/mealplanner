@@ -17,7 +17,7 @@ class CategoryViewController: UIViewController {
     var selectCategory = CategoryEnum.ayam
     var selectRecommendation = categories.getRecipeByCategory(category: .ayam)![0]
     
-    let recommendation = categories.getRecipeByCategory(category: .ayam)!
+    var recommendation: [Recipe] = []
     
     var delegate: MyDetailMealDelegate?
     
@@ -38,7 +38,19 @@ class CategoryViewController: UIViewController {
             print("recipe name: \(plan.recipe_name!)")
             print("recipe photo: \(plan.recipe_photo!)")
             print("\n\n")
-        }        
+        }
+        
+        prepareRecomendation()
+    }
+    
+    func prepareRecomendation() {
+        var allRecipes: [Recipe] = categories.getAllRecipes()
+        for _ in 1...3 {
+            let index = Int.random(in: 0..<allRecipes.count)
+            let recipe: Recipe =  allRecipes[index]
+            recommendation.append(recipe)
+            allRecipes.remove(at: index)
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
