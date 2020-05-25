@@ -74,7 +74,7 @@ class DetailMealViewController: UIViewController {
         if (fromPlan) {
             tambahRencanaButton.setTitle("Hapus Rencana", for: .normal)
             tambahRencanaButton.setTitleColor(UIColor(hex: "#F19437"), for: .normal)
-            tambahRencanaButton.backgroundColor = .white
+            tambahRencanaButton.backgroundColor = .systemBackground
             tambahRencanaButton.layer.borderWidth = 1
             tambahRencanaButton.layer.borderColor = UIColor(hex: "#F19437")?.cgColor
         }
