@@ -10,6 +10,7 @@ import UIKit
 
 protocol MyDetailMealDelegate {
     func updatePlan(plan: Plan)
+    func deletePlan(plan: Plan)
 }
 
 class DetailMealViewController: UIViewController {
@@ -34,6 +35,8 @@ class DetailMealViewController: UIViewController {
     var date = Date()
     
     var fromPlan: Bool = false
+    var fromArchive: Bool = false
+    var selectedPlan: Plan?
     
     
     override func viewDidLoad() {
@@ -56,17 +59,32 @@ class DetailMealViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         
+        if (fromArchive) {
+            tambahRencanaButton.isEnabled = false
+            tambahRencanaButton.setTitle("Hapus Rencana", for: .disabled)
+            tambahRencanaButton.setTitleColor(UIColor(hex: "#787878"), for: .disabled)
+            tambahRencanaButton.backgroundColor = UIColor(hex: "#E0E0E0")
+        }
+        
         if (fromPlan) {
-            tambahRencanaButton.isHidden = true
+            tambahRencanaButton.setTitle("Hapus Rencana", for: .normal)
+            tambahRencanaButton.setTitleColor(UIColor(hex: "#F19437"), for: .normal)
+            tambahRencanaButton.backgroundColor = .white
+            tambahRencanaButton.layer.borderWidth = 1
+            tambahRencanaButton.layer.borderColor = UIColor(hex: "#F19437")?.cgColor
         }
     }
     
     @IBAction func displayPopover(_ sender: UIButton) {
-        self.view.addSubview(popoverDatePicker)
-        popoverDatePicker.center = self.view.center
-//        self.view.superview?.alpha = 0.1
-        print("muncul??")
-        
+        if (fromPlan) {
+            showDeleteAlert()
+        } else {
+            self.view.addSubview(popoverDatePicker)
+            popoverDatePicker.center = self.view.center
+            // self.view.superview?.alpha = 0.1
+            print("muncul??")
+                    
+        }
     }
     
     
@@ -140,5 +158,31 @@ class DetailMealViewController: UIViewController {
      }
      */
     
+     func showDeleteAlert() {
+           //Creating UIAlertController and
+           //Setting title and message for the alert dialog
+           let alertController = UIAlertController(title: "Hapus Plan", message: "Apakah kamu yakin ingin menghapus ini dari rencana?", preferredStyle: .alert)
+           
+           //the confirm action taking the inputs
+        let confirmAction = UIAlertAction(title: "Ya", style: .destructive) { (_) in
+               
+               //getting the input values from user
+            if let plan = self.selectedPlan {
+                self.delegate?.deletePlan(plan: plan)
+                self.navigationController?.popViewController(animated: true)
+            }
+           }
+           
+           //the cancel action doing nothing
+           let cancelAction = UIAlertAction(title: "Tidak", style: .cancel) { (_) in }
+           
+           
+           //adding the action to dialogbox
+           alertController.addAction(confirmAction)
+           alertController.addAction(cancelAction)
+           
+           //finally presenting the dialog box
+           self.present(alertController, animated: true, completion: nil)
+       }
 }
 

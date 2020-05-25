@@ -63,6 +63,25 @@ extension Plan {
         let _ = try? viewContext.execute(deleteRequest)
     }
     
+    static func deletePlan(viewContext: NSManagedObjectContext, plan: Plan) {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Plan")
+        request.predicate = NSPredicate(format: "plan_date == %@ && recipe_id == %@", plan.plan_date as! NSDate, plan.recipe_id as! NSString)
+        do {
+            let result = try viewContext.fetch(request)
+            if (result.count > 0) {
+                if let deletePlan: Plan = result[0] as! Plan {
+                    viewContext.delete(deletePlan)
+                    try viewContext.save()
+                    print("delete plan success")
+                }
+            } else {
+                print("Cannot delete plan")
+            }
+        } catch {
+            print("Cannot delete plan")
+        }
+    }
+    
     static func savePlan (viewContext: NSManagedObjectContext, date: Date, recipe: Recipe) -> Plan {
         let plan = Plan.save(viewContext: viewContext, date: date, recipeId: recipe.id!, recipeName: recipe.name!, recipePhoto: recipe.photo!, duration: Int16(recipe.duration!), portion: Int16(recipe.portion!))
         for ingredientSection in recipe.ingredientSections! {

@@ -115,7 +115,7 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
                if identifier == "archive2detail" {
                    if let destinationVC = segue.destination as? DetailMealViewController{
                        destinationVC.recipe = sender as! Recipe
-                       destinationVC.fromPlan = true
+                       destinationVC.fromArchive = true
                    }
                }
            }
