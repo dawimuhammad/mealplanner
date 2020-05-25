@@ -15,7 +15,7 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     var plans: [Plan] = []
     var plansWithSection: [PlanSection] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.largeTitleDisplayMode = .never
@@ -42,7 +42,7 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
                 let prevDateFormat = DateFormatter()
                 curDateFormat.dateFormat = "MMM dd,yyyy"
                 prevDateFormat.dateFormat = "MMM dd,yyyy"
-
+                
                 if (curDateFormat.string(from: curPlanDate!) != prevDateFormat.string(from: prevPlanDate!) ) {
                     let planSection = PlanSection(date: prevPlanDate, plans: planDatas)
                     plansWithSection.append(planSection)
@@ -95,7 +95,7 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PlanTableViewCell
-                
+        
         cell.recipeImageView.image = UIImage(named: plansWithSection[indexPath.section].plans[indexPath.row].recipe_photo!)
         cell.recipeImageView.layer.cornerRadius = 10
         cell.recipeNameLabel.text = plansWithSection[indexPath.section].plans[indexPath.row].recipe_name
@@ -111,24 +111,26 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-           if let identifier = segue.identifier {
-               if identifier == "archive2detail" {
-                   if let destinationVC = segue.destination as? DetailMealViewController{
-                       destinationVC.recipe = sender as! Recipe
-                       destinationVC.fromPlan = true
-                   }
-               }
-           }
-       }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if let identifier = segue.identifier {
+            if identifier == "archive2detail" {
+                if let destinationVC = segue.destination as? DetailMealViewController{
+                    destinationVC.recipe = sender as! Recipe
+                    destinationVC.fromPlan = true
+                    // add another value to determine detail views came from archive
+                    destinationVC.fromArchive = true
+                }
+            }
+        }
     }
-    */
-
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
