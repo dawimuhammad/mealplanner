@@ -11,6 +11,7 @@ import QuartzCore
 
 protocol MyDetailMealDelegate {
     func updatePlan(plan: Plan)
+    func deletePlan(plan: Plan)
 }
 
 class DetailMealViewController: UIViewController {
@@ -28,8 +29,6 @@ class DetailMealViewController: UIViewController {
     @IBOutlet weak var scrollContainerView: UIView!
     
     
-    
-    
     @IBOutlet var popoverDatePicker: UIView!
     
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -43,6 +42,7 @@ class DetailMealViewController: UIViewController {
     
     var fromPlan: Bool = false
     var fromArchive: Bool = false
+    var selectedPlan: Plan?
     
     
     override func viewDidLoad() {
@@ -63,31 +63,30 @@ class DetailMealViewController: UIViewController {
         datePicker.maximumDate = Date(timeIntervalSinceNow: 60*60*24*30) //maximum pick one month from today
         
         // Do any additional setup after loading the view.
-        print(fromPlan)
-        if fromArchive {
-            tambahRencanaView.isHidden = true
-            tambahRencanaButton.isHidden = true
-            print("hide") }
+        
+        if (fromArchive) {
+            tambahRencanaButton.isEnabled = false
+            tambahRencanaButton.setTitle("Hapus Rencana", for: .disabled)
+            tambahRencanaButton.setTitleColor(UIColor(hex: "#787878"), for: .disabled)
+            tambahRencanaButton.backgroundColor = UIColor(hex: "#E0E0E0")
+        }
         
         if (fromPlan) {
             tambahRencanaButton.setTitle("Hapus Rencana", for: .normal)
-            tambahRencanaButton.backgroundColor = .systemBackground
-            tambahRencanaButton.setTitleColor(UIColor.init(hex: "#F19437"), for: .normal)
-            tambahRencanaButton.layer.borderWidth = 2.0
-            tambahRencanaButton.layer.borderColor = UIColor.init(hex: "#F19437")?.cgColor
-            
+            tambahRencanaButton.setTitleColor(UIColor(hex: "#F19437"), for: .normal)
+            tambahRencanaButton.backgroundColor = .white
+            tambahRencanaButton.layer.borderWidth = 1
+            tambahRencanaButton.layer.borderColor = UIColor(hex: "#F19437")?.cgColor
         }
     }
     
     @IBAction func tambahRencanaButtonPressed(_ sender: UIButton) {
         print("fromplan = \(fromPlan), fromarchive = \(fromArchive) ")
         if fromPlan {
-            print("delete")
             createAlert(titles: recipe.name!, message: "Apakah kamu yakin mau menghapus \(recipe.name!) dalam rencana masakmu?", forDelete: true) { (UIAlertAction) in self.deleteRecipeFromPlan() }
         } else {
             dimSuperview(true)
             self.view.addSubview(popoverDatePicker)
-//            self.popoverDatePicker.backgroundColor = UIColor.white
             popoverDatePicker.center = self.view.center
         }
         
@@ -154,10 +153,9 @@ class DetailMealViewController: UIViewController {
     func deleteRecipeFromPlan() {
         // add delete from coredata function
         print("DELETE YES")
-        print(self.view.alpha)
+        self.delegate?.deletePlan(plan: selectedPlan!)
         // perform unwind segue
         performSegue(withIdentifier: "unwindToPlan", sender: self)
-        
     }
     
     
@@ -232,6 +230,5 @@ class DetailMealViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
-    
 }
 

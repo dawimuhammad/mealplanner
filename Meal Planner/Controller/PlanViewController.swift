@@ -9,7 +9,7 @@
 import UIKit
 
 class PlanViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MyDetailMealDelegate {
-    
+
     @IBOutlet var emptyViewContainer: UIView!
     @IBOutlet var btnMulai: UIButton!
     @IBOutlet var tableViewContainer: UIView!
@@ -65,6 +65,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func prepareSection() {
+        plansWithSection = []
         var prevPlanDate: Date? = nil
         var planDatas: [Plan] = []
         for plan in plans {
@@ -147,8 +148,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedPlan: Plan = plansWithSection[indexPath.section].plans[indexPath.row]
-        let selectedRecipe: Recipe? = categories.getRecipeById(id: selectedPlan.recipe_id!)
-        performSegue(withIdentifier: "plan2detail", sender: selectedRecipe)
+        performSegue(withIdentifier: "plan2detail", sender: selectedPlan)
     }
     
     @IBAction func onPressMulai(_ sender: Any) {
@@ -177,6 +177,18 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    func deletePlan(plan: Plan) {
+        Plan.deletePlan(viewContext: getViewContext(), plan: plan)
+        plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
+        if (plans.count > 0) {
+            prepareSection()
+            print(plansWithSection)
+            self.tableView.reloadData()
+        } else {
+            prepareEmptyContainer()
+        }
+    }
+    
     func updateNewPlan(newPlan: Plan) {
         let curDateFormat = DateFormatter()
         let prevDateFormat = DateFormatter()
@@ -187,7 +199,6 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         prevDateFormat.timeZone = TimeZone.current
         
         if let row = plansWithSection.firstIndex(where: {prevDateFormat.string(from: $0.date!) == curDateFormat.string(from: newPlan.plan_date!)}) {
-               print(row)
             plansWithSection[row].plans.append(newPlan)
         } else {
             plansWithSection.append(PlanSection(date: newPlan.plan_date, plans: [newPlan]))
@@ -199,17 +210,19 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "plan2category"){
-            let v = segue.destination as! CategoryViewController
-            v.delegate =  self
+            let destinationVC = segue.destination as! CategoryViewController
+            destinationVC.delegate =  self
         }
         
         if let identifier = segue.identifier {
             if identifier == "plan2detail" {
                 if let destinationVC = segue.destination as? DetailMealViewController{
-                    destinationVC.recipe = sender as! Recipe
+                    let selectedPlan: Plan = sender as! Plan
+                    let selectedRecipe: Recipe? = categories.getRecipeById(id: selectedPlan.recipe_id!)
+                    destinationVC.recipe = selectedRecipe!
                     destinationVC.fromPlan = true
-                    // add another value to determine detail views came from archive
-                    destinationVC.fromArchive = false
+                    destinationVC.selectedPlan = selectedPlan
+                    destinationVC.delegate = self
                 }
             }
         }

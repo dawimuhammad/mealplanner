@@ -111,12 +111,10 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let identifier = segue.identifier {
+       if let identifier = segue.identifier {
             if identifier == "archive2detail" {
                 if let destinationVC = segue.destination as? DetailMealViewController{
                     destinationVC.recipe = sender as! Recipe
-                    destinationVC.fromPlan = true
-                    // add another value to determine detail views came from archive
                     destinationVC.fromArchive = true
                 }
             }
