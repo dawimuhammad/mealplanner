@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct IngredientsByTags {
+struct ShoppingListSection {
     var shopping_tag: String
-    var ingredients: [ShoppingItem]
+    var shopping_list: [ShoppingList]
 }
