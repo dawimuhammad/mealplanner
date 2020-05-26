@@ -16,8 +16,7 @@ class ShoppingListViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Daftar Belanja"
-        
-        shoppingLists = ShoppingList.fetchAll(viewContext: getViewContext())
+        fetchShoppingList()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -27,6 +26,8 @@ class ShoppingListViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) { // As soon as vc appears
         super.viewWillAppear(true)
         self.tabBarController?.tabBar.isHidden = false
+        fetchShoppingList()
+        self.tableView.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,5 +53,9 @@ class ShoppingListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // code here
+    }
+    
+    func fetchShoppingList() {
+        shoppingLists = ShoppingList.fetchAll(viewContext: getViewContext())
     }
 }
