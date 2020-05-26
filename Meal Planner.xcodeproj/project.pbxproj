@@ -36,6 +36,7 @@
 		754CA825246E06510041F32E /* DetailMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754CA824246E06510041F32E /* DetailMealViewController.swift */; };
 		754CA827246E0A240041F32E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754CA826246E0A240041F32E /* CategoryCollectionViewCell.swift */; };
 		75DAD76E246E4D4C00F00A84 /* FindMealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAD76D246E4D4C00F00A84 /* FindMealCollectionViewCell.swift */; };
+		B74ADD3C24751798007E95F0 /* IngredientsByTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74ADD3B24751798007E95F0 /* IngredientsByTags.swift */; };
 		B795C4EF247241E20080C260 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B795C4EE247241E20080C260 /* ShoppingListViewController.swift */; };
 		B795C4F1247283300080C260 /* ShoppingListViewController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B795C4F0247283300080C260 /* ShoppingListViewController+Updating.swift */; };
 		B7D5DC2424643E4A00A2F763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */; };
@@ -77,6 +78,7 @@
 		754CA824246E06510041F32E /* DetailMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMealViewController.swift; sourceTree = "<group>"; };
 		754CA826246E0A240041F32E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		75DAD76D246E4D4C00F00A84 /* FindMealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMealCollectionViewCell.swift; sourceTree = "<group>"; };
+		B74ADD3B24751798007E95F0 /* IngredientsByTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsByTags.swift; sourceTree = "<group>"; };
 		B795C4EE247241E20080C260 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		B795C4F0247283300080C260 /* ShoppingListViewController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingListViewController+Updating.swift"; sourceTree = "<group>"; };
 		B7D5DC2024643E4A00A2F763 /* Meal Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +126,7 @@
 				44DC2DC4246E262600D989D0 /* Plan+Extension.swift */,
 				44FB481824734DC8003127C0 /* PlanSection.swift */,
 				753C845A247516FD006C2862 /* String+Extension.swift */,
+				B74ADD3B24751798007E95F0 /* IngredientsByTags.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				44FDD513246D7D02006666E8 /* Ingredient.swift in Sources */,
 				B7D5DC2E24643E4A00A2F763 /* Meal_Planner.xcdatamodeld in Sources */,
 				44FDD515246D7D8B006666E8 /* StepSection.swift in Sources */,
+				B74ADD3C24751798007E95F0 /* IngredientsByTags.swift in Sources */,
 				44FDD521246E150D006666E8 /* ShoppingList+Extension.swift in Sources */,
 				44FB481924734DC8003127C0 /* PlanSection.swift in Sources */,
 				44FDD50D246D7C15006666E8 /* Recipe.swift in Sources */,
@@ -447,7 +451,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JPMPS53HUZ;
+				DEVELOPMENT_TEAM = W5ZPF478J8;
 				INFOPLIST_FILE = "Meal Planner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +472,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JPMPS53HUZ;
+				DEVELOPMENT_TEAM = W5ZPF478J8;
 				INFOPLIST_FILE = "Meal Planner/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
