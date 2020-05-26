@@ -12,7 +12,6 @@ import UIKit
 class ShoppingListViewController: UITableViewController {
     
     var shoppingLists: [ShoppingList] = []
-    var shoppingListsWithSection: [ShoppingListItemSection] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()

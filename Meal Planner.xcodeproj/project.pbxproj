@@ -36,9 +36,7 @@
 		754CA825246E06510041F32E /* DetailMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754CA824246E06510041F32E /* DetailMealViewController.swift */; };
 		754CA827246E0A240041F32E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754CA826246E0A240041F32E /* CategoryCollectionViewCell.swift */; };
 		75DAD76E246E4D4C00F00A84 /* FindMealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAD76D246E4D4C00F00A84 /* FindMealCollectionViewCell.swift */; };
-		B74ADD3C24751798007E95F0 /* ShoppingListSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74ADD3B24751798007E95F0 /* ShoppingListSection.swift */; };
 		B795C4EF247241E20080C260 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B795C4EE247241E20080C260 /* ShoppingListViewController.swift */; };
-		B795C4F1247283300080C260 /* ShoppingListViewController+Updating.swift in Sources */ = {isa = PBXBuildFile; fileRef = B795C4F0247283300080C260 /* ShoppingListViewController+Updating.swift */; };
 		B7D5DC2424643E4A00A2F763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */; };
 		B7D5DC2624643E4A00A2F763 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2524643E4A00A2F763 /* SceneDelegate.swift */; };
 		B7D5DC2824643E4A00A2F763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2724643E4A00A2F763 /* ViewController.swift */; };
@@ -46,7 +44,6 @@
 		B7D5DC2E24643E4A00A2F763 /* Meal_Planner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2C24643E4A00A2F763 /* Meal_Planner.xcdatamodeld */; };
 		B7D5DC3024643E4A00A2F763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7D5DC2F24643E4A00A2F763 /* Assets.xcassets */; };
 		B7D5DC3324643E4A00A2F763 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7D5DC3124643E4A00A2F763 /* LaunchScreen.storyboard */; };
-		B7E312A3247CED3000EEC0EF /* ShoppingListItemSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7E312A2247CED3000EEC0EF /* ShoppingListItemSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,9 +76,7 @@
 		754CA824246E06510041F32E /* DetailMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMealViewController.swift; sourceTree = "<group>"; };
 		754CA826246E0A240041F32E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		75DAD76D246E4D4C00F00A84 /* FindMealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMealCollectionViewCell.swift; sourceTree = "<group>"; };
-		B74ADD3B24751798007E95F0 /* ShoppingListSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListSection.swift; sourceTree = "<group>"; };
 		B795C4EE247241E20080C260 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
-		B795C4F0247283300080C260 /* ShoppingListViewController+Updating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShoppingListViewController+Updating.swift"; sourceTree = "<group>"; };
 		B7D5DC2024643E4A00A2F763 /* Meal Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D5DC2524643E4A00A2F763 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,7 +86,6 @@
 		B7D5DC2F24643E4A00A2F763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7D5DC3224643E4A00A2F763 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7D5DC3424643E4A00A2F763 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7E312A2247CED3000EEC0EF /* ShoppingListItemSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListItemSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,8 +122,6 @@
 				44DC2DC4246E262600D989D0 /* Plan+Extension.swift */,
 				44FB481824734DC8003127C0 /* PlanSection.swift */,
 				753C845A247516FD006C2862 /* String+Extension.swift */,
-				B74ADD3B24751798007E95F0 /* ShoppingListSection.swift */,
-				B7E312A2247CED3000EEC0EF /* ShoppingListItemSection.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,7 +138,6 @@
 				44FDD51A246DA960006666E8 /* PlanViewController.swift */,
 				44FDD51C246E134D006666E8 /* UIViewController+Extension.swift */,
 				B795C4EE247241E20080C260 /* ShoppingListViewController.swift */,
-				B795C4F0247283300080C260 /* ShoppingListViewController+Updating.swift */,
 				44FB481C2473AF2E003127C0 /* ArchiveViewController.swift */,
 				44FB481E2473B531003127C0 /* UIColor+Extension.swift */,
 				752542022478C42A00CD34F2 /* RecommendationCollectionViewCell.swift */,
@@ -292,14 +283,11 @@
 				752542032478C42A00CD34F2 /* RecommendationCollectionViewCell.swift in Sources */,
 				44FDD50F246D7C61006666E8 /* CategoryEnum.swift in Sources */,
 				44FDD51B246DA960006666E8 /* PlanViewController.swift in Sources */,
-				B7E312A3247CED3000EEC0EF /* ShoppingListItemSection.swift in Sources */,
-				B795C4F1247283300080C260 /* ShoppingListViewController+Updating.swift in Sources */,
 				B7D5DC2624643E4A00A2F763 /* SceneDelegate.swift in Sources */,
 				754CA823246E063F0041F32E /* FindMealViewController.swift in Sources */,
 				44FDD513246D7D02006666E8 /* Ingredient.swift in Sources */,
 				B7D5DC2E24643E4A00A2F763 /* Meal_Planner.xcdatamodeld in Sources */,
 				44FDD515246D7D8B006666E8 /* StepSection.swift in Sources */,
-				B74ADD3C24751798007E95F0 /* ShoppingListSection.swift in Sources */,
 				44FDD521246E150D006666E8 /* ShoppingList+Extension.swift in Sources */,
 				44FB481924734DC8003127C0 /* PlanSection.swift in Sources */,
 				44FDD50D246D7C15006666E8 /* Recipe.swift in Sources */,
