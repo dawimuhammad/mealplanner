@@ -7,13 +7,13 @@
         <attribute name="recipe_name" optional="YES" attributeType="String"/>
         <attribute name="recipe_photo" optional="YES" attributeType="String"/>
         <attribute name="recipe_portion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="shopping_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShoppingList" inverseName="plan" inverseEntity="ShoppingList"/>
+        <relationship name="shopping_list" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShoppingList" inverseName="plan" inverseEntity="ShoppingList"/>
     </entity>
     <entity name="ShoppingItem" representedClassName="ShoppingItem" syncable="YES" codeGenerationType="class">
         <attribute name="item_name" optional="YES" attributeType="String"/>
         <attribute name="item_qty" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="item_unit" optional="YES" attributeType="String"/>
-        <relationship name="shopping_list" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShoppingList" inverseName="shopping_item" inverseEntity="ShoppingList"/>
+        <relationship name="shopping_list" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="ShoppingList" inverseName="shopping_item" inverseEntity="ShoppingList"/>
     </entity>
     <entity name="ShoppingList" representedClassName="ShoppingList" syncable="YES" codeGenerationType="class">
         <attribute name="is_complete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
