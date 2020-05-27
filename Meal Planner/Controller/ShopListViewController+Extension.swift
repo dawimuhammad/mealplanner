@@ -11,11 +11,21 @@ import UIKit
 
 extension ShopListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() { return filteredShoppingList.count }
+        
         return filterShopingList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let itemsInList = filterShopingList[indexPath.row].shopping_items
+        let currentShoppingList: LocalShoppingList
+        
+        if isFiltering() {
+            currentShoppingList = filteredShoppingList[indexPath.row]
+        } else {
+            currentShoppingList = filterShopingList[indexPath.row]
+        }
+        
+        let itemsInList = currentShoppingList.shopping_items
         let cell: UITableViewCell = {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: cellId) else {
                 return UITableViewCell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: cellId)
@@ -26,9 +36,9 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.detailTextLabel?.textColor = UIColor(hex: "#979797")
         
-        cell.textLabel?.text = filterShopingList[indexPath.row].shopping_tag.capitalizingEachWords().removeDashSymbols()
+        cell.textLabel?.text = currentShoppingList.shopping_tag.capitalizingEachWords().removeDashSymbols()
         cell.detailTextLabel?.text = combineItemUnit(itemList: itemsInList)
-        cell.imageView?.image = filterShopingList[indexPath.row].is_complete == true ? UIImage(named: "checkbox-marked") : UIImage(named: "checkbox-unmark")
+        cell.imageView?.image = currentShoppingList.is_complete == true ? UIImage(named: "checkbox-marked") : UIImage(named: "checkbox-unmark")
 
         return cell
     }
@@ -36,11 +46,19 @@ extension ShopListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
         
-        let selectedRow = filterShopingList[indexPath.row]
-        let isComplete = selectedRow.is_complete == true ? false : true
-        ShoppingList.updateComplete(viewContext: getViewContext(), shoppingList: filterShopingList[indexPath.row], isComplete: isComplete)
-        filterShopingList[indexPath.row].is_complete = isComplete
-        self.tableView.reloadData()
+        var currentShoppingList: LocalShoppingList
+        
+        if isFiltering() {
+            currentShoppingList = filteredShoppingList[indexPath.row]
+        } else {
+            currentShoppingList = filterShopingList[indexPath.row]
+        }
+        
+        let isComplete = currentShoppingList.is_complete == true ? false : true
+        ShoppingList.updateComplete(viewContext: getViewContext(), shoppingList: currentShoppingList, isComplete: isComplete)
+        currentShoppingList.is_complete = isComplete
+        fetchShoppingList()
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,5 +74,11 @@ extension ShopListViewController {
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+}
+
+extension ShopListViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        filterContentForSearchText(searchText: searchController.searchBar.text!)
     }
 }

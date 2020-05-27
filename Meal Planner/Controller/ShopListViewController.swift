@@ -11,6 +11,7 @@ import UIKit
 
 class ShopListViewController: UIViewController {
     
+    var filteredShoppingList: [LocalShoppingList] = []
     var filterShopingList: [LocalShoppingList] = []
     let cellId = "cellId"
     
@@ -24,11 +25,24 @@ class ShopListViewController: UIViewController {
         return shoppingListTableView
     }()
     
+    lazy var searchController: UISearchController = {
+        let searchBarShoppingList = UISearchController(searchResultsController: nil)
+        
+        searchBarShoppingList.searchResultsUpdater = self
+        
+        searchBarShoppingList.obscuresBackgroundDuringPresentation = false
+        searchBarShoppingList.searchBar.placeholder = "Cari daftar belanja .."
+        searchBarShoppingList.searchBar.sizeToFit()
+        searchBarShoppingList.searchBar.searchBarStyle = .prominent
+        
+        return searchBarShoppingList
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.title = "Daftar Belanja"
-        
+        navigationItem.searchController = searchController
         
         fetchShoppingList()
         setupElements()
@@ -84,5 +98,26 @@ class ShopListViewController: UIViewController {
         }
                 
         return result
+    }
+    
+    func filterContentForSearchText(searchText: String) {
+        filteredShoppingList = filterShopingList.filter({ (localShoppingList: LocalShoppingList) -> Bool in
+            
+            if !isSearchBarEmpty() {
+                return localShoppingList.shopping_tag.lowercased().removeDashSymbols().contains(searchText.lowercased())
+            } else {
+                return false
+            }
+        })
+        
+        tableView.reloadData()
+    }
+    
+    func isSearchBarEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && (!isSearchBarEmpty())
     }
 }
