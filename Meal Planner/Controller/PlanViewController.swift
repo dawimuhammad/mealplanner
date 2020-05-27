@@ -171,8 +171,12 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     func updatePlan(plan: Plan) {
         plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
         print(plans.count)
-        preparePlanContainer()
-        self.tableView.reloadData()
+        if (plans.count == 0) {
+            prepareEmptyContainer()
+        } else {
+            preparePlanContainer()
+            self.tableView.reloadData()
+        }
     }
     
     func deletePlan(plan: Plan) {
