@@ -74,6 +74,33 @@ extension ShoppingList {
         let _ = try? viewContext.execute(deleteRequest)
     }
     
+    static func updateComplete(viewContext: NSManagedObjectContext, shoppingList: ShoppingList, isComplete: Bool ) {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingList")
+        request.predicate = NSPredicate(format: "shopping_tag == %@", shoppingList.shopping_tag! as NSString)
+        
+        do {
+            let result = try viewContext.fetch(request)
+            
+            if (result.count > 0) {
+                let objectUpdate = result[0] as! NSManagedObject
+                objectUpdate.setValue(isComplete, forKey: "is_complete")
+                
+                do {
+                    try viewContext.save()
+                } catch {
+                    print("Failed on updating the new complete state")
+                }
+                
+                print("Found the shopping list")
+                print(objectUpdate)
+            } else {
+                print("Failed to update shopping list")
+            }
+        } catch {
+            print("Failed to find shopping list on update")
+        }
+    }
+
     static func deleteShoppingListByPlan(viewContext: NSManagedObjectContext, plan: Plan) {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingList")
         request.predicate = NSPredicate(format: "plan_date == %@ && recipe_id == %@", plan.plan_date as! NSDate, plan.recipe_id as! NSString)
