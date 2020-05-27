@@ -59,8 +59,15 @@ class DetailMealViewController: UIViewController {
         ingredientsLabel.text = breakdownIngredients(recipe: recipe)
         stepsLabel.text = breakdownSteps(recipe: recipe)
         
+        var dayComponent    = DateComponents()
+        let theCalendar     = Calendar.current
+        
+        dayComponent.day    = 14
+        let maxDate: Date = theCalendar.date(byAdding: dayComponent, to: Date())!
+        
         datePicker.minimumDate = Date()
-        datePicker.maximumDate = Date(timeIntervalSinceNow: 60*60*24*30) //maximum pick one month from today
+        datePicker.maximumDate = maxDate //maximum pick one month from today
+        datePicker.locale = Locale.init(identifier: "id_ID")
         
         // Do any additional setup after loading the view.
         
@@ -100,6 +107,7 @@ class DetailMealViewController: UIViewController {
         dateFormatter.dateStyle = DateFormatter.Style.short
         dateFormatter.timeStyle = DateFormatter.Style.short
         dateFormatter.timeZone =  TimeZone.current
+        dateFormatter.locale = Locale.init(identifier: "id_ID")
         
         print(datePicker.date)
         
@@ -115,6 +123,7 @@ class DetailMealViewController: UIViewController {
         
         dateFormatter.dateFormat = "dd MMM yyyy"
         dateFormatter.timeZone =  TimeZone.current
+        dateFormatter.locale = Locale.init(identifier: "id_ID")
         
         let newPlan: Plan = Plan.savePlan(viewContext: getViewContext(), date: date, recipe: recipe)
         self.delegate?.updatePlan(plan: newPlan)
