@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4413392B247E1B52007183A1 /* QtyUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4413392A247E1B52007183A1 /* QtyUnit.swift */; };
 		44DC2DC5246E262600D989D0 /* Plan+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DC2DC4246E262600D989D0 /* Plan+Extension.swift */; };
 		44FB4816247340CF003127C0 /* PlanTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FB4814247340CF003127C0 /* PlanTableViewCell.swift */; };
 		44FB4817247340CF003127C0 /* PlanTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44FB4815247340CF003127C0 /* PlanTableViewCell.xib */; };
@@ -48,6 +49,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4413392A247E1B52007183A1 /* QtyUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QtyUnit.swift; sourceTree = "<group>"; };
 		44DC2DC4246E262600D989D0 /* Plan+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Plan+Extension.swift"; sourceTree = "<group>"; };
 		44FB4814247340CF003127C0 /* PlanTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanTableViewCell.swift; sourceTree = "<group>"; };
 		44FB4815247340CF003127C0 /* PlanTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlanTableViewCell.xib; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				44FB481824734DC8003127C0 /* PlanSection.swift */,
 				753C845A247516FD006C2862 /* String+Extension.swift */,
 				B7B9DAA2247E16AF00E690E5 /* Array+Extension.swift */,
+				4413392A247E1B52007183A1 /* QtyUnit.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				754CA825246E06510041F32E /* DetailMealViewController.swift in Sources */,
 				44FB481D2473AF2E003127C0 /* ArchiveViewController.swift in Sources */,
 				44FDD511246D7CE0006666E8 /* IngredientSection.swift in Sources */,
+				4413392B247E1B52007183A1 /* QtyUnit.swift in Sources */,
 				44FB481F2473B531003127C0 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
