@@ -7,14 +7,15 @@
         <attribute name="recipe_name" optional="YES" attributeType="String"/>
         <attribute name="recipe_photo" optional="YES" attributeType="String"/>
         <attribute name="recipe_portion" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="shopping_item" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShoppingItem" inverseName="plan" inverseEntity="ShoppingItem"/>
+        <relationship name="shopping_item" optional="YES" toMany="YES" deletionRule="No Action" destinationEntity="ShoppingItem" inverseName="plan" inverseEntity="ShoppingItem"/>
     </entity>
     <entity name="ShoppingItem" representedClassName="ShoppingItem" syncable="YES" codeGenerationType="class">
+        <attribute name="item_id" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="item_name" optional="YES" attributeType="String"/>
         <attribute name="item_qty" optional="YES" attributeType="Float" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="item_unit" optional="YES" attributeType="String"/>
-        <relationship name="plan" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Plan" inverseName="shopping_item" inverseEntity="Plan"/>
-        <relationship name="shopping_list" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ShoppingList" inverseName="shopping_item" inverseEntity="ShoppingList"/>
+        <relationship name="plan" optional="YES" maxCount="1" deletionRule="No Action" destinationEntity="Plan" inverseName="shopping_item" inverseEntity="Plan"/>
+        <relationship name="shopping_list" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShoppingList" inverseName="shopping_item" inverseEntity="ShoppingList"/>
     </entity>
     <entity name="ShoppingList" representedClassName="ShoppingList" syncable="YES" codeGenerationType="class">
         <attribute name="is_complete" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
@@ -23,7 +24,7 @@
     </entity>
     <elements>
         <element name="Plan" positionX="-27" positionY="18" width="128" height="148"/>
-        <element name="ShoppingItem" positionX="0" positionY="81" width="128" height="118"/>
+        <element name="ShoppingItem" positionX="0" positionY="81" width="128" height="133"/>
         <element name="ShoppingList" positionX="18" positionY="90" width="128" height="88"/>
     </elements>
 </model>

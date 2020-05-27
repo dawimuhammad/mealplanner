@@ -71,8 +71,13 @@ extension Plan {
             print(result.count)
             if (result.count > 0) {
                 if let deletePlan: Plan = result[0] as! Plan {
+                    let deleteItems: [ShoppingItem] = deletePlan.shopping_item?.allObjects as! [ShoppingItem]
+                    for item in deleteItems {
+                        ShoppingItem.deleteItem(viewContext: viewContext, item: item)
+                    }
                     viewContext.delete(deletePlan)
                     try viewContext.save()
+                                   
                     print("delete plan success")
                 }
             } else {
@@ -93,9 +98,11 @@ extension Plan {
                     let existingTag = ShoppingList.fetchDataWithKey(viewContext: viewContext, tag: tag)
                     if existingTag != nil {
                         ShoppingList.addShoppingItem(viewContext: viewContext, instance: existingTag!, shoppingItem: shoppingItem!)
+                        ShoppingItem.addShopingList(viewContext: viewContext, instance: shoppingItem!, shopingList: existingTag!)
                     } else {
                         let shoppinglist = ShoppingList.save(viewContext: viewContext, tag: tag)
                         ShoppingList.addShoppingItem(viewContext: viewContext, instance: shoppinglist!, shoppingItem: shoppingItem!)
+                        ShoppingItem.addShopingList(viewContext: viewContext, instance: shoppingItem!, shopingList: shoppinglist!)
                     }
                 }
             }
