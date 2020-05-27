@@ -182,6 +182,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     func deletePlan(plan: Plan) {
         Plan.deletePlan(viewContext: getViewContext(), plan: plan)
         plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
+        print(plans.count)
         if (plans.count > 0) {
             prepareSection()
             self.tableView.reloadData()

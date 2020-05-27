@@ -68,6 +68,7 @@ extension Plan {
         request.predicate = NSPredicate(format: "plan_date == %@ && recipe_id == %@", plan.plan_date as! NSDate, plan.recipe_id as! NSString)
         do {
             let result = try viewContext.fetch(request)
+            print(result.count)
             if (result.count > 0) {
                 if let deletePlan: Plan = result[0] as! Plan {
                     viewContext.delete(deletePlan)
