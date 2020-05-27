@@ -59,13 +59,16 @@ class DetailMealViewController: UIViewController {
         ingredientsLabel.text = breakdownIngredients(recipe: recipe)
         stepsLabel.text = breakdownSteps(recipe: recipe)
         
-        var dayComponent    = DateComponents()
+        var maxDayComponent = DateComponents()
+        var minDayComponent = DateComponents()
         let theCalendar     = Calendar.current
         
-        dayComponent.day    = 14
-        let maxDate: Date = theCalendar.date(byAdding: dayComponent, to: Date())!
-        
-        datePicker.minimumDate = Date()
+        maxDayComponent.day = 14
+        minDayComponent.day = -7
+        let maxDate: Date = theCalendar.date(byAdding: maxDayComponent, to: Date())!
+        let minDate: Date = theCalendar.date(byAdding: minDayComponent, to: Date())!
+
+        datePicker.minimumDate = minDate
         datePicker.maximumDate = maxDate //maximum pick one month from today
         datePicker.locale = Locale.init(identifier: "id_ID")
         

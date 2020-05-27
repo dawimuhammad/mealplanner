@@ -68,6 +68,7 @@ extension Plan {
         request.predicate = NSPredicate(format: "plan_date == %@ && recipe_id == %@", plan.plan_date as! NSDate, plan.recipe_id as! NSString)
         do {
             let result = try viewContext.fetch(request)
+            print(result.count)
             if (result.count > 0) {
                 if let deletePlan: Plan = result[0] as! Plan {
                     viewContext.delete(deletePlan)
@@ -88,12 +89,12 @@ extension Plan {
             for ingredient in ingredientSection.ingredients! {
                 for tag in ingredient.tag! {
                     let shoppingItem = ShoppingItem.save(viewContext: viewContext, name: ingredient.name!, qty: ingredient.qty!, unit: ingredient.unit!)
+                    ShoppingItem.addPlan(viewContext: viewContext, instance: shoppingItem!, plan: plan!)
                     let existingTag = ShoppingList.fetchDataWithKey(viewContext: viewContext, tag: tag)
                     if existingTag != nil {
                         ShoppingList.addShoppingItem(viewContext: viewContext, instance: existingTag!, shoppingItem: shoppingItem!)
                     } else {
                         let shoppinglist = ShoppingList.save(viewContext: viewContext, tag: tag)
-                        ShoppingList.addPlan(viewContext: viewContext, instance: shoppinglist!, plan: plan!)
                         ShoppingList.addShoppingItem(viewContext: viewContext, instance: shoppinglist!, shoppingItem: shoppingItem!)
                     }
                 }

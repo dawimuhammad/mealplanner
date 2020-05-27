@@ -169,45 +169,46 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func updatePlan(plan: Plan) {
+        plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
+        print(plans.count)
         if (plans.count == 0) {
-            plans.append(plan)
-            preparePlanContainer()
+            prepareEmptyContainer()
         } else {
-            plans.append(plan)
-            updateNewPlan(newPlan: plan)
+            preparePlanContainer()
+            self.tableView.reloadData()
         }
     }
     
     func deletePlan(plan: Plan) {
         Plan.deletePlan(viewContext: getViewContext(), plan: plan)
         plans = Plan.fetchQueryAfterDate(viewContext: getViewContext(), date: Date())
+        print(plans.count)
         if (plans.count > 0) {
             prepareSection()
-            print(plansWithSection)
             self.tableView.reloadData()
         } else {
             prepareEmptyContainer()
         }
     }
     
-    func updateNewPlan(newPlan: Plan) {
-        let curDateFormat = DateFormatter()
-        let prevDateFormat = DateFormatter()
-        curDateFormat.dateFormat = "MMM dd,yyyy"
-        prevDateFormat.dateFormat = "MMM dd,yyyy"
-        // added by Fandrian (to set print date to current timezone)
-        curDateFormat.timeZone = TimeZone.current
-        prevDateFormat.timeZone = TimeZone.current
-        
-        if let row = plansWithSection.firstIndex(where: {prevDateFormat.string(from: $0.date!) == curDateFormat.string(from: newPlan.plan_date!)}) {
-            plansWithSection[row].plans.append(newPlan)
-        } else {
-            plansWithSection.append(PlanSection(date: newPlan.plan_date, plans: [newPlan]))
-        }
-        
-        plansWithSection = plansWithSection.sorted(by: { curDateFormat.string(from: $0.date!) < curDateFormat.string(from: $1.date!) })
-        tableView.reloadData()
-    }
+//    func updateNewPlan(newPlan: Plan) {
+//        let curDateFormat = DateFormatter()
+//        let prevDateFormat = DateFormatter()
+//        curDateFormat.dateFormat = "MMM dd,yyyy"
+//        prevDateFormat.dateFormat = "MMM dd,yyyy"
+//        // added by Fandrian (to set print date to current timezone)
+//        curDateFormat.timeZone = TimeZone.current
+//        prevDateFormat.timeZone = TimeZone.current
+//
+//        if let row = plansWithSection.firstIndex(where: {prevDateFormat.string(from: $0.date!) == curDateFormat.string(from: newPlan.plan_date!)}) {
+//            plansWithSection[row].plans.append(newPlan)
+//        } else {
+//            plansWithSection.append(PlanSection(date: newPlan.plan_date, plans: [newPlan]))
+//        }
+//
+//        plansWithSection = plansWithSection.sorted(by: { curDateFormat.string(from: $0.date!) < curDateFormat.string(from: $1.date!) })
+//        tableView.reloadData()
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "plan2category"){

@@ -33,6 +33,8 @@ extension ShoppingList {
     
     static func fetchAll(viewContext: NSManagedObjectContext) -> [ShoppingList] {
         let request: NSFetchRequest<ShoppingList> = ShoppingList.fetchRequest()
+        let sort = NSSortDescriptor(key: #keyPath(ShoppingList.shopping_tag), ascending: true)
+        request.sortDescriptors = [sort]
         let result = try? viewContext.fetch(request)
         return result ?? []
     }
@@ -43,16 +45,6 @@ extension ShoppingList {
         do {
             try viewContext.save()
             return shoppingList
-        } catch {
-            return nil
-        }
-    }
-    
-    static func addPlan(viewContext: NSManagedObjectContext, instance: ShoppingList, plan: Plan) -> ShoppingList? {
-        instance.addToPlan(plan)
-        do {
-            try viewContext.save()
-            return instance
         } catch {
             return nil
         }
@@ -74,13 +66,13 @@ extension ShoppingList {
         let _ = try? viewContext.execute(deleteRequest)
     }
     
-    static func updateComplete(viewContext: NSManagedObjectContext, shoppingList: ShoppingList, isComplete: Bool ) {
+    static func updateComplete(viewContext: NSManagedObjectContext, shoppingList: LocalShoppingList, isComplete: Bool ) {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingList")
-        request.predicate = NSPredicate(format: "shopping_tag == %@", shoppingList.shopping_tag! as NSString)
+        request.predicate = NSPredicate(format: "shopping_tag == %@", shoppingList.shopping_tag as NSString)
         
         do {
             let result = try viewContext.fetch(request)
-            
+            print(result.count)
             if (result.count > 0) {
                 let objectUpdate = result[0] as! NSManagedObject
                 objectUpdate.setValue(isComplete, forKey: "is_complete")
