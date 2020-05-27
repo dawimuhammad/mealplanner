@@ -31,15 +31,13 @@ class ShoppingListViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+
+        let itemsInList = shoppingLists[indexPath.row].shopping_item?.allObjects as! [ShoppingItem]
+        let itemsToBuy = itemsInList.removeDuplicates()
         
-        //let itemsInList = shoppingLists[indexPath.section].shopping_item?.allObjects as! [ShoppingItem]
-        //let itemPerRow = itemsInList[indexPath.row]
-        //cell.textLabel?.text = itemPerRow.item_name
-        
-        cell.textLabel?.text = shoppingLists[indexPath.row].shopping_tag?.capitalizingFirstLetter().removeDashSymbols()
-        cell.detailTextLabel?.text = "1 Kg"
+        cell.textLabel?.text = shoppingLists[indexPath.row].shopping_tag?.capitalizingEachWords().removeDashSymbols()
+        cell.detailTextLabel?.text = itemsToBuy
         cell.imageView?.image = shoppingLists[indexPath.row].is_complete == true ? UIImage(named: "checkbox-marked") : UIImage(named: "checkbox-unmark")
         
         return cell
@@ -50,7 +48,6 @@ class ShoppingListViewController: UITableViewController {
 
         let selectedRow = shoppingLists[indexPath.row]
         let isComplete = selectedRow.is_complete == true ? false : true
-        
         ShoppingList.updateComplete(viewContext: getViewContext(), shoppingList: shoppingLists[indexPath.row], isComplete: isComplete)
 
         self.tableView.reloadData()
