@@ -25,6 +25,7 @@ extension ShoppingItem {
     
     static func save(viewContext: NSManagedObjectContext, name: String, qty: Float, unit: String) -> ShoppingItem? {
         let shoppingItem = ShoppingItem(context: viewContext)
+        shoppingItem.item_id = UUID()
         shoppingItem.item_name = name
         shoppingItem.item_qty = qty
         shoppingItem.item_unit = unit
@@ -54,6 +55,28 @@ extension ShoppingItem {
         } catch {
             return nil
         }
+    }
+    
+    static func deleteItem(viewContext: NSManagedObjectContext, item: ShoppingItem) -> Bool {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingItem")
+        request.predicate = NSPredicate(format: "item_id == %@",item.item_id as! NSUUID)
+       do {
+            let result = try viewContext.fetch(request)
+            if (result.count > 0) {
+                if let deleteItem: ShoppingItem = result[0] as? ShoppingItem {
+                    viewContext.delete(deleteItem)
+                    print("delete item success")
+                    return true
+                }
+            } else {
+                print("Cannot delete item")
+                return false
+            }
+        } catch {
+            print("Cannot delete item")
+            return false
+        }
+        return false
     }
     
     static func deleteAll(viewContext: NSManagedObjectContext) {

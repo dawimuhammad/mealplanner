@@ -62,6 +62,9 @@ class ShoppingListViewController: UITableViewController {
         let tempShoppingList = ShoppingList.fetchAll(viewContext: getViewContext())
         for shoppingList in tempShoppingList {
             let shopingItems: [ShoppingItem] = shoppingList.shopping_item?.allObjects as! [ShoppingItem]
+            for item in shopingItems {
+                print(item.item_name, item.plan?.recipe_name)
+            }
             let filterShopingItem: [ShoppingItem] = shopingItems.filter({
                 ($0.plan as! Plan).plan_date! >= Calendar.current.startOfDay(for: Date())
             })
