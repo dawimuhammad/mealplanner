@@ -125,6 +125,7 @@ class PlanViewController: UIViewController, UITableViewDelegate, UITableViewData
         dateFormatterPrint.dateFormat = "cccc, dd MMM yyyy"
         // added by Fandrian (to set print date to current timezone)
         dateFormatterPrint.timeZone = TimeZone.current
+        dateFormatterPrint.locale = Locale.init(identifier: "id_ID")
         return dateFormatterPrint.string(from: plansWithSection[section].date!)
     }
     

@@ -83,6 +83,7 @@ class ArchiveViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let dateFormatterPrint = DateFormatter()
         dateFormatterPrint.dateFormat = "cccc, dd MMM yyyy"
+        dateFormatterPrint.locale = Locale.init(identifier: "id_ID")
         return plansWithSection.count > 0 ? dateFormatterPrint.string(from: plansWithSection[section].date!) : nil
     }
     

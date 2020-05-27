@@ -73,4 +73,23 @@ extension ShoppingList {
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
         let _ = try? viewContext.execute(deleteRequest)
     }
+    
+    static func deleteShoppingListByPlan(viewContext: NSManagedObjectContext, plan: Plan) {
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingList")
+        request.predicate = NSPredicate(format: "plan_date == %@ && recipe_id == %@", plan.plan_date as! NSDate, plan.recipe_id as! NSString)
+        do {
+            let result = try viewContext.fetch(request)
+            if (result.count > 0) {
+                if let deletePlan: Plan = result[0] as! Plan {
+                    viewContext.delete(deletePlan)
+                    try viewContext.save()
+                    print("delete plan success")
+                }
+            } else {
+                print("Cannot delete plan")
+            }
+        } catch {
+            print("Cannot delete plan")
+        }
+    }
 }
