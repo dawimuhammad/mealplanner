@@ -33,7 +33,6 @@ class ViewController: UIViewController {
                             ShoppingList.addShoppingItem(viewContext: getViewContext(), instance: existingTag!, shoppingItem: shoppingItem!)
                         } else {
                             let shoppinglist = ShoppingList.save(viewContext: getViewContext(), tag: tag)
-                            ShoppingList.addPlan(viewContext: getViewContext(), instance: shoppinglist!, plan: plan!)
                             ShoppingList.addShoppingItem(viewContext: getViewContext(), instance: shoppinglist!, shoppingItem: shoppingItem!)
                         }
                     }
@@ -54,7 +53,6 @@ class ViewController: UIViewController {
                             ShoppingList.addShoppingItem(viewContext: getViewContext(), instance: existingTag!, shoppingItem: shoppingItem!)
                         } else {
                             let shoppinglist = ShoppingList.save(viewContext: getViewContext(), tag: tag)
-                            ShoppingList.addPlan(viewContext: getViewContext(), instance: shoppinglist!, plan: plan!)
                             ShoppingList.addShoppingItem(viewContext: getViewContext(), instance: shoppinglist!, shoppingItem: shoppingItem!)
                         }
                     }
@@ -76,7 +74,6 @@ class ViewController: UIViewController {
                             ShoppingList.addShoppingItem(viewContext: getViewContext(), instance: existingTag!, shoppingItem: shoppingItem!)
                         } else {
                             let shoppinglist = ShoppingList.save(viewContext: getViewContext(), tag: tag)
-                            ShoppingList.addPlan(viewContext: getViewContext(), instance: shoppinglist!, plan: plan!)
                             ShoppingList.addShoppingItem(viewContext: getViewContext(), instance: shoppinglist!, shoppingItem: shoppingItem!)
                         }
                     }
@@ -94,11 +91,6 @@ class ViewController: UIViewController {
             print("recipe duration: \(plan.recipe_duration)")
             print("recipe portion: \(plan.recipe_portion)")
             print("shopping list:")
-            if let shoppingList: [ShoppingList] = plan.shopping_list?.allObjects as! [ShoppingList] {
-                for shopping in shoppingList {
-                    print(shopping.shopping_tag!)
-                }
-            }
             print("\n\n")
         }
         

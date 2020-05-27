@@ -36,6 +36,26 @@ extension ShoppingItem {
         }
     }
     
+    static func addPlan(viewContext: NSManagedObjectContext, instance: ShoppingItem, plan: Plan) -> ShoppingItem? {
+        do {
+            instance.addToPlan(plan)
+            try viewContext.save()
+            return instance
+        } catch {
+            return nil
+        }
+    }
+    
+    static func addShopingList(viewContext: NSManagedObjectContext, instance: ShoppingItem, shopingList: ShoppingList) -> ShoppingItem? {
+        do {
+            instance.addToShopping_list(shopingList)
+            try viewContext.save()
+            return instance
+        } catch {
+            return nil
+        }
+    }
+    
     static func deleteAll(viewContext: NSManagedObjectContext) {
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "ShoppingItem")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: request)
