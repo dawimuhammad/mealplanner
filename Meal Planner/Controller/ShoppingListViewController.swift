@@ -34,10 +34,8 @@ class ShoppingListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         let itemsInList = shoppingLists[indexPath.row].shopping_item?.allObjects as! [ShoppingItem]
-        let itemsToBuy = itemsInList.removeDuplicates()
-        
         cell.textLabel?.text = shoppingLists[indexPath.row].shopping_tag?.capitalizingEachWords().removeDashSymbols()
-        cell.detailTextLabel?.text = itemsToBuy
+        cell.detailTextLabel?.text = combineItemUnit(itemList: itemsInList)
         cell.imageView?.image = shoppingLists[indexPath.row].is_complete == true ? UIImage(named: "checkbox-marked") : UIImage(named: "checkbox-unmark")
         
         return cell
@@ -56,4 +54,34 @@ class ShoppingListViewController: UITableViewController {
     func fetchShoppingList() {
         shoppingLists = ShoppingList.fetchAll(viewContext: getViewContext())
     }
+    
+    func combineItemUnit(itemList: [ShoppingItem]) -> String {
+        var arrQtyUnit: [QtyUnit] = []
+        var result: String = ""
+        
+        for item in itemList {
+            let newQtyUnit: QtyUnit = QtyUnit(qty: item.item_qty, unit: item.item_unit)
+            let curArrQtyUnitIndex = arrQtyUnit.firstIndex(where: {$0.unit == newQtyUnit.unit})
+            if let index = curArrQtyUnitIndex {
+                arrQtyUnit[index].qty += newQtyUnit.qty ?? 0.0
+            } else {
+                arrQtyUnit.append(newQtyUnit)
+            }
+        }
+        
+        for (index, item) in arrQtyUnit.enumerated() {
+            if (item.unit == "secukupnya") {
+                result = "\(result) \(item.unit!)"
+            } else {
+                result = "\(result) \(item.qty) \(item.unit!)"
+            }
+            
+            if (index < arrQtyUnit.count - 1) {
+                result = "\(result), "
+            }
+        }
+                
+        return result
+    }
+    
 }
