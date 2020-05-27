@@ -38,7 +38,7 @@ extension ShoppingItem {
     
     static func addPlan(viewContext: NSManagedObjectContext, instance: ShoppingItem, plan: Plan) -> ShoppingItem? {
         do {
-            instance.addToPlan(plan)
+            instance.plan = plan
             try viewContext.save()
             return instance
         } catch {

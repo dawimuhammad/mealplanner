@@ -62,7 +62,9 @@ class ShoppingListViewController: UITableViewController {
         let tempShoppingList = ShoppingList.fetchAll(viewContext: getViewContext())
         for shoppingList in tempShoppingList {
             let shopingItems: [ShoppingItem] = shoppingList.shopping_item?.allObjects as! [ShoppingItem]
-            let filterShopingItem: [ShoppingItem] = shopingItems.filter({($0.plan?.anyObject() as! Plan).plan_date! >= Calendar.current.startOfDay(for: Date())})
+            let filterShopingItem: [ShoppingItem] = shopingItems.filter({
+                ($0.plan as! Plan).plan_date! >= Calendar.current.startOfDay(for: Date())
+            })
             if filterShopingItem.count > 0 {
                 filterShopingList.append(LocalShoppingList(shopping_tag: shoppingList.shopping_tag!, is_complete: shoppingList.is_complete, shopping_items: filterShopingItem))
             }
