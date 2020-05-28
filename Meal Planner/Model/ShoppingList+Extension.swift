@@ -72,7 +72,7 @@ extension ShoppingList {
         
         do {
             let result = try viewContext.fetch(request)
-            print(result.count)
+
             if (result.count > 0) {
                 let objectUpdate = result[0] as! NSManagedObject
                 objectUpdate.setValue(isComplete, forKey: "is_complete")
@@ -82,9 +82,6 @@ extension ShoppingList {
                 } catch {
                     print("Failed on updating the new complete state")
                 }
-                
-                print("Found the shopping list")
-                print(objectUpdate)
             } else {
                 print("Failed to update shopping list")
             }

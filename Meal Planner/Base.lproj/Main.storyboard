@@ -960,12 +960,28 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="XHo-DX-0zh" kind="relationship" relationship="rootViewController" id="hz3-ya-Nme"/>
+                        <segue destination="Bdt-Zz-g8Y" kind="relationship" relationship="rootViewController" id="XTu-nE-YFB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KFM-XK-wzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="-333"/>
+        </scene>
+        <!--Shop List View Controller-->
+        <scene sceneID="SsO-b6-5mv">
+            <objects>
+                <viewController id="Bdt-Zz-g8Y" customClass="ShopListViewController" customModule="Meal_Planner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Brb-pt-UF8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yhJ-ex-Iqy"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I6q-nq-3Es"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eTD-3M-jTw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1817" y="-333"/>
         </scene>
     </scenes>
     <resources>

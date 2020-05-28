@@ -37,8 +37,9 @@
 		754CA825246E06510041F32E /* DetailMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754CA824246E06510041F32E /* DetailMealViewController.swift */; };
 		754CA827246E0A240041F32E /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 754CA826246E0A240041F32E /* CategoryCollectionViewCell.swift */; };
 		75DAD76E246E4D4C00F00A84 /* FindMealCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75DAD76D246E4D4C00F00A84 /* FindMealCollectionViewCell.swift */; };
-		B795C4EF247241E20080C260 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B795C4EE247241E20080C260 /* ShoppingListViewController.swift */; };
-		B7B9DAA3247E16AF00E690E5 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B9DAA2247E16AF00E690E5 /* Array+Extension.swift */; };
+		B72AE1D9247E8A4000393B35 /* ShopListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE1D8247E8A4000393B35 /* ShopListViewController.swift */; };
+		B72AE1DF247EAA8600393B35 /* LocalShoppingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE1DE247EAA8600393B35 /* LocalShoppingList.swift */; };
+		B72AE1E1247EAB8200393B35 /* ShopListViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B72AE1E0247EAB8200393B35 /* ShopListViewController+Extension.swift */; };
 		B7D5DC2424643E4A00A2F763 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */; };
 		B7D5DC2624643E4A00A2F763 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2524643E4A00A2F763 /* SceneDelegate.swift */; };
 		B7D5DC2824643E4A00A2F763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D5DC2724643E4A00A2F763 /* ViewController.swift */; };
@@ -79,8 +80,9 @@
 		754CA824246E06510041F32E /* DetailMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMealViewController.swift; sourceTree = "<group>"; };
 		754CA826246E0A240041F32E /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		75DAD76D246E4D4C00F00A84 /* FindMealCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindMealCollectionViewCell.swift; sourceTree = "<group>"; };
-		B795C4EE247241E20080C260 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
-		B7B9DAA2247E16AF00E690E5 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		B72AE1D8247E8A4000393B35 /* ShopListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopListViewController.swift; sourceTree = "<group>"; };
+		B72AE1DE247EAA8600393B35 /* LocalShoppingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalShoppingList.swift; sourceTree = "<group>"; };
+		B72AE1E0247EAB8200393B35 /* ShopListViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShopListViewController+Extension.swift"; sourceTree = "<group>"; };
 		B7D5DC2024643E4A00A2F763 /* Meal Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Planner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7D5DC2324643E4A00A2F763 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7D5DC2524643E4A00A2F763 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,8 +128,8 @@
 				44DC2DC4246E262600D989D0 /* Plan+Extension.swift */,
 				44FB481824734DC8003127C0 /* PlanSection.swift */,
 				753C845A247516FD006C2862 /* String+Extension.swift */,
-				B7B9DAA2247E16AF00E690E5 /* Array+Extension.swift */,
 				4413392A247E1B52007183A1 /* QtyUnit.swift */,
+				B72AE1DE247EAA8600393B35 /* LocalShoppingList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -143,10 +145,11 @@
 				75DAD76D246E4D4C00F00A84 /* FindMealCollectionViewCell.swift */,
 				44FDD51A246DA960006666E8 /* PlanViewController.swift */,
 				44FDD51C246E134D006666E8 /* UIViewController+Extension.swift */,
-				B795C4EE247241E20080C260 /* ShoppingListViewController.swift */,
 				44FB481C2473AF2E003127C0 /* ArchiveViewController.swift */,
 				44FB481E2473B531003127C0 /* UIColor+Extension.swift */,
 				752542022478C42A00CD34F2 /* RecommendationCollectionViewCell.swift */,
+				B72AE1D8247E8A4000393B35 /* ShopListViewController.swift */,
+				B72AE1E0247EAB8200393B35 /* ShopListViewController+Extension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -277,8 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44FDD51F246E13E8006666E8 /* ShoppingItem+Extension.swift in Sources */,
-				B7B9DAA3247E16AF00E690E5 /* Array+Extension.swift in Sources */,
-				B795C4EF247241E20080C260 /* ShoppingListViewController.swift in Sources */,
+				B72AE1DF247EAA8600393B35 /* LocalShoppingList.swift in Sources */,
 				753963562465554500E7EEA4 /* CategoryViewController.swift in Sources */,
 				44DC2DC5246E262600D989D0 /* Plan+Extension.swift in Sources */,
 				44FDD51D246E134D006666E8 /* UIViewController+Extension.swift in Sources */,
@@ -300,8 +302,10 @@
 				44FDD50D246D7C15006666E8 /* Recipe.swift in Sources */,
 				44FB4816247340CF003127C0 /* PlanTableViewCell.swift in Sources */,
 				44FDD511246D7CE0006666E8 /* IngredientSection.swift in Sources */,
+				B72AE1E1247EAB8200393B35 /* ShopListViewController+Extension.swift in Sources */,
 				754CA827246E0A240041F32E /* CategoryCollectionViewCell.swift in Sources */,
 				754CA825246E06510041F32E /* DetailMealViewController.swift in Sources */,
+				B72AE1D9247E8A4000393B35 /* ShopListViewController.swift in Sources */,
 				44FB481D2473AF2E003127C0 /* ArchiveViewController.swift in Sources */,
 				44FDD511246D7CE0006666E8 /* IngredientSection.swift in Sources */,
 				4413392B247E1B52007183A1 /* QtyUnit.swift in Sources */,
