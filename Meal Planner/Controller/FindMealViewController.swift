@@ -34,7 +34,8 @@ class FindMealViewController: UIViewController {
         findMealCollectionView.dataSource = self
         findMealSearchBar.delegate = self
         resep = categories.getRecipeByCategory(category: selectedCategory)!
-        // Do any additional setup after loading the view.        
+        // Do any additional setup after loading the view.
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -124,11 +125,6 @@ extension FindMealViewController: UISearchBarDelegate {
             self.findMealCollectionView?.reloadData()
         }
     }
-    
-
-    
-
-    
     
 }
 

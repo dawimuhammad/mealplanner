@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAw-az-m9g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VAw-az-m9g">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -476,10 +476,22 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZG-jf-354">
+                                                        <rect key="frame" x="0.0" y="4" width="374" height="12"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="12" id="cJ8-Fs-zCc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="10"/>
+                                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="quV-kk-L0w" secondAttribute="trailing" constant="8" id="N1M-po-jIk"/>
+                                                    <constraint firstItem="HZG-jf-354" firstAttribute="leading" secondItem="zzS-ZB-ic4" secondAttribute="leading" id="UE6-jS-QWQ"/>
                                                     <constraint firstAttribute="height" constant="50" id="cNq-hz-Ijq"/>
+                                                    <constraint firstItem="HZG-jf-354" firstAttribute="top" secondItem="zzS-ZB-ic4" secondAttribute="top" constant="4" id="nk3-Nv-nK4"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HZG-jf-354" secondAttribute="trailing" id="pmO-hE-PNU"/>
                                                     <constraint firstItem="quV-kk-L0w" firstAttribute="leading" secondItem="zzS-ZB-ic4" secondAttribute="leading" constant="8" id="wIy-jK-9ZJ"/>
                                                     <constraint firstAttribute="bottom" secondItem="quV-kk-L0w" secondAttribute="bottom" constant="8" id="wN3-ya-Zo5"/>
                                                 </constraints>
@@ -662,6 +674,7 @@
                         <outlet property="portionLabel" destination="kkF-34-3Eh" id="eeJ-sd-ehP"/>
                         <outlet property="recipeTitleLabel" destination="quV-kk-L0w" id="IVW-Yn-8Jn"/>
                         <outlet property="scrollContainerView" destination="j5M-4x-aTu" id="lJY-ZY-vSr"/>
+                        <outlet property="sourceLabel" destination="HZG-jf-354" id="C58-8j-PKG"/>
                         <outlet property="stepsLabel" destination="5Yv-tc-cBv" id="qKT-HS-gBd"/>
                         <outlet property="tambahRencanaButton" destination="ovp-yn-glQ" id="gwo-WO-3xJ"/>
                         <outlet property="tambahRencanaView" destination="pEw-0C-v2Y" id="TcA-XX-t1M"/>
@@ -984,6 +997,9 @@
             <point key="canvasLocation" x="1817" y="-333"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="A3I-b5-127"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="PlanEmpty" width="392.5" height="353"/>
         <image name="PortionIcon" width="12.5" height="9.5"/>
@@ -992,9 +1008,6 @@
         <image name="list-icon" width="32.5" height="29.5"/>
         <image name="plan-empty" width="392.5" height="353"/>
         <image name="plan-icon" width="31.5" height="29"/>
-        <image name="xmark" catalog="system" width="64" height="56"/>
+        <image name="xmark" catalog="system" width="128" height="113"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="gCa-Rl-0gt"/>
-    </inferredMetricsTieBreakers>
 </document>

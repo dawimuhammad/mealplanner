@@ -24,6 +24,7 @@ class DetailMealViewController: UIViewController {
     @IBOutlet weak var tambahRencanaButton: UIButton!
     @IBOutlet weak var tambahRencanaView: UIView!
     @IBOutlet weak var ingredientsLabel: UILabel!
+    @IBOutlet weak var sourceLabel: UILabel!
     
     //all view?
     @IBOutlet weak var scrollContainerView: UIView!
@@ -55,6 +56,7 @@ class DetailMealViewController: UIViewController {
         durationLabel.text = ": \(recipe.duration!) menit"
         portionLabel.text = ": \(recipe.portion!) orang"
         mealImage.image = UIImage(named: recipe.photo!)
+        sourceLabel.text = "Diambil Dari : \(recipe.source?.regex(pattern: "(?<=//)([a-z0-9]*.[a-z0-9]*)")[0] ?? "cookpad.com")"
         
         ingredientsLabel.text = breakdownIngredients(recipe: recipe)
         stepsLabel.text = breakdownSteps(recipe: recipe)
@@ -188,7 +190,7 @@ class DetailMealViewController: UIViewController {
                 for list in item.ingredients! {
                     temp += "\n\(list.name ?? "")"
                 }
-                temp += "\n\n"
+                temp += "\n"
             }
         }
         return temp
@@ -200,12 +202,12 @@ class DetailMealViewController: UIViewController {
         if recipe.stepSections?.count == 1 {
             for item in recipe.stepSections! {
                 temp += "\(item.steps!.joined(separator: "\n"))"
-                temp += "\n\n"
+                temp += "\n"
             }
         } else {
             for item in recipe.stepSections! {
                 temp += "\(item.section ?? "") : \n\(item.steps!.joined(separator: "\n"))"
-                temp += "\n\n"
+                temp += "\n"
             }
         }
         
