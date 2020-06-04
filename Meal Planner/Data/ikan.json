@@ -1,0 +1,421 @@
+[
+  {
+    "id": "ikan-1",
+    "name": "Tim Ikan Kakap",
+    "category": "ikan",
+    "photo": "ikan-1",
+    "duration": 45,
+    "portion": 3,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "ikan-kakap"
+            ],
+            "name": "Ikan kakap - 1 ekor (500 gram)",
+            "unit": "gram",
+            "qty": 500
+          },
+          {
+            "tag": [
+              "jeruk-nipis"
+            ],
+            "name": "Air perasan jeruk nipis - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "bawang-bombay"
+            ],
+            "name": "Bawang bombay, iris tipis memanjang - 1/2 butir",
+            "unit": "butir",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "bawang-putih"
+            ],
+            "name": "Bawang putih, cincang - 3 siung",
+            "unit": "siung",
+            "qty": 3
+          },
+          {
+            "tag": [
+              "jahe"
+            ],
+            "name": "Jahe, iris korek api - 5 cm",
+            "unit": "cm",
+            "qty": 5
+          },
+          {
+            "tag": [
+              "cabai-rawit"
+            ],
+            "name": "Cabai rawit, biarkan utuh - 10 butir",
+            "unit": "butir",
+            "qty": 10
+          },
+          {
+            "tag": [
+              "daun-bawang"
+            ],
+            "name": "Daun bawang, iris tipis - 1 batang",
+            "unit": "batang",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "kecap-asin"
+            ],
+            "name": "Kecap asin - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "minyak-wijen"
+            ],
+            "name": "Minyak wijen - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "saus-tiram"
+            ],
+            "name": "Saus tiram - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "gula-pasir"
+            ],
+            "name": "Gula pasir - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "merica"
+            ],
+            "name": "Merica - 1/2 sdt",
+            "unit": "sdt",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "air"
+            ],
+            "name": "Air - 100 ml",
+            "unit": "ml",
+            "qty": 100
+          },
+          {
+            "tag": [
+              "minyak"
+            ],
+            "name": "Minyak, untuk menumis - 2 sdm",
+            "unit": "sdm",
+            "qty": 2
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "LANGKAH",
+        "steps": [
+          "1. Siangi dan bersihkan ikan kakap. Lumuri dengan air perasan jeruk nipis dan garam. Diamkan sebentar lalu bilas hingga bersih. Taruh ikan dalam wadah atau pinggan tahan panas.",
+          "2. Panaskan panci kukusan. Kukus ikan selama 5 menit saja. Angkat.",
+          "3. Buang air yang ada dalam wadah ikan. Sisihkan.",
+          "4. Panaskan minyak. Tumis bawang putih dan bombay hingga harum.",
+          "5. Masukkan jahe dan cabai rawit. Aduk hingga harum dan layu.",
+          "6. Masukkan kecap asin, minyak wijen, saus tiram, gula, dan merica.",
+          "7. Tuang air lalu aduk rata hingga mendidih dan biarkan masak beberapa saat. Angkat.",
+          "8. Tuang saus ke atas ikan dan ratakan. Beri taburan daun bawang.",
+          "9. Panaskan lagi panci kukusan. Masukkan wadah ikan dan kukus hingga matang selama 20 menit. Angkat.",
+          "10. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Pilih ikan yang masih segar agar rasa dan baunya tidak amis.",
+      "2. Setelah matang, langsung keluarkan ikan dari panci kukusan agar tidak overcooked (terlalu matang).",
+      "3. Sajikan ikan tim segera setelah matang dan selagi hangat.",
+      "4. Gunakan panci kukusan yang berukuran cukup besar, seperti Maspion Dandang Alcor 26 cm (lihat di Lazada DISKON), supaya seluruh bagian ikan dapat masuk dengan utuh dan menghasilkan tim ikan kakap yang meggugah selera."
+    ],
+    "source": "https://resepkoki.id/resep/resep-tim-ikan-kakap/"
+  },
+  {
+    "id": "ikan-2",
+    "name": "Ikan Bawal Bakar",
+    "category": "ikan",
+    "photo": "ikan-2",
+    "duration": 60,
+    "portion": 4,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "ikan-bawal"
+            ],
+            "name": "Ikan bawal - 1 kg",
+            "unit": "kg",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "jeruk-nipis"
+            ],
+            "name": "Air perasan jeruk nipis - 1 buah",
+            "unit": "buah",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "minyak-goreng"
+            ],
+            "name": "Minyak goreng, untuk menggoreng - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      },
+      {
+        "section": "BUMBU HALUS:",
+        "ingredients": [
+          {
+            "tag": ["bawang-putih"],
+            "name": "Bawang putih - 3 siung",
+            "unit": "siung",
+            "qty": 3
+          },
+          {
+            "tag": ["ketumbar"],
+            "name": "Ketumbar - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": ["kunyit"],
+            "name": "Kunyit - 2 cm",
+            "unit": "cm",
+            "qty": 2
+          },
+          {
+            "tag": ["jahe"],
+            "name": "Jahe - 2 cm",
+            "unit": "cm",
+            "qty": 2
+          },
+          {
+            "tag": ["garam"],
+            "name": "Garam - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "section": "BUMBU OLESAN (CAMPUR JADI SATU) :",
+        "ingredients": [
+          {
+            "tag": ["kecap-manis"],
+            "name": "Kecap manis - 100 ml",
+            "unit": "ml",
+            "qty": 10
+          },
+          {
+            "tag": ["madu"],
+            "name": "Madu - 50 ml",
+            "unit": "ml",
+            "qty": 50
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT BAHAN SAUS",
+        "steps": [
+          "1. Bersihkan ikan dan buang kotoran serta isi perutnya. Cuci hingga bersih di bawah air mengalir. Lumuri ikan dengan air perasan jeruk nipis.",
+          "2. Lumuri seluruh permukaan ikan dengan bumbu halus. Simpan ikan dalam kulkas selama 20-30 menit.",
+          "3. Panaskan minyak. Goreng ikan hingga setengah matang. Angkat dan tiriskan.",
+          "4. Siapkan alat panggangan. Bakar ikan sambil dioles bumbu olesan. Balik ikan dan bakar di sisi satunya sambil dioles kembali hingga matang. Angkat.",
+          "5. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Jika tidak punya alat panggangan, bisa menggunakan wajan datar anti lengket di atas kompor."
+    ],
+    "source": "https://resepkoki.id/resep/resep-ikan-bawal-bakar/"
+  },
+  {
+    "id": "ikan-3",
+    "name": "Sup Ikan Kakap",
+    "category": "ikan",
+    "photo": "ikan-3",
+    "duration": 30,
+    "portion": 5,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "ikan-kakap-merah"
+            ],
+            "name": "Ikan kakap merah - 1 ekor",
+            "unit": "ekor",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "jeruk-nipis"
+            ],
+            "name": "Air perasan jeruk nipis - 1 buah",
+            "unit": "buah",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "tomat-hijau"
+            ],
+            "name": "Tomat hijau, iris - 1 buah",
+            "unit": "buah",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "daun-ketumbar"
+            ],
+            "name": "Daun ketumbar, iris halus - 50 gram",
+            "unit": "gram",
+            "qty": 50
+          },
+          {
+            "tag": [
+              "bawang-putih"
+            ],
+            "name": "Bawang putih - 6 siung",
+            "unit": "siung",
+            "qty": 6
+          },
+          {
+            "tag": [
+              "bawang-merah"
+            ],
+            "name": "Bawang merah - 6 butir",
+            "unit": "butir",
+            "qty": 6
+          },
+          {
+            "tag": [
+              "bawang-bombay"
+            ],
+            "name": "Bawang bombay - 1/2 siung",
+            "unit": "siung",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Garam - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "gula"
+            ],
+            "name": "Gula - 1/2 sdm",
+            "unit": "sdm",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "lada-putih"
+            ],
+            "name": "Lada putih - 1 sdt",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "kaldu-bubuk"
+            ],
+            "name": "Kaldu bubuk - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "kecap-ikan"
+            ],
+            "name": "Kecap ikan - 1 sdm",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "air"
+            ],
+            "name": "Air - 1,5 liter",
+            "unit": "liter",
+            "qty": 1.5
+          },
+          {
+            "tag": [
+              "bawang-goreng"
+            ],
+            "name": "Bawang goreng - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          },
+          {
+            "tag": [
+              "minyak"
+            ],
+            "name": "Minyak, untuk menumis - secukupnya",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT BAHAN SAUS",
+        "steps": [
+          "1. Cuci bersih ikan, lalu potong sesuai selera. Lumuri dengan air perasan jeruk nipis dan 1 sdm garam hingga merata. Biarkan selama 10 menit lalu bilas kembali hingga bersih. Sisihkan.",
+          "2. Panaskan minyak. Goreng bawang putih, bawang merah, dan bawang bombay hingga layu dan matang. Angkat lalu haluskan/blender hingga jadi pasta.",
+          "3. Dalam panci, didihkan 1,5 liter air.",
+          "4. Masukkan ikan, bawang halus, dan irisan tomat hijau. Aduk rata dan biarkan hingga mendidih kembali.",
+          "5. Bumbui dengan garam, gula, lada, kaldu bubuk, dan kecap ikan. Aduk rata dan koreksi rasanya. Matikan api. Beri taburan daun ketumbar dan bawang goreng.",
+          "6. Siap disajikan."
+        ]
+      }
+    ],
+    "tips": [
+      "1. Pilihlah ikan yang benar-benar fresh agar citarasanya maksimal.",
+      "2. Daun ketumbar bisa diganti dengan daun seledri sesuai selera."
+    ],
+    "source": "https://resepkoki.id/resep/resep-sup-ikan-kakap/"
+  }
+]

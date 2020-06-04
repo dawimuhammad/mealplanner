@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="PlanTableViewCell" customModule="Meal_Planner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uDP-7l-Yf5">
+                        <rect key="frame" x="16" y="4" width="64" height="62"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-ZJ-yBd">
+                        <rect key="frame" x="96" y="42" width="103" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chevron-right" translatesAutoresizingMaskIntoConstraints="NO" id="feS-Jf-6nU">
+                        <rect key="frame" x="289" y="4" width="15" height="62"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="62" id="6PZ-QG-D0c"/>
+                            <constraint firstAttribute="width" constant="15" id="iyf-zQ-RK9"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhl-HX-zBS">
+                        <rect key="frame" x="96" y="18" width="116" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DfW-ZJ-yBd" firstAttribute="leading" secondItem="uDP-7l-Yf5" secondAttribute="trailing" constant="16" id="0jM-VM-MDX"/>
+                    <constraint firstAttribute="bottom" secondItem="feS-Jf-6nU" secondAttribute="bottom" constant="4" id="0xM-7D-HNf"/>
+                    <constraint firstItem="Bhl-HX-zBS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="18" id="Juo-vD-JGu"/>
+                    <constraint firstItem="Bhl-HX-zBS" firstAttribute="leading" secondItem="uDP-7l-Yf5" secondAttribute="trailing" constant="16" id="QTh-M7-SmQ"/>
+                    <constraint firstItem="DfW-ZJ-yBd" firstAttribute="top" secondItem="Bhl-HX-zBS" secondAttribute="bottom" id="j90-6w-CDS"/>
+                    <constraint firstItem="feS-Jf-6nU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="lPb-CO-iD9"/>
+                    <constraint firstAttribute="trailing" secondItem="feS-Jf-6nU" secondAttribute="trailing" constant="16" id="tNb-rx-8pB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="recipeDurationLabel" destination="DfW-ZJ-yBd" id="I28-bG-0gx"/>
+                <outlet property="recipeImageView" destination="uDP-7l-Yf5" id="U8V-KM-WRb"/>
+                <outlet property="recipeNameLabel" destination="Bhl-HX-zBS" id="pkE-py-yl1"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="79.6875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron-right" width="8" height="44"/>
+    </resources>
+</document>

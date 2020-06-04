@@ -1,0 +1,355 @@
+[
+  {
+    "id": "babi-1",
+    "name": "Samcan Crispy",
+    "category": "babi",
+    "photo": "babi-1",
+    "duration": 45,
+    "portion": 8,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "samcan-babi"
+            ],
+            "name": "1 kg samcan babi",
+            "unit": "kg",
+            "qty": 1
+          }
+        ]
+      },
+      {
+        "section": "Bumbu A (aduk rata) :",
+        "ingredients": [
+          {
+            "tag": [
+              "bubuk-ngohiong"
+            ],
+            "name": "1 sdt bubuk ngohiong",
+            "unit": "sdt",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "1 1/2 sdt garam",
+            "unit": "sdt",
+            "qty": 1.5
+          },
+          {
+            "tag": ["gula-pasir"],
+            "name": "1 sdm munjung gula pasir",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": ["merica"],
+            "name": "1/4 sdt merica bubuk",
+            "unit": "sdt",
+            "qty": 0.25
+          }
+        ]
+      },
+      {
+        "section": "Bumbu B (aduk sampai rata dan larut):",
+        "ingredients": [
+          {
+            "tag": ["garam"],
+            "name": "1 sdm garam",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": ["cuka"],
+            "name": "3 sdm cuka putih",
+            "unit": "sdm",
+            "qty": 3
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT BAHAN SAUS",
+        "steps": [
+          "1. Cuci samcan, kemudian lap sampai kering dengan serbet / tisu dapur. Balikkan samcan sehingga bagian daging menghadap ke atas, iris daging sedalam 2-3 cm tapi tidak sampai ke kulit. Iris2 daging tsb memanjang, dengan jarak 2 cm di antara tiap irisan.",
+          "2. Lumuri dengan bumbu A sampai rata, termasuk ke dalam sela-sela irisan.",
+          "3. Taruh samcan di dalam wadah dengan kulit di atas. Lumuri kulit dengan bumbu B. Simpan dalam kulkas semalaman di wadah terbuka (jangan ditutup) agar kulitnya mengering. Jangan buang sisa bumbu B, karena akan digunakan untuk melumuri kulit keesokan harinya.",
+          "4. Panaskan oven 200 derajat Celcius (api atas-bawah). Taruh samcan di pinggan tahan panas, dengan posisi kulit di bawah. Panggang di dalam oven selama 20 menit.",
+          "5. Keluarkan samcan, balikkan sehingga sekarang posisi kulit menghadap ke atas. Saya taruh di pinggan roasting agar tidak repot membuang lemak. Keringkan kulit dari lemak yg menempel dengan tisu dapur. Olesi lagi kulit dengan larutan bumbu B. Panggang lagi selama 20 menit.",
+          "6. Keluarkan lgai samcan dari oven, keringkan kulitnya dengan tisu dapur, olesi lagi dengan bahan B. Panggang lagi selama 20 menit.",
+          "7. Keluarkan samcan dari oven. Samcan sudah matang bila keseluruhan kulitnya bergelembung seperti kerupuk. Diamkan samcan selama 15 menit, kemudian potong2 sesuai dgn irisan yg sudah dibuat, dan iris2 lagi setebal 1 cm. Samcan siap disajikan dengan nasi atau mie."
+        ]
+      }
+    ],
+    "tips": [],
+    "source": "https://cookpad.com/id/resep/12495053-samcan-crispy-simpel/"
+  },
+  {
+    "id": "babi-2",
+    "name": "Abon Babi",
+    "category": "babi",
+    "photo": "babi-2",
+    "duration": 45,
+    "portion": 10,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "daging-babi"
+            ],
+            "name": "1 kg daging babi (boleh campur sedikit dengan lemak)",
+            "unit": "kg",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "bawang-merah"
+            ],
+            "name": "13 siung Bawang merah (ukuran sedang)",
+            "unit": "siung",
+            "qty": 13
+          },
+          {
+            "tag": [
+              "bawang-putih"
+            ],
+            "name": "8 siung Bawang putih",
+            "unit": "siung",
+            "qty": 8
+          },
+          {
+            "tag": [
+              "cabai-merah"
+            ],
+            "name": "2 Cabai merah besar",
+            "unit": "pcs",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "cabai-rawit"
+            ],
+            "name": "8 Cabai rawit",
+            "unit": "pcs",
+            "qty": 8
+          },
+          {
+            "tag": [
+              "cabai-keriting"
+            ],
+            "name": "7 Cabai keriting",
+            "unit": "pcs",
+            "qty": 7
+          },
+          {
+            "tag": [
+              "jahe"
+            ],
+            "name": "1 ruas Jahe",
+            "unit": "ruas",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "gula-merah"
+            ],
+            "name": "1 lempeng Gula merah (ukuran besar)",
+            "unit": "lempeng",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "jinten"
+            ],
+            "name": "1/2 sdm Jinten",
+            "unit": "sdm",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "ketumbar"
+            ],
+            "name": "1 sdm Ketumbar",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "gula-pasir"
+            ],
+            "name": "1 sdm Gula pasir",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "secukupnya Garam",
+            "unit": "secukupnya",
+            "qty": 0
+          },
+          {
+            "tag": [
+              "minyak"
+            ],
+            "name": "Minyak untuk menggoreng",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "CARA MEMBUAT",
+        "steps": [
+          "1. Rebus daging hingga empuk (kira² 30 menit) agar mudah di tumbuk. Kalau sudah empuk angkat lalu tiriskan.",
+          "2. Tumbuk daging hingga gepeng, lalu suwir². Setelah itu tumbuk lagi sampai tekstur nya benar² hancur. Saya menggunakan ulekan.",
+          "3. Blender semua bahan kecuali minyak goreng. Kalau sudah, campur daging dalam satu wadah, aduk hingga tercampur rata.",
+          "4.Panaskan minyak, ini tergantung selera. Kalau yang tidak terlalu suka berminyak cukup tuang minyak sekitar 4 sdm, lalu goreng daging dengan api sedang. Terus aduk agar tidak gosong. Tampilan di foto saya itu memang tidak terlalu garing karena hanya menggunakan sedikit minyak. Kalau mau lebih garing bisa di tambahkan lagi minyak nya. Selamat mencoba 🙏"
+        ]
+      }
+    ],
+    "tips": [],
+    "source": "https://cookpad.com/id/resep/12498203-abon-babi"
+  },
+  {
+    "id": "babi-3",
+    "name": "Siomay Babi",
+    "category": "babi",
+    "photo": "babi-3",
+    "duration": 60,
+    "portion": 4,
+    "ingredient_section": [
+      {
+        "section": "Bahan",
+        "ingredients": [
+          {
+            "tag": [
+              "babi-giling-campur-lemak"
+            ],
+            "name": "1/2 kg babi giling campur lemak",
+            "unit": "kg",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "udang"
+            ],
+            "name": "1/2 kg udang",
+            "unit": "kg",
+            "qty": 0.5
+          },
+          {
+            "tag": [
+              "tepung-tapioka"
+            ],
+            "name": "10 sdm tepung tapioka (dirasa kurang bisa d tambah)",
+            "unit": "sdm",
+            "qty": 10
+          },
+          {
+            "tag": [
+              "tepung-terigu"
+            ],
+            "name": "1 sdm tepung terigu",
+            "unit": "sdm",
+            "qty": 1
+          },
+          {
+            "tag": [
+              "bawang-putih"
+            ],
+            "name": "5 siung bawang putih cincang",
+            "unit": "siung",
+            "qty": 5
+          },
+          {
+            "tag": [
+              "daun-bawang"
+            ],
+            "name": "5 daun bawang iris tipis",
+            "unit": "biji",
+            "qty": 5
+          },
+          {
+            "tag": [
+              "wortel"
+            ],
+            "name": "3 biji wortel potong dadu (1/2 biji d parut untuk hiasan atas)",
+            "unit": "biji",
+            "qty": 3
+          },
+          {
+            "tag": [
+              "garam"
+            ],
+            "name": "Secukupnya Garam",
+            "unit": "secukupnya",
+            "qty": 0
+          },
+          {
+            "tag": [
+              "merica"
+            ],
+            "name": "Secukupnya Merica",
+            "unit": "secukupnya",
+            "qty": 0
+          },
+          {
+            "tag": [
+              "totole"
+            ],
+            "name": "2 sdt totole",
+            "unit": "sdt",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "gula"
+            ],
+            "name": "sedikit Gula",
+            "unit": "sedikit",
+            "qty": 0
+          },
+          {
+            "tag": [
+              "telur"
+            ],
+            "name": "2 butir Telor",
+            "unit": "butir",
+            "qty": 2
+          },
+          {
+            "tag": [
+              "kulit-siomay",
+              "kulit-pangsit"
+            ],
+            "name": "Kulit siomay/ kulit pangsit ",
+            "unit": "secukupnya",
+            "qty": 0
+          }
+        ]
+      }
+    ],
+    "steps": [
+      {
+        "section": "LANGKAH",
+        "steps": [
+          "1. Campur semua bahan menjadi 1. Kemudian bentuk 1 per 1.",
+          "2. Panas kan kukusan, kukus selama 30 mnit. Bisa d cek dengan d tusuk untuk mengecek kematangan nya.",
+          "3. Setelah matang siap disajikan dengan sambel cocol"
+        ]
+      }
+    ],
+    "tips": [],
+    "source": "https://cookpad.com/id/resep/12483262-siomay-babi-udang-bisa-juga-di-ganti-ayam-udang"
+  }
+]
